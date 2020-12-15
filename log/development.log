@@ -2338,3 +2338,919 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (2362.4ms)[0m  [1m[35mCREATE DATABASE "cocooning_development" ENCODING = 'unicode'[0m
+  [1m[35m (619.3ms)[0m  [1m[35mCREATE DATABASE "cocooning_test" ENCODING = 'unicode'[0m
+  [1m[35m (653.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (85.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (19.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5317189377005588355)[0m
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateServices (20191211235506)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (170.5ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (58.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191211235506"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCountries (20191212021610)
+  [1m[35m (41.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCREATE TABLE "countries" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191212021610"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateDepartments (20191212021619)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "departments" ("id" bigserial primary key, "code" character varying, "name" character varying, "country_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_departments_on_country_id" ON "departments"  ("country_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191212021619"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateClients (20191212023451)
+  [1m[35m (24.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (58.8ms)[0m  [1m[35mCREATE TABLE "clients" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_clients_on_email" ON "clients"  ("email")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_clients_on_reset_password_token" ON "clients"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191212023451"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexToClients (20191212025609)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.6ms)[0m  [1m[35mALTER TABLE "clients" ADD "first_name" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "clients" ADD "last_name" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "clients" ADD "adresse" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "clients" ADD "adresse_complet" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "clients" ADD "tel" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "clients" ADD "sexe" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clients" ADD "country" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clients" ADD "zip_code" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clients" ADD "town" character varying[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "clients" ADD "is_client" boolean DEFAULT FALSE[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191212025609"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCandidates (20191213143256)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCREATE TABLE "candidates" ("id" bigserial primary key, "sexe" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" character varying, "raison_sociale" character varying, "siren" character varying, "email" character varying, "telephone" character varying, "adresse" character varying, "adresse_complet" character varying, "zip_code" character varying, "ville" character varying, "country" character varying, "services" character varying, "countries" character varying, "departments" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191213143256"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePrestataireDepartments (20191216103522)
+  [1m[35m (40.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "prestataire_departments" ("id" bigserial primary key, "department_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_departments_on_department_id" ON "prestataire_departments"  ("department_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_departments_on_prestataire_id" ON "prestataire_departments"  ("prestataire_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191216103522"]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePrestataireServices (20191216103528)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE "prestataire_services" ("id" bigserial primary key, "prestataire_id" bigint, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_services_on_prestataire_id" ON "prestataire_services"  ("prestataire_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_services_on_service_id" ON "prestataire_services"  ("service_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191216103528"]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateAdmins (20191216170030)
+  [1m[35m (22.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (129.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191216170030"]]
+  [1m[35m (44.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePrestataires (20191218201001)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCREATE TABLE "prestataires" ("id" bigserial primary key, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191218201001"]]
+  [1m[35m (41.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexToPrestataires (20191218201013)
+  [1m[35m (31.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "sexe" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "first_name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "last_name" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "date_of_birth" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "raison_sociale" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "siren" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "tel" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "adresse" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "adresse_complet" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "zip_code" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "ville" character varying[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "pays" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "confirm_token" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191218201013"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateProducts (20200205005933)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (85.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" float, "is_option_spa" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205005933"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMassageCas (20200205142557)
+  [1m[35m (26.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "massage_cas" ("id" bigserial primary key, "name" character varying, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_massage_cas_on_service_id" ON "massage_cas"  ("service_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205142557"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMassageSus (20200205142713)
+  [1m[35m (24.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "massage_sus" ("id" bigserial primary key, "name" character varying, "description" text, "massage_ca_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_massage_sus_on_massage_ca_id" ON "massage_sus"  ("massage_ca_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205142713"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMassageSuPrices (20200205143008)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "massage_su_prices" ("id" bigserial primary key, "duration" integer, "exceptional_price" float, "ordinary_price" float, "exceptional_acompte" float, "ordinary_acompte" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205143008"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSpas (20200205143148)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "spas" ("id" bigserial primary key, "duration" integer, "exceptional_price" float, "ordinary_price" float, "exceptional_acompte" float, "ordinary_acompte" float, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_spas_on_service_id" ON "spas"  ("service_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205143148"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20200205143420)
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "prestation_date" character varying, "billing_pays" character varying, "billing_ville" character varying, "billing_code_postal" character varying, "billing_adresse" character varying, "billing_adresse_complet" character varying, "delivery_pays" character varying, "delivery_ville" character varying, "delivery_code_postal" character varying, "delivery_adresse" character varying, "delivery_adresse_complet" character varying, "praticien" character varying, "message" text, "paymentMeanBrand" character varying, "transactionDateTime" character varying, "acompte_amount" character varying, "is_validate" boolean DEFAULT FALSE, "status_order" character varying DEFAULT 'en cours', "client_id" bigint, "department_id" bigint, "country_id" bigint, "code_promo_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_client_id" ON "orders"  ("client_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_department_id" ON "orders"  ("department_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_country_id" ON "orders"  ("country_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_code_promo_id" ON "orders"  ("code_promo_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205143420"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrderMassages (20200205143909)
+  [1m[35m (24.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "order_massages" ("id" bigserial primary key, "order_id" bigint, "massage_ca_id" bigint, "massage_su_id" bigint, "massage_su_price_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_order_id" ON "order_massages"  ("order_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_ca_id" ON "order_massages"  ("massage_ca_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_su_id" ON "order_massages"  ("massage_su_id")[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_su_price_id" ON "order_massages"  ("massage_su_price_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205143909"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrderSpas (20200205143920)
+  [1m[35m (40.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "order_spas" ("id" bigserial primary key, "logement" character varying, "installation" character varying, "syteme_eau" character varying, "order_id" bigint, "spa_id" bigint, "product_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_order_id" ON "order_spas"  ("order_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_spa_id" ON "order_spas"  ("spa_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_product_id" ON "order_spas"  ("product_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205143920"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOtherSuPrices (20200205145124)
+  [1m[35m (40.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "other_su_prices" ("id" bigserial primary key, "massage_su_id" bigint, "massage_su_price_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_other_su_prices_on_massage_su_id" ON "other_su_prices"  ("massage_su_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_other_su_prices_on_massage_su_price_id" ON "other_su_prices"  ("massage_su_price_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205145124"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrderServices (20200205151906)
+  [1m[35m (25.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "order_services" ("id" bigserial primary key, "service_time" character varying, "confirm_token" character varying, "status_order" character varying DEFAULT 'en cours', "order_id" bigint, "service_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_order_id" ON "order_services"  ("order_id")[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_service_id" ON "order_services"  ("service_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_prestataire_id" ON "order_services"  ("prestataire_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200205151906"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateComments (20200211153537)
+  [1m[35m (39.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "note" integer, "content" text, "user_name" character varying, "comment_for" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200211153537"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCodePromos (20200226171056)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "code_promos" ("id" bigserial primary key, "code" character varying, "reduction" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200226171056"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateServiceCountries (20200304172517)
+  [1m[35m (25.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "service_countries" ("id" bigserial primary key, "service_id" bigint, "country_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_service_countries_on_service_id" ON "service_countries"  ("service_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_service_countries_on_country_id" ON "service_countries"  ("country_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200304172517"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateServiceDepartments (20200304172623)
+  [1m[35m (39.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "service_departments" ("id" bigserial primary key, "service_id" bigint, "department_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_service_departments_on_service_id" ON "service_departments"  ("service_id")[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_service_departments_on_department_id" ON "service_departments"  ("department_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200304172623"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMessages (20200326022945)
+  [1m[35m (40.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "tel" character varying, "name_corp" character varying, "content" text, "is_see" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200326022945"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePrestataireCountries (20200407064344)
+  [1m[35m (40.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "prestataire_countries" ("id" bigserial primary key, "country_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_countries_on_country_id" ON "prestataire_countries"  ("country_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_countries_on_prestataire_id" ON "prestataire_countries"  ("prestataire_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200407064344"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexToAdmins (20200414062346)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "admins" ADD "first_name" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_name" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200414062346"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePrestataireOrders (20200414082452)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.5ms)[0m  [1m[35mCREATE TABLE "prestataire_orders" ("id" bigserial primary key, "is_accepted" boolean DEFAULT TRUE, "order_service_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_orders_on_order_service_id" ON "prestataire_orders"  ("order_service_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_orders_on_prestataire_id" ON "prestataire_orders"  ("prestataire_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200414082452"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateNotifications (20200520075640)
+  [1m[35m (28.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (29.2ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" bigserial primary key, "notif_type" integer, "data" character varying, "is_view" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200520075640"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnToOrder (20200617085900)
+  [1m[35m (40.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "orders" ADD "send_mail" boolean DEFAULT FALSE[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200617085900"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddStatutToPrestataires (20200825082203)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "statut" character varying DEFAULT 'actif'[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200825082203"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (31.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-15 09:13:24.859610"], ["updated_at", "2020-12-15 09:13:24.859610"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5317189377005588355)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-12-15 09:18:32 +0000
+  [1m[35m (70.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (8.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 8386ms
+Built at: 15/12/2020 09:19:07
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered static_page/index.html.erb within layouts/application (Duration: 32627.9ms | Allocations: 6794)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 19.8ms | Allocations: 639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34958ms (Views: 34279.6ms | ActiveRecord: 430.5ms | Allocations: 82120)
+
+
+Started GET "/" for ::1 at 2020-12-15 09:19:12 +0000
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3847)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.5ms | Allocations: 12437)
+
+
+Started GET "/location-spa" for ::1 at 2020-12-15 09:20:42 +0000
+Processing by StaticPageController#location_spa as HTML
+  Rendering static_page/location_spa.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "spa"]]
+  ↳ app/views/static_page/location_spa.html.erb:888
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/location_spa.html.erb within layouts/application (Duration: 636.4ms | Allocations: 5514)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 752ms (Views: 727.9ms | ActiveRecord: 0.6ms | Allocations: 14280)
+
+
+Started GET "/location-spa" for ::1 at 2020-12-15 09:20:44 +0000
+Processing by StaticPageController#location_spa as HTML
+  Rendering static_page/location_spa.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "spa"]]
+  ↳ app/views/static_page/location_spa.html.erb:888
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/location_spa.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3772)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.4ms | Allocations: 12410)
+
+
+Started GET "/location-spa" for ::1 at 2020-12-15 09:20:45 +0000
+Processing by StaticPageController#location_spa as HTML
+  Rendering static_page/location_spa.html.erb within layouts/application
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "spa"]]
+  ↳ app/views/static_page/location_spa.html.erb:888
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/location_spa.html.erb within layouts/application (Duration: 43.4ms | Allocations: 4138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.8ms | Allocations: 13047)
+
+
+Started GET "/reservation-massage" for ::1 at 2020-12-15 09:23:09 +0000
+Processing by StaticPageController#massage as HTML
+  Rendering static_page/massage.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "massage"]]
+  ↳ app/views/static_page/massage.html.erb:629
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/massage.html.erb within layouts/application (Duration: 84.7ms | Allocations: 4694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 308ms (Views: 112.5ms | ActiveRecord: 0.4ms | Allocations: 18765)
+
+
+Started GET "/reservation-massage" for ::1 at 2020-12-15 09:23:10 +0000
+Processing by StaticPageController#massage as HTML
+  Rendering static_page/massage.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "massage"]]
+  ↳ app/views/static_page/massage.html.erb:629
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/massage.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3643)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 29.1ms | ActiveRecord: 0.3ms | Allocations: 12264)
+
+
+Started GET "/reservation-massage" for ::1 at 2020-12-15 09:23:10 +0000
+Processing by StaticPageController#massage as HTML
+  Rendering static_page/massage.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "massage"]]
+  ↳ app/views/static_page/massage.html.erb:629
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/massage.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 98.9ms | ActiveRecord: 0.4ms | Allocations: 14108)
+
+
+Started GET "/reservation-prestation" for ::1 at 2020-12-15 09:24:00 +0000
+Processing by OrdersController#index as HTML
+  [1m[36mSpa Load (42.5ms)[0m  [1m[34mSELECT "spas".* FROM "spas"[0m
+  ↳ app/controllers/orders_controller.rb:170:in `index'
+  [1m[36mProduct Load (33.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."is_option_spa" = $1[0m  [["is_option_spa", true]]
+  ↳ app/controllers/orders_controller.rb:176:in `index'
+  [1m[36mMassageCa Load (43.3ms)[0m  [1m[34mSELECT "massage_cas".* FROM "massage_cas"[0m
+  ↳ app/controllers/orders_controller.rb:184:in `index'
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mCountry Load (11.4ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/orders/index.html.erb:34:in `collect'
+  [1m[36mDepartment Load (29.2ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/orders/index.html.erb:44:in `collect'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered orders/index.html.erb within layouts/application (Duration: 162.5ms | Allocations: 6871)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 150)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 602ms (Views: 235.8ms | ActiveRecord: 174.6ms | Allocations: 35589)
+
+
+Started GET "/reservation-prestation" for ::1 at 2020-12-15 09:24:01 +0000
+Processing by OrdersController#index as HTML
+  [1m[36mSpa Load (0.4ms)[0m  [1m[34mSELECT "spas".* FROM "spas"[0m
+  ↳ app/controllers/orders_controller.rb:170:in `index'
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."is_option_spa" = $1[0m  [["is_option_spa", true]]
+  ↳ app/controllers/orders_controller.rb:176:in `index'
+  [1m[36mMassageCa Load (0.5ms)[0m  [1m[34mSELECT "massage_cas".* FROM "massage_cas"[0m
+  ↳ app/controllers/orders_controller.rb:184:in `index'
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mCountry Load (2.2ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/orders/index.html.erb:34:in `collect'
+  [1m[36mDepartment Load (0.4ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/orders/index.html.erb:44:in `collect'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered orders/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 4617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 35.7ms | ActiveRecord: 3.7ms | Allocations: 15217)
+
+
+Started GET "/reservation-prestation" for ::1 at 2020-12-15 09:24:01 +0000
+Processing by OrdersController#index as HTML
+  [1m[36mSpa Load (0.6ms)[0m  [1m[34mSELECT "spas".* FROM "spas"[0m
+  ↳ app/controllers/orders_controller.rb:170:in `index'
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."is_option_spa" = $1[0m  [["is_option_spa", true]]
+  ↳ app/controllers/orders_controller.rb:176:in `index'
+  [1m[36mMassageCa Load (0.5ms)[0m  [1m[34mSELECT "massage_cas".* FROM "massage_cas"[0m
+  ↳ app/controllers/orders_controller.rb:184:in `index'
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT "countries".* FROM "countries"[0m
+  ↳ app/views/orders/index.html.erb:34:in `collect'
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT "departments".* FROM "departments"[0m
+  ↳ app/views/orders/index.html.erb:44:in `collect'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered orders/index.html.erb within layouts/application (Duration: 15.1ms | Allocations: 4617)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 34.8ms | ActiveRecord: 3.1ms | Allocations: 15559)
+
+
+Started GET "/clients/sign_in" for ::1 at 2020-12-15 09:24:43 +0000
+Started GET "/clients/img/logo-ccspa.png" for ::1 at 2020-12-15 09:24:43 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/logo-ccspa.png"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1041)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 543ms (Views: 468.5ms | ActiveRecord: 0.0ms | Allocations: 43124)
+
+
+Started GET "/clients/img/home/tablemassage.jpg" for ::1 at 2020-12-15 09:24:45 +0000
+Started GET "/clients/img/home/plateau.jpg" for ::1 at 2020-12-15 09:24:45 +0000
+Started GET "/clients/img/home/fontainechocolat.jpg" for ::1 at 2020-12-15 09:24:45 +0000
+Started GET "/clients/img/home/petitfour.jpg" for ::1 at 2020-12-15 09:24:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/tablemassage.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/fontainechocolat.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/plateau.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/petitfour.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_in" for ::1 at 2020-12-15 09:24:45 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 20979)
+
+
+Started GET "/clients/carousel/carousel.css" for ::1 at 2020-12-15 09:24:45 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/carousel/carousel.css"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_in" for ::1 at 2020-12-15 09:24:46 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 712)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 127ms (Views: 124.8ms | ActiveRecord: 0.0ms | Allocations: 39539)
+
+
+Started GET "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif" for ::1 at 2020-12-15 09:24:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/home/footer-bg.jpg" for ::1 at 2020-12-15 09:24:46 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/footer-bg.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_up" for ::1 at 2020-12-15 09:25:00 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 16.6ms | Allocations: 235)
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 658.5ms | Allocations: 3254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 780ms (Views: 777.9ms | ActiveRecord: 0.0ms | Allocations: 13235)
+
+
+Started GET "/clients/sign_up" for ::1 at 2020-12-15 09:25:02 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 10252)
+
+
+Started GET "/clients/carousel/carousel.css" for ::1 at 2020-12-15 09:25:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/carousel/carousel.css"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_up" for ::1 at 2020-12-15 09:25:02 +0000
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 79)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 10513)
+
+
+Started GET "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif" for ::1 at 2020-12-15 09:25:02 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/home/footer-bg.jpg" for ::1 at 2020-12-15 09:25:03 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/footer-bg.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-12-15 10:50:27 +0000
+  [1m[35m (65.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (43.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+Started GET "/" for ::1 at 2020-12-15 10:50:30 +0000
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 546.4ms | Allocations: 6308)
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3965)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 19.3ms | Allocations: 666)
+  Rendered clients/shared/_links.html.erb (Duration: 19.7ms | Allocations: 791)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1114ms (Views: 902.3ms | ActiveRecord: 210.4ms | Allocations: 46748)
+
+
+Completed 200 OK in 1982ms (Views: 1140.3ms | ActiveRecord: 731.0ms | Allocations: 62774)
+
+
+Started GET "/" for ::1 at 2020-12-15 10:50:34 +0000
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3834)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.6ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 63ms (Views: 61.1ms | ActiveRecord: 0.4ms | Allocations: 12857)
+
+
