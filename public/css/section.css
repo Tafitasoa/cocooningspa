@@ -1,0 +1,172 @@
+@media only screen 
+and (max-device-width : 600px) {
+	.section-spaccmmobil{
+		margin-top: -25%;
+	}
+	.section-spa0{
+		margin-top: -18%;
+	}
+	.section-spa1mobil{
+		margin-top: -150px;
+	}
+	.section-spa2{
+		margin-top: -45%;
+	}
+	.section-spa3Mobil{
+		margin-top: -10%;
+	}
+	.sectionIndexSpecialResponsive{
+		margin-top: -18%;
+	}
+	.sectionIndexSpecialApropos, .section-index1{
+		margin-top: -8.5%;
+	}
+	.section-specialMas{
+		margin-top: -15%;
+	}
+	.section-specialMasQui{
+		margin-top: -10%;
+		margin-bottom: -5%;
+	}
+	.sectionMasSpecial{
+		margin-top: -10%;
+	}
+
+	.list-inline .liSection{
+		margin-left: -32%;
+	}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	.lireBtn {
+		position: relative;
+		top: 20px;
+		left: 36.5% !important;
+	} 
+	.section-spa0{
+		margin-top: -55px;
+	}
+	.section-spa1{
+		margin-top: -90px;
+	}
+	.section-spa2{
+		margin-top: -150px;
+	}
+	.textExtras{
+		font-size: 14px;
+		letter-spacing: 1.3px;
+	}
+	.specialWidth {
+		margin-top: -30px;
+		position: relative;
+		left: 15%;
+	}
+
+	.sectionIndexSpecial{
+		margin-top: -50px;
+	}
+
+	.section-massage2{
+		margin-top: -45px;
+	}
+	.section-specialMas{
+		margin-top: -10px;
+	}
+	.section-specialMasQui{
+		margin-top: -40px;
+		margin-bottom: -40px;
+	}
+	.section-spa3{
+		margin-top: -25px;
+	}
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	.lireBtn {
+		margin-left:-5%;
+	} 
+
+	.section-specialMasQui {
+		margin-bottom: -50px;
+		margin-top: -30px;
+	}
+}
+
+
+@media only screen and (min-width: 992px) {
+	.section-index1{
+		margin-top: -30px !important;
+	}
+
+	.section-index2{
+		margin-top: 0px !important;
+	}
+	.section-index3{
+		margin-top: -15px !important;
+	}
+
+	.section-massage1{
+		margin-top: 0px !important;
+	}
+	.section-massage2{
+		margin-top: -60px !important;
+	}
+	.section-massage3{
+		margin-top: -20px !important;
+	}
+
+	.section-spa1{
+		margin-top: -85px !important;
+	}
+	.section-spa2{
+		margin-top: -150px !important;
+		margin-bottom: 20px;
+	}
+	.section-spa3{
+		margin-top: -15px !important;
+	}
+	.section-spa4{
+		margin-top: 8px !important;
+	}
+
+	.section-propos1{
+		margin-top: -105px !important;
+	}
+	.section-propos2{
+		margin-top: -100px !important;
+	}
+	.section-propos3{
+		margin-top: -50px !important;
+		margin-bottom: -30px;
+	}
+
+	.section-partner1{
+		margin-top: -30px !important;
+	}
+
+	.section-partner2{
+		margin-top: -50px !important;
+	}
+	
+	.specialWidth {
+		margin-bottom: -70px;
+	}
+
+	.section-legal{
+		margin-top: 60px !important;
+	}
+
+	.section-specialIndex, .section-specialMas{
+		margin-top: -20px !important;
+	}
+
+	.section-specialMasQui{
+		margin-bottom: -50px;
+	}
+
+}

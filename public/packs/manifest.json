@@ -1,0 +1,64 @@
+{
+  "ajax_notification.js": "/packs/js/ajax_notification-7b37b2199cc5cf1bcb69.js",
+  "ajax_notification.js.map": "/packs/js/ajax_notification-7b37b2199cc5cf1bcb69.js.map",
+  "application.js": "/packs/js/application-9912d9fe12e0aa08ec43.js",
+  "application.js.map": "/packs/js/application-9912d9fe12e0aa08ec43.js.map",
+  "buttons-prestation.js": "/packs/js/buttons-prestation-6bec81067f578a4541d9.js",
+  "buttons-prestation.js.map": "/packs/js/buttons-prestation-6bec81067f578a4541d9.js.map",
+  "delete.js": "/packs/js/delete-44084992fe16a4a8581c.js",
+  "delete.js.map": "/packs/js/delete-44084992fe16a4a8581c.js.map",
+  "entrypoints": {
+    "ajax_notification": {
+      "js": [
+        "/packs/js/ajax_notification-7b37b2199cc5cf1bcb69.js"
+      ],
+      "js.map": [
+        "/packs/js/ajax_notification-7b37b2199cc5cf1bcb69.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-9912d9fe12e0aa08ec43.js"
+      ],
+      "js.map": [
+        "/packs/js/application-9912d9fe12e0aa08ec43.js.map"
+      ]
+    },
+    "buttons-prestation": {
+      "js": [
+        "/packs/js/buttons-prestation-6bec81067f578a4541d9.js"
+      ],
+      "js.map": [
+        "/packs/js/buttons-prestation-6bec81067f578a4541d9.js.map"
+      ]
+    },
+    "delete": {
+      "js": [
+        "/packs/js/delete-44084992fe16a4a8581c.js"
+      ],
+      "js.map": [
+        "/packs/js/delete-44084992fe16a4a8581c.js.map"
+      ]
+    },
+    "index-js": {
+      "js": [
+        "/packs/js/index-js-3bb72bc4a781de429dff.js"
+      ],
+      "js.map": [
+        "/packs/js/index-js-3bb72bc4a781de429dff.js.map"
+      ]
+    },
+    "orders_index": {
+      "js": [
+        "/packs/js/orders_index-3c06ccd2166d5d5df509.js"
+      ],
+      "js.map": [
+        "/packs/js/orders_index-3c06ccd2166d5d5df509.js.map"
+      ]
+    }
+  },
+  "index-js.js": "/packs/js/index-js-3bb72bc4a781de429dff.js",
+  "index-js.js.map": "/packs/js/index-js-3bb72bc4a781de429dff.js.map",
+  "orders_index.js": "/packs/js/orders_index-3c06ccd2166d5d5df509.js",
+  "orders_index.js.map": "/packs/js/orders_index-3c06ccd2166d5d5df509.js.map"
+}

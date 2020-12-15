@@ -1,0 +1,164 @@
+<link href="/css/summary.css" rel="stylesheet">
+<div class="container" style="background: white;">
+	<style>
+		.i{
+			margin-left: 10px;
+		}
+		.summaryTable{
+			margin-bottom: 5%;
+		}
+	</style>
+
+	<div class="secotionTitle">
+		<h2 id="service" class="poli1 police_massage"><span>Récapitulatif de votre commande</span></h2>
+	</div>
+	<div class="row">
+		<div class="col-sm-8">
+			<section class="clearfix orderSection padding summaryTable">
+				<div class="col-xs-12">
+					<div class="innerWrapper">
+						<% unless session[:myPrestation]["spa"].empty? %>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>LOCATION SPA</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+										<% session[:myPrestation]["spa"].each do |spa| %> 
+										<div class="reservationSpa">
+											<strong style="font-family: Quicksand; text-transform: uppercase;color: black;">spa pour <%= spa["time"] %>H : <%= spa["price"][0].to_i %> € </strong><br>
+											<% if spa["option"] %>
+												<i>Ambiance <%= spa["option"][0][0] %> : </i><%= spa["option"][0][1].to_i %> €<br>
+												<i>Prix : </i><%= spa["price"][0].to_i + spa["option"][0][1].to_i %> €<br>
+											<% else %>
+												<i>Prix : </i><%= spa["price"][0].to_i %> €<br>
+											<% end %>
+											<i>Acompte : </i><%= spa["price"][1].to_i %> €<br>
+											<ul>
+												<li><i>Type de logement :</i> <%= spa["type"][0] %></li>
+												<li><i>Type d'installation :</i> <%= spa["type"][1] %></li>
+												<li><i>Système d'eau : </i><%= spa["type"][2] %></li>
+											</ul>
+											<div>
+											<i>Date et heure de livraison : </i>le <%= session[:otherInfo]["date"] %> à <%= session[:otherInfo]["heureSpa"] %>
+											</div>
+										</div>
+										<hr style="">
+										<% end %>
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<% end %>
+						
+						<% unless session[:myPrestation]["massage"].empty? %>
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>MASSAGE</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+
+										<td>
+											<% session[:myPrestation]["massage"].each do |massage| %>
+											<div class="reservationSpa">
+												<strong style="font-family: Quicksand; text-transform: uppercase;color: black;">Massage pour <%= massage["ca"] %></strong>	<br>
+												<i>Type de massage : </i> <%= massage["su"] %><br>
+
+												
+												<i>Type de praticien : </i><%= @order.praticien == "all" ? "peu importe" : @order.praticien %><br>
+												<i>Prix : </i><%= massage["price"][1].to_i %>€<br>
+												<i>Acompte : </i> <%= massage["price"][2].to_i %>€
+											<div>
+											<i>Date et heure de livraison : </i>le <%= session[:otherInfo]["date"] %> à <%= session[:otherInfo]["heureMassage"] %>
+											</div>
+											</div>
+											<hr style="">
+
+											<% end %>
+										</td>
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+						<% end %>
+
+						<div class="table-responsive">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>INFOS COMPLÉMENTAIRES</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="reservationSpa">
+												Pays : <%= @order.country.name %> <br>
+												<% unless @order.department.nil? %>
+												Département : <%= @order.department.name %><br>
+												<% end %>
+												Adresse de facturation : 
+												<li class='adresses'>Pays : <%= @order.billing_pays %></li> 
+												<li class='adresses'>Ville : <%= @order.billing_ville %></li>
+												<li class='adresses'>Adresse : <%= @order.billing_adresse %></li>
+												<li class='adresses'>Complément d'adresse : <%= @order.billing_adresse_complet %></li>
+												<li class='adresses'>Code postal :  <%= @order.billing_code_postal %></li>
+
+
+												Adresse de livraison : 
+												<li class='adresses'>Pays : <%= @order.delivery_pays %></li> 
+												<li class='adresses'>Ville : <%= @order.delivery_ville %></li>
+												<li class='adresses'>Adresse : <%= @order.delivery_adresse %></li>
+												<li class='adresses'>Complément d'adresse : <%= @order.delivery_adresse_complet %></li>
+												<li class='adresses'>Code postal :  <%= @order.delivery_code_postal %></li>
+
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+					</div>
+				</div>		
+			</section>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="alert alert-success">
+				<% unless @code_promo == 0 %>
+				Code promo : reduction de <b><%= @code_promo.to_i %>€</b><br>
+				<% end %>
+				Prix Total : <strong><%= @totalPrice %>€</strong><br>
+				<span>Acompte à régler en ligne : <strong><%= @totalAcompte %>€</strong></span><br>
+				Montant à régler sur place (CB ou éspèces uniquement) : <strong><%= @totalPrice - @totalAcompte %>€</strong><br>
+				<form method="post" action="https://payment-webinit.mercanet.bnpparibas.net/paymentInit">
+				 <!--<form method="post" action="https://payment-webinit.simu.mercanet.bnpparibas.net/paymentInit"> -->
+					<input type="hidden" name="Data" value="<%=@data%>">
+					<input type="hidden" name="InterfaceVersion" value="HP_2.20">
+					<input type="hidden" name="Seal" value="<%=@seal%>"> <br>
+					<center><input type="submit" value="Payer mon acompte" class="confirm-command btn btn-primary btn-resa-text text-btn btn-resa-text"></center><br>
+				</form>
+			</div>
+			<center class="infoImportant">
+				<h4><i class="fa fa-exclamation-circle i" aria-hidden="true"></i> IMPORTANT</h4>
+				<p class="p-important">Ce devis ne tient pas compte des éventuels frais de déplacement (pour les services spa/massage) qui pourraient vous être facturés selon votre ville. Pour plus d'informations veuillez nous contacter.</p>
+				
+			</center>
+
+		</div>
+	</div>
+
+</div>

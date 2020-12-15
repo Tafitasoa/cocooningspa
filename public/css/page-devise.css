@@ -1,0 +1,465 @@
+<!-- media query -->
+/* Extra small devices (phones, 600px and down) */
+/* Large devices (laptops/desktops, 992px and up) */
+
+  .error {border: 1px red solid;}
+
+@media only screen and (min-width: 992px) {
+
+
+    .btn-mdp{
+        width: auto !important;
+        padding: 10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .mdp-oublie{
+        padding-top:100px;
+        padding-bottom:100px;
+        width: 700px;
+        background: #554e502e;
+    }
+    .mailmdp{
+        width:500px;
+        margin: 20px;
+    }
+    .formPart .panel-body {
+        padding: 20px !important;
+        border: 1px solid 
+        #dedede;
+        border-top-color: rgb(222, 222, 222);
+        border-top-style: solid;
+        border-top-width: 1px;
+
+    }
+    .form-control {
+        height: 43px;
+        box-shadow: none;
+        border-radius: 0;
+        padding-left: 18px;
+        border-color: 
+        #dedede;
+        color:
+        #666666;
+        margin-left: 10px;
+        border-radius: 8px;
+        width: 100%;
+    }
+    .inscri{
+        background:
+        white;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 1000px;
+        position: relative;
+        left: 90px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .btn-mdp{
+        width: auto !important;
+        padding: 10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .mdp-oublie{
+        padding-top:100px;
+        padding-bottom:100px;
+        width: 700px;
+        background: #554e502e;
+    }
+    .mailmdp{
+        width:500px;
+        margin: 20px;
+    }
+    /*RADIO BUTTON*/
+    .switch-field label {
+        background-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 8px 16px;
+        margin-right: -1px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+        transition: all 0.1s ease-in-out;
+        position: relative;
+        left: -50px;
+    }
+
+    .switch-field label:hover {
+        cursor: pointer;
+    }
+
+    .switch-field input:checked + label {
+        background-color: #ec5598;
+        box-shadow: none;
+    }
+
+    .radio-one {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .radio-two{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .switch-field{
+        display: inline-block;
+        position: relative;
+        left: 43.5%;
+    }
+
+    .label2{
+        position: relative;
+        left: -20px;
+    }
+    .input-group {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        width: 212%;
+    }
+    .input-group-addon{
+        border-radius: 8px !important;
+    }
+
+    .form-groupp {
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+
+
+
+    .btn-block {
+        display: block;
+        width: 240px !important;
+        border-radius: 100px;
+    }
+    .form-control {
+        height: 43px;
+        box-shadow: none;
+        border-radius: 0;
+        padding-left: 18px;
+        border-color: 
+        #dedede;
+        color:
+        #666666;
+        margin-left: 10px;
+        border-radius: 8px;
+        width: 100% !important;
+    }
+    .form-controlDevise{
+        min-width: 399px !important;
+    }
+    .form-controlDeviseSignUp{
+        min-width: 310px !important;
+    }
+    .panel-title{
+        text-align: center;
+    }
+    #contac-submit-btn{
+        margin-bottom: 30px;
+    }
+    .inscript {
+        margin-left: 0px;
+    }
+    .panel-login, .panel-body-login {
+        width: 400px !important;
+    }
+    .btn-new-compte{
+        position: relative;
+        left: 25px;
+    }
+    .a-descendre {
+        margin-top: 10px;
+        position: relative;
+        left: 50px;
+        width: 300px;
+    }
+    .btn-common {
+        margin: 0;
+        padding: 14px !important;
+        font-size: 9px;
+        border-radius: 100px;
+        margin-left: 60px;
+    }
+    .formPart .panel-body {
+        padding: 20px !important;
+        border: 1px solid 
+        #dedede;
+        border-top-color: rgb(222, 222, 222);
+        border-top-style: solid;
+        border-top-width: 1px;
+
+    }
+}
+@media only screen and (max-width: 600px) {
+    .btn-mdp{
+        width: 235 !important;
+        padding: 10px;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .mdp-oublie{
+        padding-top:100px;
+        padding-bottom:100px;
+        background: #554e502e;
+    }
+    .mailmdp{
+
+        margin: 20px;
+    }
+    /*RADIO BUTTON*/
+    .switch-field label {
+        background-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 8px 16px;
+        margin-right: -1px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+        transition: all 0.1s ease-in-out;
+        position: relative;
+        left: -50px;
+    }
+
+    .switch-field label:hover {
+        cursor: pointer;
+    }
+
+    .switch-field input:checked + label {
+        background-color: #ec5598;
+        box-shadow: none;
+    }
+
+    .radio-one {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .radio-two{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .switch-field{
+        display: inline-block;
+        position: relative;
+        left: 33%;
+    }
+
+    .label2{
+        position: relative;
+        left: -20px;
+    }
+    .input-group {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        width:98%;
+    }
+    .input-group-addon{
+        border-radius: 8px !important;
+    }
+
+    .form-groupp {
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+    .switch-field {
+        display: inline-block;
+        position: relative;
+        left: 30%;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .btn-new-compte{
+        position: initial;
+        left: 25px;
+    }
+    .switch-field{
+        display: inline-block;
+        position: relative;
+        left: 46%;
+        margin-bottom: 15px;
+    }
+
+    #contact-submit-btnn {
+
+        width: auto;
+        text-align: center;
+        margin-left: 60px;
+        border-radius: 10px;
+        background:white;
+        border-color:#dedede;
+        position: absolute;
+        top: 47px;
+        left: 22px;
+        color: #c4baba !important;
+        font-size:10px;
+    }
+
+    .a-descendre {
+        margin-top: 10px;
+        position: relative;
+        left: 50px;
+        width: 300px;
+    }
+    .panel-title{
+        text-align: center;
+        color:deeppink !important;
+        margin-bottom: 15px;
+        margin-top: 25px
+    }
+    .formPart .panel-body {
+        padding: 20px !important;
+        border: none;
+        margin-top: 20px;
+    }
+    .form-control {
+        height: 43px;
+        box-shadow: none;
+        border-radius: 0;
+        padding-left: 18px;
+        border-color: 
+        #dedede;
+        color:
+        #666666;
+        margin-left: 10px;
+        border-radius: 8px;
+        width: 100% !important;
+    }
+    .inscript {
+        margin-left: 100px;
+    }
+    .contac-submit-btn{
+        position: relative;
+        left: 10px !important;
+    }
+
+
+    /*RADIO BUTTON*/
+    .switch-field label {
+        background-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 8px 16px;
+        margin-right: -1px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+        transition: all 0.1s ease-in-out;
+        position: relative;
+        left: -50px;
+    }
+
+    .switch-field label:hover {
+        cursor: pointer;d-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 8px 16px;
+        margin-right: -1px;
+        border: 1px sold-color: #e4e4e4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 1;
+        text-align: center;
+        padding: 8px 16px;
+        margin-right: -1px;
+        border: 1px sol
+    }
+
+    .switch-field input:checked + label {
+        background-color: #ec5598;
+        box-shadow: none;
+    }
+
+    .radio-one {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .radio-two{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .switch-field{
+        display: inline-block;
+        position: relative;
+    }
+
+    .label2{
+        position: relative;
+        left: -20px;
+    }
+    .input-group {
+        position: relative;
+        display: table;
+        border-collapse: separate;
+        width:98%;
+    }
+    .input-group-addon{
+        border-radius: 8px !important;
+    }
+
+    .form-groupp {
+        margin-bottom: 20px;
+        margin-top: 25px;
+    }
+
+}
+
+
+.mdp-oublie h2{
+    color:#ec5598;
+    font-family: Quicksand;
+    margin-bottom: -20px;
+}
+
+/*ipad 10.5 landscape*/
+
+@media only screen 
+and (min-device-width: 1112px) 
+and (max-device-width: 1112px) 
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+
+.inscri {
+    background: 
+    white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1000px;
+    position: relative;
+    left: -15px;
+}
+}
+
+/*Portrait and landscape iPad Pro*/
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) 
+  and (orientation: portrait){
+.inscri {
+    background: 
+    white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1000px;
+    position: relative;
+    left: -15px;
+}
+}

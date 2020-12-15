@@ -1,0 +1,297 @@
+
+
+
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+  width: 1000px;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 1000px;
+  height: 300px;
+  background: white;
+  text-align: center;
+  line-height: 300px;
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 34%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 10px 10px 0;
+  background: #ec5598;
+
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 10px 0 0 10px;
+  background: #ec5598;
+}
+
+.slider_option {
+  position: relative;
+  margin: 10px auto;
+  width: 160px;
+  font-size: 18px;
+}
+
+
+
+}
+<!-- media query -->
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  width: 600px !important;
+  border-radius: 10px;
+  left: -90px;
+}
+.comments{
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 50%;
+}
+.comments .commentataire{
+  color: #48D1CC;
+}
+
+.commentsMassage{
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 50%;
+}
+.commentsMassage .commentataire{
+  color: #48D1CC;
+}
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 768px) {
+  #slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  width: 720px !important;
+  border-radius: 10px;
+  left: 0px;
+}
+.comments{
+  position: absolute;
+  top: 80px;
+  left: 110px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 50%;
+}
+.comments .commentataire{
+  color: #48D1CC;
+
+}
+
+.commentsMassage{
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 50%;
+}
+.commentsMassage .commentataire{
+  color: #48D1CC;
+
+}
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  width: 1000px !important;
+  border-radius: 10px;
+  left: 0px;
+}
+.comments{
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 80%;
+}
+.commentsMassage{
+  position: absolute;
+  top: 60px;
+  left: 100px;
+  font-size: 17px;
+  letter-spacing: 2px;
+  width: 100%;
+  max-width: 80%;
+}
+.comIntru{
+ position: absolute;
+  top: 70px !important;
+}
+.comments .commentataire{
+  color: #48D1CC;
+
+}
+.commentsMassage .commentataire{
+  color: #48D1CC;
+
+}
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    #slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+  width: 330px !important;
+  border-radius: 10px;
+}
+.comments{
+position: absolute;
+top: 10%;
+left: 30px;
+font-size: 15px;
+letter-spacing: 2px;
+width: 100%;
+max-width: 28%;
+}
+
+.commentsMassage{
+position: absolute;
+top: 10%;
+left: 37px;
+font-size: 15px;
+letter-spacing: 2px;
+width: 100%;
+max-width: 26%;
+text-align: justify;
+}
+.commentselse{
+position: absolute;
+top: 30% !important;
+}
+.comments .commentataire{
+  color: #48D1CC;
+}
+.commentsMassage .commentataire{
+  color: #48D1CC;
+  margin-left: 40%;
+}
+}
+
+/*ipad landscape*/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+.commentsMassage {
+
+    position: absolute;
+    top: 10%;
+    left: 9%;
+    font-size: 17px;
+    letter-spacing: 2px;
+    width: 100%;
+    max-width: 75%;
+
+}
+.commentselse{
+position: absolute;
+top: 30% !important;
+}
+.comments .commentataire{
+  color: #48D1CC;
+}
+.commentsMassage .commentataire{
+  color: #48D1CC;
+  margin-left: 0%;
+}
+}
+
+/*ipad portrait*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+.commentsMassage{
+position: absolute;
+top: 10%;
+left: 115px;
+font-size: 17px;
+letter-spacing: 2px;
+width: 100%;
+max-width: 50%;
+}
+.commentselse{
+position: absolute;
+top: 30% !important;
+}
+.comments .commentataire{
+  color: #48D1CC;
+}
+.commentsMassage .commentataire{
+  color: #48D1CC;
+  margin-left: 0%;
+}
+  }

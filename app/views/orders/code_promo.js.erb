@@ -1,0 +1,18 @@
+if (<%=@test%> == true) {
+	document.getElementById("alert-code").classList.remove("hidden");
+	document.getElementById("form-promo-code").classList.add("hidden");
+	document.getElementById("alert-code").innerHTML = "Votre code promo "+ "<%= session[:otherInfo]['code_promo'][0] %> est validé avec succès." + " Vous avez gagné une reduction de " + parseInt(<%= session[:otherInfo]['code_promo'][1] %>)+ "€";
+	let prestations = JSON.parse(sessionStorage.getItem("prestations"))
+	prestations.code_promo = ["<%= session[:otherInfo]['code_promo'][0] %>",parseInt(<%= session[:otherInfo]['code_promo'][1] %>)]
+	sessionStorage.setItem("prestations",JSON.stringify(prestations))
+	let priceTotal = document.getElementById("total-price")
+	let acompteTotal = document.getElementById("total-acompte")
+	if(parseInt(priceTotal.innerHTML) > 0 ){
+		priceTotal.innerHTML = parseInt(priceTotal.innerHTML) -	prestations.code_promo[1]
+	}
+	if(parseInt(acompteTotal.innerHTML) > 0 ){
+		acompteTotal.innerHTML = parseInt(acompteTotal.innerHTML) -	prestations.code_promo[1]
+	}
+}else{
+	alert("Code promo non reconnu");
+}

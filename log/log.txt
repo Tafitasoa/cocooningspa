@@ -1,0 +1,8 @@
+I, [2020-06-09T13:16:28.367427 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca] Started GET "/clients/password/new" for 127.0.0.1 at 2020-06-09 13:16:28 -0700
+I, [2020-06-09T13:16:28.369138 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca] Processing by Devise::PasswordsController#new as */*
+I, [2020-06-09T13:16:28.441664 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca]   Rendering clients/passwords/new.html.erb within layouts/application
+I, [2020-06-09T13:16:28.444571 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca]   Rendered clients/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 237)
+I, [2020-06-09T13:16:28.447139 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca]   Rendered clients/shared/_links.html.erb (Duration: 1.0ms | Allocations: 549)
+I, [2020-06-09T13:16:28.447224 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca]   Rendered clients/passwords/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2430)
+I, [2020-06-09T13:16:28.451012 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca]   Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 99)
+I, [2020-06-09T13:16:28.451541 #20302]  INFO -- : [6c5afaaa-a3e9-47ed-99b2-41c1748f35ca] Completed 200 OK in 82ms (Views: 11.6ms | ActiveRecord: 11.8ms | Allocations: 25721)

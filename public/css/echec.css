@@ -1,0 +1,80 @@
+@media only screen and (max-width: 600px) {
+
+	.confirmations .alert.alert-success {
+		border: 1px solid transparent;
+		background-color:#f0d1ca;
+		color:#ea0606;
+		padding: 15px 20px;
+		margin: 0 0 60px 0;
+		width: 100%;
+		border: none;
+		border-radius: 0;
+
+	}
+	.confirmations .alert .close {
+		color: #ea0606;
+		position: relative;
+		top: 0px;
+	}
+	.baniere-btnbis {
+		position: absolute;
+		right: 25%;
+		bottom: -40px;
+	}
+	.baniere-btnbis a {
+		padding: 10px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.confirmations .alert.alert-success {
+		border: 1px solid transparent;
+		background-color:#f0d1ca;
+		color:#ea0606;
+		padding: 15px 20px;
+		margin: 0 0 60px 0;
+		width: 100%;
+		border: none;
+		border-radius: 0;
+
+	}
+
+	.alert-common span{
+position: relative;
+top: -8px;
+	}
+
+	.confirmation .alert.alert-info, .confirmation .alert.alert-warning  {
+    font-size: 24px !important;
+    margin-left: -1px;
+}
+	.confirmations .alert .close {
+		color: #ea0606;
+		position: relative;
+		top: 0px;
+	}
+.confirms span {
+font-size: 18px;
+}
+	.confirm{
+		font-size: 17px;
+		letter-spacing: 2px;
+		line-height: 2.5;
+	}
+	.baniere-btnbis {
+		position: absolute;
+		right: 40%;
+		bottom: -40px;
+	}
+	.baniere-btnbis a {
+		padding: 10px;
+	}
+
+	.confirmation .alert .fa-frown-o, .confirmation .alert .fa-info-circle {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+    margin-right: 24px;
+}
+}

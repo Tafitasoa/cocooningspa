@@ -1,0 +1,459 @@
+<!-- css pour le tableau -->
+<link href="/admin/css/table-responsive.css" rel="stylesheet">
+<!-- GALLERY SECTION -->
+<section class="clearfix ">
+	<div class="container">
+		<div class="secotionTitle">
+			<% if flash[:sucess] %>
+			<div class="alert alert-success">
+				<%= flash[:sucess] %>
+			</div>
+			<% end %>
+			<h2 id="service" class="poli1 police_massage"><span>Commande N°<%= @order.id %> de <strong><%= @order.client.first_name %></span>
+			</h2>
+		</div>
+
+		<div class="row isotopeContainer" id="container">
+			<!--<%= form_for @order, url: admin_update_status_order_path(@order.id), method: :post, class: 'form-inline', style: "width: 100%" do |f| %>
+				<div class="row">
+					<div class="col-md-1"><label style="padding-top: 10px;padding-left: 10px;">Statut: </label></div>
+					<div class="col-md-5" style="margin-bottom: 50px;"><%= select("order", "status_order", options_for_select({ "en cours" => "en cours", "non traitée" => "non traitée", "traitée" => "traitée" }, @order.status_order ),{ include_blank: false }, class: "form-control") %></div>
+					<div class="col-md-2">
+						<button type="submit" class="btn btn-primary">
+							Changer
+						</button>
+					</div>
+				<div>
+			<%end%>-->
+			<div id="classRemove" class="hiden">
+				<div class="col-sm-12 isotopeSelector massage">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="innerWrapper">
+
+								<div class="table-responsive" style="background: white;">
+									<table class="table">
+										<thead>
+											<tr>
+												<th colspan="3" style="border-bottom: 1px solid white;"> <h4><center class="entete-table" >Prestations</center></h4></th>
+											</tr>
+											<tr>
+												<th>Services</th>
+												<th>Informations</th>
+												<th>Prix</th>
+											</tr>
+										</thead>
+										<tbody>
+											<% unless @order.order_massages.empty? %>
+											<% @order.order_massages.each do |o_massage| %>
+											<tr>
+												<td> Massage pour <%= o_massage.massage_ca.name %> </td>
+												<td> 
+													<li>Type  de massage: <%= o_massage.massage_su.name %></li>
+													<li>Durée: <%= o_massage.massage_su_price.duration %> mn</li>
+													<li>
+														Type de praticien: <i>"<%= @order.praticien == "all" ? "Peu importe" : @order.praticien %>"</i><br>
+														<% presta =  @order.order_massages.first.prestataire %>
+														<li><strong>Prestataire associé:</strong> 
+															<% if presta.nil? %>
+															<i>"Aucun prestataire affecté pour le moment"</i>
+															<% else %>
+															<i><a href="<%= show_prestataires_path(presta.id) %>" title="Afficher">"<%= presta.first_name %> <%= presta.last_name %>"</a>
+
+
+
+																<%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, delete_prestataire_to_order_path("massage",@order.id,presta.id), method: :delete, data: { confirm: 'Etes vous sur de retirer ce prestataire à cette commande ?' }, title:"Enlever ce prestataire de cette commande",class:"btn btn-default" %> </li></td>
+															</i>
+															<% end %>
+														</li>
+
+														<li>
+														Heure de la prestation: <strong><%= @massage_time %></strong>
+														</li>
+
+													</td>
+													<td>
+														<% if @order.isExceptional? %>
+														<li class="liPrix"><%= o_massage.massage_su_price.exceptional_price.to_i %>€</li>
+														<li class="liPrix">~ acompte: <%= o_massage.massage_su_price.exceptional_acompte.to_i %>€</li>
+														<% else %>
+														<li class="liPrix"><%= o_massage.massage_su_price.ordinary_price.to_i %>€</li>
+														<li class="liPrix">~ acompte: <%= o_massage.massage_su_price.ordinary_acompte.to_i %>€</li>
+														<% end %>
+													</td>
+												</tr>
+												<% end %>
+												<% end %>
+												<% unless @order.order_spas.empty? %>
+												<% @order.order_spas.each do |o_spa| %>
+												<tr>
+													<td> Location Spa pour <%= o_spa.spa.duration %>H</td>
+													<td>
+														<li>Type de logement: <%= o_spa.logement %></li>
+														<li>Type d'installation: <%= o_spa.installation %></li>
+														<li>Système d'eau: <%= o_spa.syteme_eau %></li>
+														<li>Ambiance:
+															<% if o_spa.product.nil? %>
+															Aucun produit selectionné
+															<% else %>
+															<%= o_spa.product.name %><br>
+															<% end %>
+														</li>
+														
+														<li>
+														Heure de la prestation: <strong><%= @spa_time %></strong>
+														</li>
+
+														<li>
+															<% presta =  @order.order_spas.first.prestataire %>
+															Prestataire associé: 
+															<% if presta.nil? %>
+															<i>"Aucun prestataire affecté pour le moment"</i>
+															<% else %>
+															<i><a href="<%=show_prestataires_path(presta.id)%>" title="Afficher">"<%= presta.first_name %> <%= presta.last_name %>"</a>
+
+
+																<%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, delete_prestataire_to_order_path("spa",@order.id,presta.id), method: :delete, data: { confirm: 'Etes vous sur de retirer ce prestataire à cette commande ?' }, title:"Enlever ce prestataire de cette commande",class:"btn btn-default" %> 
+																<% end %>
+
+															</li>
+														</td>
+														<td>
+															<% ambiance_price = 0 %>
+															<% unless o_spa.product.nil? %>
+																 <% ambiance_price = o_spa.product.price %>
+															<% end %>
+															<% if @order.isExceptional? %>
+															<li class="liPrix"><%= o_spa.spa.exceptional_price.to_i + ambiance_price.to_i %>€</li>
+															<li class="liPrix">~ acompte: <%= o_spa.spa.exceptional_acompte.to_i %>€</li>
+															<% else %>
+															<li class="liPrix"><%= o_spa.spa.ordinary_price.to_i + ambiance_price.to_i %>€</li>
+															<li class="liPrix">~ acompte: <%= o_spa.spa.ordinary_acompte.to_i %>€</li>
+															<% end %>
+														</td>
+													</tr>
+													<% end %>
+													<% end %>
+
+												</tbody>
+											</table>
+										</div>
+										<br>
+										<!-- livraison -->
+										<div class="table-responsive" style="background: white;">
+											<table class="table">
+												<thead>
+													<tr>
+														<th colspan="3" style="border-bottom: 1px solid white;"> <h4><center class="entete-table">Livraison</center></h4></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td style="color: #666666;">
+															<strong><h3>Coordonnées</h3></strong> 
+															<strong>Date de livraison:</strong> <%= @order.prestation_date %><br> <br>
+															<strong>Pays:</strong> <%= @order.country.name %>
+															<% if !@order.department.nil? %> <br>
+															<br><strong>Departement:</strong> <%= @order.department.name %>
+															<% end %>
+														</td>
+
+														<td> 
+															<strong><h3>ADRESSE DE LIVRAISON</h3></strong> 
+
+															<strong>Adresse: </strong> <%= @order.delivery_adresse %> <br>
+															<strong>Complement d'adresse: </strong> <%= @order.delivery_adresse_complet %> <br>
+															<strong>Code Postal:</strong>  <%= @order.delivery_code_postal %> <br>
+															<strong>Ville: </strong> <%= @order.delivery_ville %> <br>
+															<strong>Pays: </strong> <%= @order.delivery_pays %> <br>	
+														</td>
+
+														<td style="text-align: left;"> 
+
+															<strong><h3>ADRESSE DE FACTURATION</h3></strong> 
+
+															<strong>Adresse: </strong> <%= @order.billing_adresse %> <br>
+															<strong>Complement d'adresse: </strong> <%= @order.billing_adresse_complet %> <br>
+															<strong>Code Postal: </strong> <%= @order.billing_code_postal %> <br>
+															<strong>Ville: </strong> <%= @order.billing_ville %> <br>
+															<strong>Pays: </strong> <%= @order.billing_pays %> <br>
+
+														</td>
+													</tr>
+
+												</tbody>
+
+												<tfoot>
+													<tr>
+														<th colspan="3" style="border-bottom: 1px solid white;"> 	<strong><h3>Message du client : </h3></strong>
+															<i>
+																"<%= @order.message %>"
+															</i>
+														</th>
+													</tr>
+
+												</tfoot>
+											</table>
+										</div>
+										<div>
+											
+											<br><br>
+											<h2 style="color:#EC5598;" class='title-responsive'>Liste des prestataires disponible</h2>
+
+
+											<div class="page">
+												<% unless @order.order_spas.empty? %>
+												<h3>Pour la location spa</h3>
+												<% unless @spa_prestataires.empty? %>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+															<th>Nom du prestataire</th>
+															<th>Sexe</th>
+															<th>Adresse email</th>
+															<th><center>Action</center></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% @spa_prestataires.each do |p_order| %>
+														<tr>
+
+															<td class="organisationnumber"> <%= p_order.first_name %> <%= p_order.last_name %></td>
+
+															<td class="organisationnumber"><%= p_order.sexe %></td>
+
+															<td class="organisationname"><%= p_order.email %></td>
+															<td class="action">
+																<center>
+																	<%= link_to '<i class="fas fa-eye button button1"></i>'.html_safe, show_prestataires_path(p_order.id), title:"Apropos du prestataire",class:"btn btn-default" %> 
+																	<% if @order.prestataires.include?(['spa',p_order]) %>
+																	<strong style="font-size: 17px;height: 31px;
+																	display: inline-block;padding: 5px;" class="label label-info">Déjà affecté</strong>
+																	<% else %>
+																	<%= link_to '<i class="fas fa-exchange-alt button button1"></i>'.html_safe, afect_prestataire_to_order_path("spa",@order.id,p_order.id), method: :patch, data: { confirm: "Etes vous sur d'affecter ce prestataire à cette commande ?" }, title:"Affecter ce prestataire à cette commande",class:"btn btn-default" %> 
+																	<% end %>
+																</center>		
+															</td>
+														</tr>
+														<% end %>
+													</tbody>
+												</table>
+												<% else%>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																Aucun prestataire disponible pour le moment
+															</td>
+														</tr>
+													</tbody>
+												</table>
+
+												<% end %>
+												<% end %>
+											</div>
+
+
+
+											<div class="page">
+												<% unless @order.order_massages.empty? %>
+												<h3>Pour le massage</h3>
+												<% unless @massage_prestataires.empty? %>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+															<th>Nom du prestataire</th>
+															<th>Sexe</th>
+															<th>Adresse email</th>
+															<th><center>Action</center></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% @massage_prestataires.each do |p_order| %>
+														<tr>
+															<td class="organisationnumber"><%= p_order.first_name %> <%= p_order.last_name %></td>
+
+															<td class="organisationnumber"><%= p_order.sexe %></td>
+															<td class="organisationname"><%= p_order.email %></td>
+
+
+
+															<td class="action">
+																<center>
+																	<%= link_to '<i class="fas fa-eye button button1"></i>'.html_safe, show_prestataires_path(p_order.id), title:"Apropos du prestataire",class:"btn btn-default" %> 
+
+																	<% if @order.prestataires.include?(['massage',p_order]) %>
+																	<strong style="font-size: 17px;height: 31px;
+																	display: inline-block;padding: 5px;" class="label label-info">Déjà affecté</strong>
+																	<% else %>
+																	<%= link_to '<i class="fas fa-exchange-alt button button1"></i>'.html_safe, afect_prestataire_to_order_path("massage",@order.id,p_order.id), method: :patch, data: { confirm: "Etes vous sur d'affecter ce prestataire à cette commande ?" }, title:"Affecter ce prestataire à cette commande",class:"btn btn-default" %>
+																	<% end %>
+																</center>		
+															</td>	
+														</tr>
+														<% end %>
+													</tbody>
+												</table>
+												<% else%>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																Aucun prestataire disponible pour le moment
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<% end %>
+												<% end %>
+											</div>
+
+											<br> <br>		
+											<h2 style="color:#EC5598;" class='title-responsive'>Liste des prestataires qui ont répondus à la commande</h2>
+
+											<div class="page">
+												<% unless @order.order_massages.empty? %>
+												<h3>Pour le massage</h3>
+												<% unless @massage_result_prestataire.empty? %>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+															<th>Nom du prestataire</th>
+															<th>Sexe</th>
+															<th>Adresse email</th>
+															<th>Réponse</th>
+															<th><center>Action</center></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% @massage_result_prestataire.each do |m_r_p| %>
+														<tr>
+
+															<td class="organisationnumber"> 
+																<a href="<%=show_prestataires_path(m_r_p.prestataire.id)%>" title="Afficher"><%= m_r_p.prestataire.first_name %> <%= m_r_p.prestataire.last_name %></a>
+															</td>
+
+															<td class="organisationnumber"><%= m_r_p.prestataire.sexe %></td>
+
+															<td class="organisationname"><%= m_r_p.prestataire.email %></td>
+															<td class="organisationname">
+																<%= m_r_p.is_accepted ? "Accepté" : "Refusé" %>
+															</td>
+
+															<td class="action">
+																<center>
+																	<%= link_to '<i class="fas fa-eye button button1"></i>'.html_safe, show_prestataires_path(m_r_p.prestataire.id), title:"Apropos du prestataire",class:"btn btn-default" %> 
+																	<%= link_to '<i class="fas fa-exchange-alt button button1"></i>'.html_safe, afect_prestataire_to_order_path("massage",@order.id,m_r_p.prestataire.id), method: :patch, data: { confirm: "Etes vous sur d'affecter ce prestataire à cette commande ?" }, title:"Affecter ce prestataire à cette commande",class:"btn btn-default" %> 
+
+																</center>
+															</td>	
+														</tr>
+														<% end %>
+													</tbody>
+												</table>
+												<% else%>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																Aucun prestataire n'a répondu pour le moment
+															</td>
+														</tr>
+													</tbody>
+												</table>
+												<% end %>
+												<% end %>
+											</div>
+											<div class="page">
+												<% unless @order.order_spas.empty? %>
+												<h3>Pour la Location Spa</h3>
+												<% unless @spa_result_prestataire.empty? %>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+															<th>Nom du prestataire</th>
+															<th>Sexe</th>
+															<th>Adresse email</th>
+															<th>Réponse</th>
+															<th><center>Action</center></th>
+														</tr>
+													</thead>
+													<tbody>
+														<% @spa_result_prestataire.each do |m_r_p| %>
+
+														<tr>
+
+															<td class="organisationnumber"> 
+																<a href="<%=show_prestataires_path(m_r_p.prestataire.id)%>" title="Afficher"><%= m_r_p.prestataire.first_name %> <%= m_r_p.prestataire.last_name %></a>
+															</td>
+
+															<td class="organisationnumber"><%= m_r_p.prestataire.sexe %></td>
+
+															<td class="organisationname"><%= m_r_p.prestataire.email %></td>
+															<td class="organisationname">
+																<%= m_r_p.is_accepted ? "Accepté" : "Refusé" %>
+															</td>
+
+															<td class="action">
+																<center>
+																	<%= link_to '<i class="fas fa-eye button button1"></i>'.html_safe, show_prestataires_path(m_r_p.prestataire.id), title:"Apropos du prestataire",class:"btn btn-default" %> 
+																	<%= link_to '<i class="fas fa-exchange-alt button button1"></i>'.html_safe, afect_prestataire_to_order_path("spa",@order.id,m_r_p.prestataire.id), method: :patch, data: { confirm: "Etes vous sur d'affecter ce prestataire à cette commande ?" }, title:"Affecter ce prestataire à cette commande",class:"btn btn-default" %> 
+
+																</center>
+															</td>				
+														</tr>
+														<% end %>
+													</tbody>
+												</table>
+												<% else%>
+												<table class="layout display responsive-table">
+													<thead>
+														<tr>
+
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>
+																Aucun prestataire n'a répondu pour le moment
+															</td>
+														</tr>
+													</tbody>
+												</table>
+
+												<% end %>
+												<% end %>
+
+											</div>
+
+
+											<div class="action">
+												<center><button class="button button1"><%= link_to 'Tous les commandes', admin_order_index_path %></button></center>
+
+											</div>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

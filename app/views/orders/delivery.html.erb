@@ -1,0 +1,96 @@
+<link href="/css/delivery.css" rel="stylesheet">
+<div class="container">
+		<!-- ADRESSE DE LIVRAISON -->
+		<div class="col-sm-12">
+			<%= form_tag(save_delivery_path) do %>
+			<div class="livraison">
+				<h2><center class="adresseTitle">Adresse de Livraison</center></h2>
+				<div class="adresseLivraison">
+					<div class="inline-form">
+						<%= label_tag 'adresseL', 'Adresse', class: 'small_label' %>
+						<%= text_field_tag 'adresseL', @client.adresse, class: "input", required:true %>
+					</div>
+
+					<div class="inline-form">
+						<%= label_tag 'complAdresseL', 'Complément d\'adresse', class: 'small_label' %>
+						<%= text_field_tag 'complAdresseL', @client.adresse_complet, class: "input" %>
+					</div>
+
+					<div class="inline-form">
+						<%= label_tag 'codePostaL', 'Code Postal', class: 'small_label' %>
+						<%= text_field_tag 'codePostaL', @client.zip_code, class: "input", required:true %>
+					</div>
+
+					<div class="inline-form">
+						<%= label_tag 'villeL', 'Ville', class: 'small_label' %>
+						<%= text_field_tag 'villeL', @client.town, class: "input", required:true %>
+					</div>
+
+					<div class="inline-formPays">
+						<label class='small_label'>Pays</label>
+						<% @countries.each do |country| %>
+						<input type="radio" name="countryL" id="<%=dom_id(country)%>", value="<%=country.name%>" class="paysList" required>
+						<label for="<%=dom_id(country)%>" class='pays_label'><%= country.name%></label> 
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- ADRESSE FACTURATION -->
+		<div class="col-sm-12">
+			<div class="livraison">
+				<h2><center class="adresseTitle adresseTitleFac">Adresse de facturation</center></h2>
+				<div class="inline-form">
+					<%= label_tag 'adresseF', 'Adresse', class: 'small_label' %>
+					<%= text_field_tag 'adresseF', @client.adresse, class: "input", required:true %>
+				</div>
+
+				<div class="inline-form">
+					<%= label_tag 'complAdresseF', 'Complément d\'adresse', class: 'small_label' %>
+					<%= text_field_tag 'complAdresseF', @client.adresse_complet, class: "input" %>
+				</div>
+
+				<div class="inline-form">
+					<%= label_tag 'codePostaF', 'Code Postal', class: 'small_label' %>
+					<%= text_field_tag 'codePostaF', @client.zip_code, class: "input", required:true %>
+				</div>
+
+				<div class="inline-form">
+					<%= label_tag 'villeF', 'Ville', class: 'small_label' %>
+					<%= text_field_tag 'villeF', @client.town, class: "input", required:true %>
+				</div>
+
+				<div class="inline-form">
+					<label class='small_label'>Pays</label>
+					<% @countries.each do |country| %>
+					<input class="paysList" type="radio" name="countryF" id="<%=dom_id(country,:F)%>", value="<%=country.name%>">
+						<label class='pays_label' for="<%=dom_id(country,:F)%>"><%= country.name%></label>
+					<% end %>
+				</div>
+			</div>
+		</div>
+<!-- MESSAGE PARTICULIER -->
+		<div class="col-sm-12">
+			<div class="livraison">
+
+				<h2><center class="adresseTitle">Un message à nous faire parvenir ?</center></h2>
+
+				<div>
+					<%= label_tag 'message', 'Message perso', class: 'small_label messages' %>
+					<%= text_area_tag 'message', " ", rows: 10, class: 'small_textarea'%>
+				</div>
+
+			</div>
+
+			<div class="btn-resa">
+				<%= submit_tag("Je valide", class:"confirm-command btn btn-primary text-btn btn-resa-text")%>
+			</div>
+
+
+			<% end %>
+
+		</div>
+	
+</div>
+
+<script data-turbolinks-track = "reload" src="/js/delivery.js"></script>
