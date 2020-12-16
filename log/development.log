@@ -2338,3 +2338,2362 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-12-15 09:57:51 +0300
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/pgsql_socket/.s.PGSQL.5432"?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.1) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.1) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-12-15 10:36:50 +0300
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/var/pgsql_socket/.s.PGSQL.5432"?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.1) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.1) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-12-15 11:25:41 +0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "cocooning_development" does not exist
+):
+  
+activerecord (6.0.3.1) lib/active_record/connection_adapters/postgresql_adapter.rb:50:in `rescue in postgresql_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/postgresql_adapter.rb:33:in `postgresql_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.1) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.1) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.1) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.1) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (218.5ms)[0m  [1m[35mCREATE DATABASE "cocooning_development" ENCODING = 'unicode'[0m
+  [1m[35m (121.6ms)[0m  [1m[35mCREATE DATABASE "cocooning_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (13.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins" CASCADE[0m
+  [1m[35m (33.0ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "first_name" character varying, "last_name" character varying)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "candidates" CASCADE[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "candidates" ("id" bigserial primary key, "sexe" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" character varying, "raison_sociale" character varying, "siren" character varying, "email" character varying, "telephone" character varying, "adresse" character varying, "adresse_complet" character varying, "zip_code" character varying, "ville" character varying, "country" character varying, "services" character varying, "countries" character varying, "departments" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "clients" CASCADE[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "clients" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "first_name" character varying, "last_name" character varying, "adresse" character varying, "adresse_complet" character varying, "tel" character varying, "sexe" character varying, "country" character varying, "zip_code" character varying, "town" character varying, "is_client" boolean DEFAULT FALSE)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_clients_on_email" ON "clients"  ("email")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_clients_on_reset_password_token" ON "clients"  ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "code_promos" CASCADE[0m
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "code_promos" ("id" bigserial primary key, "code" character varying, "reduction" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "note" integer, "content" text, "user_name" character varying, "comment_for" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "countries" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "countries" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "departments" ("id" bigserial primary key, "code" character varying, "name" character varying, "country_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_departments_on_country_id" ON "departments"  ("country_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "massage_cas" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "massage_cas" ("id" bigserial primary key, "name" character varying, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE  INDEX  "index_massage_cas_on_service_id" ON "massage_cas"  ("service_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "massage_su_prices" CASCADE[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "massage_su_prices" ("id" bigserial primary key, "duration" integer, "exceptional_price" float, "ordinary_price" float, "exceptional_acompte" float, "ordinary_acompte" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "massage_sus" CASCADE[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "massage_sus" ("id" bigserial primary key, "name" character varying, "description" text, "massage_ca_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_massage_sus_on_massage_ca_id" ON "massage_sus"  ("massage_ca_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "messages" CASCADE[0m
+  [1m[35m (9.2ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "tel" character varying, "name_corp" character varying, "content" text, "is_see" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "notifications" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" bigserial primary key, "notif_type" integer, "data" character varying, "is_view" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_massages" CASCADE[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "order_massages" ("id" bigserial primary key, "order_id" bigint, "massage_ca_id" bigint, "massage_su_id" bigint, "massage_su_price_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_ca_id" ON "order_massages"  ("massage_ca_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_su_id" ON "order_massages"  ("massage_su_id")[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_su_price_id" ON "order_massages"  ("massage_su_price_id")[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_order_id" ON "order_massages"  ("order_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_services" CASCADE[0m
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "order_services" ("id" bigserial primary key, "service_time" character varying, "confirm_token" character varying, "status_order" character varying DEFAULT 'en cours', "order_id" bigint, "service_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_order_id" ON "order_services"  ("order_id")[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_prestataire_id" ON "order_services"  ("prestataire_id")[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_service_id" ON "order_services"  ("service_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_spas" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "order_spas" ("id" bigserial primary key, "logement" character varying, "installation" character varying, "syteme_eau" character varying, "order_id" bigint, "spa_id" bigint, "product_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_order_id" ON "order_spas"  ("order_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_product_id" ON "order_spas"  ("product_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_spa_id" ON "order_spas"  ("spa_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "prestation_date" character varying, "billing_pays" character varying, "billing_ville" character varying, "billing_code_postal" character varying, "billing_adresse" character varying, "billing_adresse_complet" character varying, "delivery_pays" character varying, "delivery_ville" character varying, "delivery_code_postal" character varying, "delivery_adresse" character varying, "delivery_adresse_complet" character varying, "praticien" character varying, "message" text, "paymentMeanBrand" character varying, "transactionDateTime" character varying, "acompte_amount" character varying, "is_validate" boolean DEFAULT FALSE, "status_order" character varying DEFAULT 'en cours', "client_id" bigint, "department_id" bigint, "country_id" bigint, "code_promo_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "send_mail" boolean DEFAULT FALSE)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_client_id" ON "orders"  ("client_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_code_promo_id" ON "orders"  ("code_promo_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_country_id" ON "orders"  ("country_id")[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_department_id" ON "orders"  ("department_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "other_su_prices" CASCADE[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "other_su_prices" ("id" bigserial primary key, "massage_su_id" bigint, "massage_su_price_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE  INDEX  "index_other_su_prices_on_massage_su_id" ON "other_su_prices"  ("massage_su_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_other_su_prices_on_massage_su_price_id" ON "other_su_prices"  ("massage_su_price_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_countries" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "prestataire_countries" ("id" bigserial primary key, "country_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_countries_on_country_id" ON "prestataire_countries"  ("country_id")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_countries_on_prestataire_id" ON "prestataire_countries"  ("prestataire_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_departments" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "prestataire_departments" ("id" bigserial primary key, "department_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_departments_on_department_id" ON "prestataire_departments"  ("department_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_departments_on_prestataire_id" ON "prestataire_departments"  ("prestataire_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_orders" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "prestataire_orders" ("id" bigserial primary key, "is_accepted" boolean DEFAULT TRUE, "order_service_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_orders_on_order_service_id" ON "prestataire_orders"  ("order_service_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_orders_on_prestataire_id" ON "prestataire_orders"  ("prestataire_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_services" CASCADE[0m
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE "prestataire_services" ("id" bigserial primary key, "prestataire_id" bigint, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_services_on_prestataire_id" ON "prestataire_services"  ("prestataire_id")[0m
+  [1m[35m (13.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_services_on_service_id" ON "prestataire_services"  ("service_id")[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataires" CASCADE[0m
+  [1m[35m (30.2ms)[0m  [1m[35mCREATE TABLE "prestataires" ("id" bigserial primary key, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "sexe" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" character varying, "raison_sociale" character varying, "siren" character varying, "tel" character varying, "adresse" character varying, "adresse_complet" character varying, "zip_code" character varying, "ville" character varying, "pays" character varying, "confirm_token" character varying)[0m
+  [1m[35m (12.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" float, "is_option_spa" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "service_countries" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "service_countries" ("id" bigserial primary key, "service_id" bigint, "country_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_service_countries_on_country_id" ON "service_countries"  ("country_id")[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE  INDEX  "index_service_countries_on_service_id" ON "service_countries"  ("service_id")[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "service_departments" CASCADE[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "service_departments" ("id" bigserial primary key, "service_id" bigint, "department_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_service_departments_on_department_id" ON "service_departments"  ("department_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_service_departments_on_service_id" ON "service_departments"  ("service_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "services" CASCADE[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "spas" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "spas" ("id" bigserial primary key, "duration" integer, "exceptional_price" float, "ordinary_price" float, "exceptional_acompte" float, "ordinary_acompte" float, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_spas_on_service_id" ON "spas"  ("service_id")[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (11.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200617085900)[0m
+  [1m[35m (6.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191211235506),
+(20191212021610),
+(20191212021619),
+(20191212023451),
+(20191212025609),
+(20191213143256),
+(20191216103522),
+(20191216103528),
+(20191216170030),
+(20191218201001),
+(20191218201013),
+(20200205005933),
+(20200205142557),
+(20200205142713),
+(20200205143008),
+(20200205143148),
+(20200205143420),
+(20200205143909),
+(20200205143920),
+(20200205145124),
+(20200205151906),
+(20200211153537),
+(20200226171056),
+(20200304172517),
+(20200304172623),
+(20200326022945),
+(20200407064344),
+(20200414062346),
+(20200414082452),
+(20200520075640);
+
+[0m
+  [1m[35m (19.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (8.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-15 08:26:44.490656"], ["updated_at", "2020-12-15 08:26:44.490656"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "829b8946d56ee62dc1e6136c8095a4a83ac186c6"], ["created_at", "2020-12-15 08:26:44.526478"], ["updated_at", "2020-12-15 08:26:44.526478"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "admins" CASCADE[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "first_name" character varying, "last_name" character varying)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_email" ON "admins"  ("email")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admins_on_reset_password_token" ON "admins"  ("reset_password_token")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "candidates" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "candidates" ("id" bigserial primary key, "sexe" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" character varying, "raison_sociale" character varying, "siren" character varying, "email" character varying, "telephone" character varying, "adresse" character varying, "adresse_complet" character varying, "zip_code" character varying, "ville" character varying, "country" character varying, "services" character varying, "countries" character varying, "departments" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "clients" CASCADE[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "clients" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "confirmation_token" character varying, "confirmed_at" timestamp, "confirmation_sent_at" timestamp, "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "first_name" character varying, "last_name" character varying, "adresse" character varying, "adresse_complet" character varying, "tel" character varying, "sexe" character varying, "country" character varying, "zip_code" character varying, "town" character varying, "is_client" boolean DEFAULT FALSE)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_clients_on_email" ON "clients"  ("email")[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_clients_on_reset_password_token" ON "clients"  ("reset_password_token")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "code_promos" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "code_promos" ("id" bigserial primary key, "code" character varying, "reduction" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "note" integer, "content" text, "user_name" character varying, "comment_for" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "countries" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "countries" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "departments" CASCADE[0m
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "departments" ("id" bigserial primary key, "code" character varying, "name" character varying, "country_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_departments_on_country_id" ON "departments"  ("country_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "massage_cas" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "massage_cas" ("id" bigserial primary key, "name" character varying, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_massage_cas_on_service_id" ON "massage_cas"  ("service_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "massage_su_prices" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "massage_su_prices" ("id" bigserial primary key, "duration" integer, "exceptional_price" float, "ordinary_price" float, "exceptional_acompte" float, "ordinary_acompte" float, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "massage_sus" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "massage_sus" ("id" bigserial primary key, "name" character varying, "description" text, "massage_ca_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_massage_sus_on_massage_ca_id" ON "massage_sus"  ("massage_ca_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "messages" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "messages" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "email" character varying, "tel" character varying, "name_corp" character varying, "content" text, "is_see" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "notifications" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "notifications" ("id" bigserial primary key, "notif_type" integer, "data" character varying, "is_view" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_massages" CASCADE[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "order_massages" ("id" bigserial primary key, "order_id" bigint, "massage_ca_id" bigint, "massage_su_id" bigint, "massage_su_price_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_ca_id" ON "order_massages"  ("massage_ca_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_su_id" ON "order_massages"  ("massage_su_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_massage_su_price_id" ON "order_massages"  ("massage_su_price_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_massages_on_order_id" ON "order_massages"  ("order_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_services" CASCADE[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "order_services" ("id" bigserial primary key, "service_time" character varying, "confirm_token" character varying, "status_order" character varying DEFAULT 'en cours', "order_id" bigint, "service_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_order_id" ON "order_services"  ("order_id")[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_prestataire_id" ON "order_services"  ("prestataire_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_order_services_on_service_id" ON "order_services"  ("service_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "order_spas" CASCADE[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "order_spas" ("id" bigserial primary key, "logement" character varying, "installation" character varying, "syteme_eau" character varying, "order_id" bigint, "spa_id" bigint, "product_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_order_id" ON "order_spas"  ("order_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_product_id" ON "order_spas"  ("product_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_order_spas_on_spa_id" ON "order_spas"  ("spa_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders" CASCADE[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "prestation_date" character varying, "billing_pays" character varying, "billing_ville" character varying, "billing_code_postal" character varying, "billing_adresse" character varying, "billing_adresse_complet" character varying, "delivery_pays" character varying, "delivery_ville" character varying, "delivery_code_postal" character varying, "delivery_adresse" character varying, "delivery_adresse_complet" character varying, "praticien" character varying, "message" text, "paymentMeanBrand" character varying, "transactionDateTime" character varying, "acompte_amount" character varying, "is_validate" boolean DEFAULT FALSE, "status_order" character varying DEFAULT 'en cours', "client_id" bigint, "department_id" bigint, "country_id" bigint, "code_promo_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "send_mail" boolean DEFAULT FALSE)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_client_id" ON "orders"  ("client_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_code_promo_id" ON "orders"  ("code_promo_id")[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_country_id" ON "orders"  ("country_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_orders_on_department_id" ON "orders"  ("department_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "other_su_prices" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "other_su_prices" ("id" bigserial primary key, "massage_su_id" bigint, "massage_su_price_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_other_su_prices_on_massage_su_id" ON "other_su_prices"  ("massage_su_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_other_su_prices_on_massage_su_price_id" ON "other_su_prices"  ("massage_su_price_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_countries" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "prestataire_countries" ("id" bigserial primary key, "country_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_countries_on_country_id" ON "prestataire_countries"  ("country_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_countries_on_prestataire_id" ON "prestataire_countries"  ("prestataire_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_departments" CASCADE[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "prestataire_departments" ("id" bigserial primary key, "department_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_departments_on_department_id" ON "prestataire_departments"  ("department_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_departments_on_prestataire_id" ON "prestataire_departments"  ("prestataire_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_orders" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "prestataire_orders" ("id" bigserial primary key, "is_accepted" boolean DEFAULT TRUE, "order_service_id" bigint, "prestataire_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_orders_on_order_service_id" ON "prestataire_orders"  ("order_service_id")[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_orders_on_prestataire_id" ON "prestataire_orders"  ("prestataire_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataire_services" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "prestataire_services" ("id" bigserial primary key, "prestataire_id" bigint, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_services_on_prestataire_id" ON "prestataire_services"  ("prestataire_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_prestataire_services_on_service_id" ON "prestataire_services"  ("service_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "prestataires" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "prestataires" ("id" bigserial primary key, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "sexe" character varying, "first_name" character varying, "last_name" character varying, "date_of_birth" character varying, "raison_sociale" character varying, "siren" character varying, "tel" character varying, "adresse" character varying, "adresse_complet" character varying, "zip_code" character varying, "ville" character varying, "pays" character varying, "confirm_token" character varying)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "description" text, "price" float, "is_option_spa" boolean DEFAULT FALSE, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "service_countries" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "service_countries" ("id" bigserial primary key, "service_id" bigint, "country_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE  INDEX  "index_service_countries_on_country_id" ON "service_countries"  ("country_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_service_countries_on_service_id" ON "service_countries"  ("service_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "service_departments" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "service_departments" ("id" bigserial primary key, "service_id" bigint, "department_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE  INDEX  "index_service_departments_on_department_id" ON "service_departments"  ("department_id")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_service_departments_on_service_id" ON "service_departments"  ("service_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "services" CASCADE[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "services" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "spas" CASCADE[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "spas" ("id" bigserial primary key, "duration" integer, "exceptional_price" float, "ordinary_price" float, "exceptional_acompte" float, "ordinary_acompte" float, "service_id" bigint, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE  INDEX  "index_spas_on_service_id" ON "spas"  ("service_id")[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200617085900)[0m
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191211235506),
+(20191212021610),
+(20191212021619),
+(20191212023451),
+(20191212025609),
+(20191213143256),
+(20191216103522),
+(20191216103528),
+(20191216170030),
+(20191218201001),
+(20191218201013),
+(20200205005933),
+(20200205142557),
+(20200205142713),
+(20200205143008),
+(20200205143148),
+(20200205143420),
+(20200205143909),
+(20200205143920),
+(20200205145124),
+(20200205151906),
+(20200211153537),
+(20200226171056),
+(20200304172517),
+(20200304172623),
+(20200326022945),
+(20200407064344),
+(20200414062346),
+(20200414082452),
+(20200520075640);
+
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-15 08:26:45.032568"], ["updated_at", "2020-12-15 08:26:45.032568"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-12-15 08:26:45.040491"], ["key", "environment"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "829b8946d56ee62dc1e6136c8095a4a83ac186c6"], ["created_at", "2020-12-15 08:26:45.057517"], ["updated_at", "2020-12-15 08:26:45.057517"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5317189377005588355)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddStatutToPrestataires (20200825082203)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.9ms)[0m  [1m[35mALTER TABLE "prestataires" ADD "statut" character varying DEFAULT 'actif'[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200825082203"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5317189377005588355)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-12-15 11:27:13 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (3.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/cedric/Source Code/CocooningSPA/ccspa.rails/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 3456ms
+Built at: 12/15/2020 11:27:20 AM
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered static_page/index.html.erb within layouts/application (Duration: 7390.9ms | Allocations: 5979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 2.4ms | Allocations: 639)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7761ms (Views: 7732.8ms | ActiveRecord: 10.7ms | Allocations: 78566)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 11:27:21 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 29.5ms | Allocations: 7585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 56ms (Views: 51.5ms | ActiveRecord: 2.5ms | Allocations: 15469)
+
+
+Started GET "/clients/sign_in" for 127.0.0.1 at 2020-12-15 11:42:47 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 697)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 10448)
+
+
+Started GET "/clients/img/home/Page_Accueil_BlocLocSpa.jpg" for 127.0.0.1 at 2020-12-15 11:42:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/Page_Accueil_BlocLocSpa.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/Relaxez.png" for 127.0.0.1 at 2020-12-15 11:42:48 +0300
+Started GET "/clients/sign_in" for 127.0.0.1 at 2020-12-15 11:42:48 +0300
+Processing by Devise::SessionsController#new as HTML
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/Relaxez.png"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 413)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 246ms (Views: 244.9ms | ActiveRecord: 0.0ms | Allocations: 97093)
+
+
+Started GET "/clients/sign_in" for 127.0.0.1 at 2020-12-15 11:42:48 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 413)
+Started GET "/clients/carousel/carousel.css" for 127.0.0.1 at 2020-12-15 11:42:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/carousel/carousel.css"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 200ms (Views: 199.4ms | ActiveRecord: 0.0ms | Allocations: 96378)
+
+
+Started GET "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif" for 127.0.0.1 at 2020-12-15 11:42:49 +0300
+Started GET "/clients/img/home/footer-bg.jpg" for 127.0.0.1 at 2020-12-15 11:42:49 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/footer-bg.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/logo-ccspa.png" for 127.0.0.1 at 2020-12-15 11:42:51 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/logo-ccspa.png"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_up" for 127.0.0.1 at 2020-12-15 11:42:57 +0300
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 235)
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 24.2ms | Allocations: 3251)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 12447)
+
+
+Started GET "/clients/sign_up" for 127.0.0.1 at 2020-12-15 11:42:57 +0300
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered clients/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 9490)
+
+
+Started GET "/clients/sign_up" for 127.0.0.1 at 2020-12-15 11:42:57 +0300
+Started GET "/clients/carousel/carousel.css" for 127.0.0.1 at 2020-12-15 11:42:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/carousel/carousel.css"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1590)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 71.6ms | ActiveRecord: 0.0ms | Allocations: 27975)
+
+
+Started GET "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif" for 127.0.0.1 at 2020-12-15 11:42:58 +0300
+Started GET "/clients/img/home/footer-bg.jpg" for 127.0.0.1 at 2020-12-15 11:42:58 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/footer-bg.jpg"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/logo-ccspa.png" for 127.0.0.1 at 2020-12-15 11:42:59 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/logo-ccspa.png"):
+  
+actionpack (6.0.3.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.1) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.1) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/clients" for 127.0.0.1 at 2020-12-15 11:44:52 +0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"0Bd7t/LBUjcZUfiaGu/cb2WUMQS0DtfhZA5f9tP2gBTsBbj1FR6OPi52Vj/5zsWv1vCpF9GgbMEIiwaUzZdbBQ==", "client"=>{"sexe"=>"Homme", "last_name"=>"M", "first_name"=>"Cédric", "country"=>"France", "town"=>"Toulouse", "zip_code"=>"101", "adresse"=>"Localhost", "adresse_complet"=>"MacOS", "tel"=>"032", "email"=>"cedric@agenceka.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "clients" WHERE "clients"."email" = $1 LIMIT $2[0m  [["email", "cedric@agenceka.fr"], ["LIMIT", 1]]
+  [1m[36mClient Create (2.7ms)[0m  [1m[32mINSERT INTO "clients" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name", "adresse", "adresse_complet", "tel", "sexe", "country", "zip_code", "town") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "cedric@agenceka.fr"], ["encrypted_password", "$2a$11$ndf3fXr4imW8D4x6JtWOU.g53imq1YIxqqgqDuodBZEjt22BtHLyu"], ["created_at", "2020-12-15 08:44:53.747762"], ["updated_at", "2020-12-15 08:44:53.747762"], ["first_name", "Cédric"], ["last_name", "M"], ["adresse", "Localhost"], ["adresse_complet", "MacOS"], ["tel", "032"], ["sexe", "Homme"], ["country", "France"], ["zip_code", "101"], ["town", "Toulouse"]]
+  Rendering client_mailer/welcome_client.html.erb within layouts/mailer
+  Rendered client_mailer/welcome_client.html.erb within layouts/mailer (Duration: 2.9ms | Allocations: 1059)
+ClientMailer#welcome_client: processed outbound mail in 17.2ms
+Delivered mail 5fd87786b7d7_697b3fedbfb5a5e4733a0@Cedrics-MacBook-Air.local.mail (45.6ms)
+Date: Tue, 15 Dec 2020 11:44:54 +0300
+From: contact@cocooningspa.com
+To: cedric@agenceka.fr
+Message-ID: <5fd87786b7d7_697b3fedbfb5a5e4733a0@Cedrics-MacBook-Air.local.mail>
+Subject: =?UTF-8?Q?Votre_compte_client_a_bien_=C3=A9t=C3=A9_cr=C3=A9=C3=A9?=
+ =?UTF-8?Q?_!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!doctype html>=0D
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micro=
+soft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">=0D
+    <head>=0D
+        <!-- NAME: SELL PRODUCTS -->=0D
+        <!--[if gte mso 15]>=0D
+        <xml>=0D
+            <o:OfficeDocumentSettings>=0D
+            <o:AllowPNG/>=0D
+            <o:PixelsPerInch>96</o:PixelsPerInch>=0D
+            </o:OfficeDocumentSettings>=0D
+        </xml>=0D
+        <![endif]-->=0D
+        <meta charset=3D"UTF-8">=0D
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0D
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-=
+scale=3D1">=0D
+    <style type=3D"text/css">=0D
+		p{=0D
+			margin:10px 0;=0D
+			padding:0;=0D
+		}=0D
+		table{=0D
+			border-collapse:collapse;=0D
+		}=0D
+		h1,h2,h3,h4,h5,h6{=0D
+			display:block;=0D
+			margin:0;=0D
+			padding:0;=0D
+		}=0D
+		img,a img{=0D
+			border:0;=0D
+			height:auto;=0D
+			outline:none;=0D
+			text-decoration:none;=0D
+		}=0D
+		body,#bodyTable,#bodyCell{=0D
+			height:100%;=0D
+			margin:0;=0D
+			padding:0;=0D
+			width:100%;=0D
+		}=0D
+		.mcnPreviewText{=0D
+			display:none !important;=0D
+		}=0D
+		#outlook a{=0D
+			padding:0;=0D
+		}=0D
+		img{=0D
+			-ms-interpolation-mode:bicubic;=0D
+		}=0D
+		table{=0D
+			mso-table-lspace:0pt;=0D
+			mso-table-rspace:0pt;=0D
+		}=0D
+		.ReadMsgBody{=0D
+			width:100%;=0D
+		}=0D
+		.ExternalClass{=0D
+			width:100%;=0D
+		}=0D
+		p,a,li,td,blockquote{=0D
+			mso-line-height-rule:exactly;=0D
+		}=0D
+		a[href^=3Dtel],a[href^=3Dsms]{=0D
+			color:inherit;=0D
+			cursor:default;=0D
+			text-decoration:none;=0D
+		}=0D
+		p,a,li,td,body,table,blockquote{=0D
+			-ms-text-size-adjust:100%;=0D
+			-webkit-text-size-adjust:100%;=0D
+		}=0D
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.E=
+xternalClass span,.ExternalClass font{=0D
+			line-height:100%;=0D
+		}=0D
+		a[x-apple-data-detectors]{=0D
+			color:inherit !important;=0D
+			text-decoration:none !important;=0D
+			font-size:inherit !important;=0D
+			font-family:inherit !important;=0D
+			font-weight:inherit !important;=0D
+			line-height:inherit !important;=0D
+		}=0D
+		.templateContainer{=0D
+			max-width:600px !important;=0D
+		}=0D
+		a.mcnButton{=0D
+			display:block;=0D
+		}=0D
+		.mcnImage,.mcnRetinaImage{=0D
+			vertical-align:bottom;=0D
+		}=0D
+		.mcnTextContent{=0D
+			word-break:break-word;=0D
+		}=0D
+		.mcnTextContent img{=0D
+			height:auto !important;=0D
+		}=0D
+		.mcnDividerBlock{=0D
+			table-layout:fixed !important;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 1=0D
+	@style heading 1=0D
+	*/=0D
+		h1{=0D
+			/*@editable*/color:#222222;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:40px;=0D
+			/*@editable*/font-style:normal;=0D
+			/*@editable*/font-weight:bold;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:center;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 2=0D
+	@style heading 2=0D
+	*/=0D
+		h2{=0D
+			/*@editable*/color:#222222;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:34px;=0D
+			/*@editable*/font-style:normal;=0D
+			/*@editable*/font-weight:bold;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 3=0D
+	@style heading 3=0D
+	*/=0D
+		h3{=0D
+			/*@editable*/color:#444444;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:22px;=0D
+			/*@editable*/font-style:normal;=0D
+			/*@editable*/font-weight:bold;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 4=0D
+	@style heading 4=0D
+	*/=0D
+		h4{=0D
+			/*@editable*/color:#949494;=0D
+			/*@editable*/font-family:Georgia;=0D
+			/*@editable*/font-size:20px;=0D
+			/*@editable*/font-style:italic;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/line-height:125%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Container Style=0D
+	*/=0D
+		#templateHeader{=0D
+			/*@editable*/background-color:#transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0px;=0D
+			/*@editable*/padding-bottom:0px;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Interior Style=0D
+	*/=0D
+		.headerContainer{=0D
+			/*@editable*/background-color:#transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0;=0D
+			/*@editable*/padding-bottom:0;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Text=0D
+	*/=0D
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/color:#757575;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:16px;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Link=0D
+	*/=0D
+		.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a=
+{=0D
+			/*@editable*/color:#007C89;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/text-decoration:underline;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Container Style=0D
+	*/=0D
+		#templateBody{=0D
+			/*@editable*/background-color:#FFFFFF;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0px;=0D
+			/*@editable*/padding-bottom:0px;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Interior Style=0D
+	*/=0D
+		.bodyContainer{=0D
+			/*@editable*/background-color:transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0;=0D
+			/*@editable*/padding-bottom:0;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Text=0D
+	*/=0D
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{=0D
+			/*@editable*/color:#757575;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:16px;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Link=0D
+	*/=0D
+		.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a{=0D=
+
+			/*@editable*/color:#007C89;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/text-decoration:underline;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Style=0D
+	*/=0D
+		#templateFooter{=0D
+			/*@editable*/background-color:#333333;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0px;=0D
+			/*@editable*/padding-bottom:0px;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Interior Style=0D
+	*/=0D
+		.footerContainer{=0D
+			/*@editable*/background-color:#transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0;=0D
+			/*@editable*/padding-bottom:0;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Text=0D
+	*/=0D
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/color:#FFFFFF;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:12px;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/text-align:center;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Link=0D
+	*/=0D
+		.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a=
+{=0D
+			/*@editable*/color:#FFFFFF;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/text-decoration:underline;=0D
+		}=0D
+	@media only screen and (min-width:768px){=0D
+		.templateContainer{=0D
+			width:600px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		body,table,td,p,a,li,blockquote{=0D
+			-webkit-text-size-adjust:none !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		body{=0D
+			width:100% !important;=0D
+			min-width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnRetinaImage{=0D
+			max-width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImage{=0D
+			width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCap=
+tionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,=
+.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCa=
+ptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnC=
+aptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.m=
+cnImageCardRightTextContentContainer,.mcnImageCardLeftImageContentContain=
+er,.mcnImageCardRightImageContentContainer{=0D
+			max-width:100% !important;=0D
+			width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnBoxedTextContentContainer{=0D
+			min-width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageGroupContent{=0D
+			padding:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOute=
+r .mcnTextContent{=0D
+			padding-top:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcnCa=
+ptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-=
+child .mcnTextContent{=0D
+			padding-top:18px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageCardBottomImageContent{=0D
+			padding-bottom:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageGroupBlockInner{=0D
+			padding-top:0 !important;=0D
+			padding-bottom:0 !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageGroupBlockOuter{=0D
+			padding-top:9px !important;=0D
+			padding-bottom:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnTextContent,.mcnBoxedTextContentColumn{=0D
+			padding-right:18px !important;=0D
+			padding-left:18px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{=0D
+			padding-right:18px !important;=0D
+			padding-bottom:0 !important;=0D
+			padding-left:18px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcpreview-image-uploader{=0D
+			display:none !important;=0D
+			width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 1=0D
+	@tip Make the first-level headings larger in size for better readability=
+ on small screens.=0D
+	*/=0D
+		h1{=0D
+			/*@editable*/font-size:30px !important;=0D
+			/*@editable*/line-height:125% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 2=0D
+	@tip Make the second-level headings larger in size for better readabilit=
+y on small screens.=0D
+	*/=0D
+		h2{=0D
+			/*@editable*/font-size:26px !important;=0D
+			/*@editable*/line-height:125% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 3=0D
+	@tip Make the third-level headings larger in size for better readability=
+ on small screens.=0D
+	*/=0D
+		h3{=0D
+			/*@editable*/font-size:20px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 4=0D
+	@tip Make the fourth-level headings larger in size for better readabilit=
+y on small screens.=0D
+	*/=0D
+		h4{=0D
+			/*@editable*/font-size:18px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Boxed Text=0D
+	@tip Make the boxed text larger in size for better readability on small =
+screens. We recommend a font size of at least 16px.=0D
+	*/=0D
+		.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentConta=
+iner .mcnTextContent p{=0D
+			/*@editable*/font-size:14px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Header Text=0D
+	@tip Make the header text larger in size for better readability on small=
+ screens.=0D
+	*/=0D
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/font-size:16px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Body Text=0D
+	@tip Make the body text larger in size for better readability on small s=
+creens. We recommend a font size of at least 16px.=0D
+	*/=0D
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{=0D
+			/*@editable*/font-size:16px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Footer Text=0D
+	@tip Make the footer content text larger in size for better readability =
+on small screens.=0D
+	*/=0D
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/font-size:14px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}</style>=0D
+                    <script>var w=3Dwindow;if(w.performance||w.mozPerform=
+ance||w.msPerformance||w.webkitPerformance){var d=3Ddocument;AKSB=3Dw.AKS=
+B||{},AKSB.q=3DAKSB.q||[],AKSB.mark=3DAKSB.mark||function(e,_){AKSB.q.pus=
+h(["mark",e,_||(new Date).getTime()])},AKSB.measure=3DAKSB.measure||funct=
+ion(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.don=
+e=3DAKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte"=
+,(new Date).getTime()),AKSB.prof=3D{custid:"405192",ustr:"",originlat:"0"=
+,clientrtt:"7",ghostip:"92.123.100.23",ipv6:false,pct:"10",clientip:"90.1=
+16.103.142",requestid:"2a64a86",region:"31260",protocol:"h2",blver:14,akM=
+:"x",akN:"ae",akTT:"O",akTX:"1",akTI:"2a64a86",ai:"386313",ra:"false",pmg=
+n:"",pmgi:"",pmp:"",qc:""},function(e){var _=3Dd.createElement("script");=
+_.async=3D"async",_.src=3De;var t=3Dd.getElementsByTagName("script"),t=3D=
+t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"=3D=3D=3Dd.locatio=
+n.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</sc=
+ript>=0D
+                    </head>=0D
+    <body>=0D
+        <!--*|IF:MC_PREVIEW_TEXT|*-->=0D
+        <!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" style=3D=
+"display:none; font-size:0px; line-height:0px; max-height:0px; max-width:=
+0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;"> </spa=
+n><!--<![endif]-->=0D
+        <!--*|END:IF|*-->=0D
+        <center>=0D
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable">=0D
+                <tr>=0D
+                    <td align=3D"center" valign=3D"top" id=3D"bodyCell">=0D=
+
+                        <!-- BEGIN TEMPLATE // -->=0D
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=0D
+                            <tr>=0D
+                                <td align=3D"center" valign=3D"top" id=3D=
+"templateHeader" data-template-container>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+=0D
+                                    <tr>=0D
+                                    <td align=3D"center" valign=3D"top" w=
+idth=3D"600" style=3D"width:600px;">=0D
+                                    <![endif]-->=0D
+                                    <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateConta=
+iner">=0D
+                                        <tr>=0D
+                                            <td valign=3D"top" class=3D"h=
+eaderContainer"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" class=3D"mcnImageBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnImageBlockOuter">=0D
+            <tr>=0D
+                <td valign=3D"top" style=3D"padding:9px" class=3D"mcnImag=
+eBlockInner">=0D
+                    <table align=3D"left" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width:100%;">=0D
+                        <tbody><tr>=0D
+                            <td class=3D"mcnImageContent" valign=3D"top" =
+style=3D"padding-right: 9px; padding-left: 9px; padding-top: 0; padding-b=
+ottom: 0; text-align:center;">=0D
+                                =0D
+                                    =0D
+                                        <img align=3D"center" alt=3D"" sr=
+c=3D"https://mcusercontent.com/099e41185bba84a5e7a6694a1/images/954098fc-=
+d781-429d-8fb2-81660140cd38.png" width=3D"564" style=3D"max-width:600px; =
+padding-bottom: 0; display: inline !important; vertical-align: bottom;" c=
+lass=3D"mcnImage">=0D
+                                    =0D
+                                =0D
+                            </td>=0D
+                        </tr>=0D
+                    </tbody></table>=0D
+                </td>=0D
+            </tr>=0D
+    </tbody>=0D
+</table></td>=0D
+                                        </tr>=0D
+                                    </table>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    </td>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                            <tr>=0D
+                                <td align=3D"center" valign=3D"top" id=3D=
+"templateBody" data-template-container>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+=0D
+                                    <tr>=0D
+                                    <td align=3D"center" valign=3D"top" w=
+idth=3D"600" style=3D"width:600px;">=0D
+                                    <![endif]-->=0D
+                                    <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateConta=
+iner">=0D
+                                        <tr>=0D
+                                            <td valign=3D"top" class=3D"b=
+odyContainer"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnTextBlockOuter">=0D
+        <tr>=0D
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddi=
+ng-top:9px;">=0D
+              	<!--[if mso]>=0D
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;">=0D
+				<tr>=0D
+				<![endif]-->=0D
+			    =0D
+				<!--[if mso]>=0D
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">=0D
+				<![endif]-->=0D
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=3D"100%" cl=
+ass=3D"mcnTextContentContainer">=0D
+                    <tbody><tr>=0D
+                        =0D
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:1=
+8px;">=0D
+                        =0D
+                            <h3 style=3D"text-align: center;"><br>=0D
+<span style=3D"color:#F0339A">Votre compte client a bien =C3=A9t=C3=A9 cr=
+=C3=A9=C3=A9 !</span></h3>=0D
+=0D
+<p><br>=0D
+<span style=3D"font-size:13px">Bonjour !<br>=0D
+<br>=0D
+Nous sommes tr=C3=A8s heureux de vous compter parmi la communaut=C3=A9 Co=
+cooning Spa. Votre compte client a bien =C3=A9t=C3=A9 cr=C3=A9=C3=A9 !<br=
+>=0D
+<br>=0D
+Sur notre site, vous pouvez r=C3=A9server en 2 clics une <a href=3D"http:=
+//cocooningspa.com/location-spa" target=3D"_blank"><strong>location de ja=
+cuzzi =C3=A0 domicile</strong></a>&nbsp;et/ou un <a href=3D"http://cocoon=
+ingspa.com/reservation-massage" target=3D"_blank"><strong>massage =C3=A0 =
+domicile</strong></a>. Notre r=C3=A9seau de professionnels nous permet d'=
+=C3=AAtre disponible partout en France, Belgique, Luxembourg et Suisse.<b=
+r>=0D
+<br>=0D
+Vous =C3=AAtes int=C3=A9ress=C3=A9(e) par nos services, mais vous avez en=
+core des questions ?&nbsp;Besoin d'aide ?<br>=0D
+Nous mettons un point d'honneur =C3=A0 r=C3=A9pondre rapidement et effica=
+cement =C3=A0 vos demandes. N'h=C3=A9sitez pas =C3=A0 nous en faire part,=
+ notre service client est disponible tous les jours de l'ann=C3=A9e&nbsp;=
+de 8h =C3=A0 20h par mail, t=C3=A9l=C3=A9phone, SMS, r=C3=A9seaux sociaux=
+...&nbsp;<br>=0D
+<br>=0D
+Voici les <a href=3D"http://cocooningspa.com/conditions-generales" target=
+=3D"_blank"><strong>conditions g=C3=A9n=C3=A9rales d'utilisation</strong>=
+</a> de la plateforme que vous avez accept=C3=A9es.<br>=0D
+<br>=0D
+=C3=80 tr=C3=A8s bient=C3=B4t&nbsp;!</span></p>=0D
+=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+				<!--[if mso]>=0D
+				</td>=0D
+				<![endif]-->=0D
+                =0D
+				<!--[if mso]>=0D
+				</tr>=0D
+				</table>=0D
+				<![endif]-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnButtonBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnButtonBlockOuter">=0D
+        <tr>=0D
+            <td style=3D"padding-top:0; padding-right:18px; padding-botto=
+m:18px; padding-left:18px;" valign=3D"top" align=3D"center" class=3D"mcnB=
+uttonBlockInner">=0D
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"mcnButtonContentContainer" style=3D"border-collapse: separate !im=
+portant;border-radius: 50px;background-color: #2BAADF;">=0D
+                    <tbody>=0D
+                        <tr>=0D
+                            <td align=3D"center" valign=3D"middle" class=3D=
+"mcnButtonContent" style=3D"font-family: Arial; font-size: 16px; padding:=
+ 18px;">=0D
+                                <a class=3D"mcnButton " title=3D"Je r=C3=A9=
+serve" href=3D"http://cocooningspa.com/reservation-prestation" target=3D"=
+_blank" style=3D"font-weight: bold;letter-spacing: normal;line-height: 10=
+0%;text-align: center;text-decoration: none;color: #FFFFFF;">Je r=C3=A9se=
+rve</a>=0D
+                            </td>=0D
+                        </tr>=0D
+                    </tbody>=0D
+                </table>=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table></td>=0D
+                                        </tr>=0D
+                                    </table>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    </td>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                            <tr>=0D
+                                <td align=3D"center" valign=3D"top" id=3D=
+"templateFooter" data-template-container>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+=0D
+                                    <tr>=0D
+                                    <td align=3D"center" valign=3D"top" w=
+idth=3D"600" style=3D"width:600px;">=0D
+                                    <![endif]-->=0D
+                                    <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateConta=
+iner">=0D
+                                        <tr>=0D
+                                            <td valign=3D"top" class=3D"f=
+ooterContainer"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnTextBlockOuter">=0D
+        <tr>=0D
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddi=
+ng-top:9px;">=0D
+              	<!--[if mso]>=0D
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;">=0D
+				<tr>=0D
+				<![endif]-->=0D
+			    =0D
+				<!--[if mso]>=0D
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">=0D
+				<![endif]-->=0D
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=3D"100%" cl=
+ass=3D"mcnTextContentContainer">=0D
+                    <tbody><tr>=0D
+                        =0D
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:1=
+8px;">=0D
+                        =0D
+                            <div style=3D"text-align: left;"><br>=0D
+<span style=3D"color:#F0339A"><span style=3D"font-size:16px"><em><strong>=
+L'=C3=89quipe Cocooning Spa</strong></em></span></span><br>=0D
+&nbsp;</div>=0D
+=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+				<!--[if mso]>=0D
+				</td>=0D
+				<![endif]-->=0D
+                =0D
+				<!--[if mso]>=0D
+				</tr>=0D
+				</table>=0D
+				<![endif]-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnDividerBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnDividerBlockOuter">=0D
+        <tr>=0D
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width:100%; p=
+adding:18px;">=0D
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border=
+-top: 2px solid #505050;">=0D
+                    <tbody><tr>=0D
+                        <td>=0D
+                            <span></span>=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+<!--            =0D
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px=
+;">=0D
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-co=
+lor:none; border-left-color:none; border-right-color:none; border-bottom-=
+width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-=
+right:0; margin-bottom:0; margin-left:0;" />=0D
+-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnFollowBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnFollowBlockOuter">=0D
+        <tr>=0D
+            <td align=3D"center" valign=3D"top" style=3D"padding:9px" cla=
+ss=3D"mcnFollowBlockInner">=0D
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" class=3D"mcnFollowContentContainer" style=3D"min-width:100%=
+;">=0D
+    <tbody><tr>=0D
+        <td align=3D"center" style=3D"padding-left:9px;padding-right:9px;=
+">=0D
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"min-width:100%;" class=3D"mcnFollowContent">=0D
+                <tbody><tr>=0D
+                    <td align=3D"center" valign=3D"top" style=3D"padding-=
+top:9px; padding-right:9px; padding-left:9px;">=0D
+                        <table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0">=0D
+                            <tbody><tr>=0D
+                                <td align=3D"center" valign=3D"top">=0D
+                                    <!--[if mso]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0">=0D
+                                    <tr>=0D
+                                    <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"https://www.facebook.com/cocooningspaev/" target=3D=
+"_blank"><img src=3D"https://cdn-images.mailchimp.com/icons/social-block-=
+v2/outline-light-facebook-48.png" alt=3D"Facebook" style=3D"display:block=
+;" height=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"https://www.instagram.com/cocooningspaev/?hl=3Dfr" =
+target=3D"_blank"><img src=3D"https://cdn-images.mailchimp.com/icons/soci=
+al-block-v2/outline-light-instagram-48.png" alt=3D"Link" style=3D"display=
+:block;" height=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"https://www.snapchat.com/add/cocooningspaev" target=
+=3D"_blank"><img src=3D"https://cdn-images.mailchimp.com/icons/social-blo=
+ck-v2/outline-light-snapchat-48.png" alt=3D"Link" style=3D"display:block;=
+" height=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"http://cocooningspa.com/" target=3D"_blank"><img sr=
+c=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light=
+-link-48.png" alt=3D"Website" style=3D"display:block;" height=3D"24" widt=
+h=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:0; padding-bottom:9px;" class=3D"mcnFollowContentIte=
+mContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"mailto:cocooningspa@outlook.com" target=3D"_blank">=
+<img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/outlin=
+e-light-forwardtofriend-48.png" alt=3D"Email" style=3D"display:block;" he=
+ight=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                    <!--[if mso]>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                        </tbody></table>=0D
+                    </td>=0D
+                </tr>=0D
+            </tbody></table>=0D
+        </td>=0D
+    </tr>=0D
+</tbody></table>=0D
+=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnTextBlockOuter">=0D
+        <tr>=0D
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddi=
+ng-top:9px;">=0D
+              	<!--[if mso]>=0D
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;">=0D
+				<tr>=0D
+				<![endif]-->=0D
+			    =0D
+				<!--[if mso]>=0D
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">=0D
+				<![endif]-->=0D
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=3D"100%" cl=
+ass=3D"mcnTextContentContainer">=0D
+                    <tbody><tr>=0D
+                        =0D
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:1=
+8px;">=0D
+                        =0D
+                            <div style=3D"text-align: center;"><span styl=
+e=3D"font-size:13px">06 67 07 65 87</span></div>=0D
+=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+				<!--[if mso]>=0D
+				</td>=0D
+				<![endif]-->=0D
+                =0D
+				<!--[if mso]>=0D
+				</tr>=0D
+				</table>=0D
+				<![endif]-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnDividerBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnDividerBlockOuter">=0D
+        <tr>=0D
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width:100%; p=
+adding:18px;">=0D
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border=
+-top: 2px solid #505050;">=0D
+                    <tbody><tr>=0D
+                        <td>=0D
+                            <span></span>=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+<!--            =0D
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px=
+;">=0D
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-co=
+lor:none; border-left-color:none; border-right-color:none; border-bottom-=
+width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-=
+right:0; margin-bottom:0; margin-left:0;" />=0D
+-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnImageBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnImageBlockOuter">=0D
+            <tr>=0D
+                <td valign=3D"top" style=3D"padding:9px" class=3D"mcnImag=
+eBlockInner">=0D
+                    <table align=3D"left" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width:100%;">=0D
+                        <tbody><tr>=0D
+                            <td class=3D"mcnImageContent" valign=3D"top" =
+style=3D"padding-right: 9px; padding-left: 9px; padding-top: 0; padding-b=
+ottom: 0; text-align:center;">=0D
+                                =0D
+                                    <a href=3D"http://cocooningspa.com/" =
+title=3D"" class=3D"" target=3D"_blank">=0D
+                                        <img align=3D"center" alt=3D"" sr=
+c=3D"https://gallery.mailchimp.com/099e41185bba84a5e7a6694a1/images/b2f39=
+879-3281-47e9-be3e-36130191a0d3.png" width=3D"78.03" style=3D"max-width:4=
+59px; padding-bottom: 0; display: inline !important; vertical-align: bott=
+om;" class=3D"mcnImage">=0D
+                                    </a>=0D
+                                =0D
+                            </td>=0D
+                        </tr>=0D
+                    </tbody></table>=0D
+                </td>=0D
+            </tr>=0D
+    </tbody>=0D
+</table></td>=0D
+                                        </tr>=0D
+                                    </table>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    </td>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                        </table>=0D
+                        <!-- // END TEMPLATE -->=0D
+                    </td>=0D
+                </tr>=0D
+            </table>=0D
+        </center>=0D
+    </body>=0D
+</html>=0D
+=0D
+  </body>=0D
+</html>=0D
+
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/client-profil
+Completed 302 Found in 3906ms (ActiveRecord: 25.4ms | Allocations: 936620)
+
+
+Started GET "/client-profil" for 127.0.0.1 at 2020-12-15 11:44:56 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (0.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (26.3ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 1], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 35.2ms | Allocations: 2061)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.6ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 176ms (Views: 49.7ms | ActiveRecord: 46.8ms | Allocations: 23696)
+
+
+Started GET "/client-profil" for 127.0.0.1 at 2020-12-15 11:44:57 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (3.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (10.0ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 1], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 11.9ms | Allocations: 746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 88ms (Views: 64.3ms | ActiveRecord: 13.2ms | Allocations: 11270)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 11:52:41 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 3450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (0.6ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 1.3ms | Allocations: 12288)
+
+
+Started GET "/" for 127.0.0.1 at 2020-12-15 11:52:42 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (18.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 130.8ms | Allocations: 4506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 149ms (Views: 128.5ms | ActiveRecord: 19.4ms | Allocations: 13305)
+
+
+Started GET "/reservation-massage" for 127.0.0.1 at 2020-12-15 11:52:47 +0300
+Processing by StaticPageController#massage as HTML
+  Rendering static_page/massage.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "massage"]]
+  ↳ app/views/static_page/massage.html.erb:629
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/massage.html.erb within layouts/application (Duration: 31.6ms | Allocations: 4188)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 107ms (Views: 54.7ms | ActiveRecord: 1.1ms | Allocations: 17703)
+
+
+Started GET "/reservation-massage" for 127.0.0.1 at 2020-12-15 11:52:47 +0300
+Processing by StaticPageController#massage as HTML
+  Rendering static_page/massage.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "massage"]]
+  ↳ app/views/static_page/massage.html.erb:629
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/massage.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.7ms | Allocations: 11941)
+
+
+Started GET "/reservation-massage" for 127.0.0.1 at 2020-12-15 11:52:47 +0300
+Processing by StaticPageController#massage as HTML
+  Rendering static_page/massage.html.erb within layouts/application
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "massage"]]
+  ↳ app/views/static_page/massage.html.erb:629
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/massage.html.erb within layouts/application (Duration: 20.8ms | Allocations: 7157)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (2.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 81.3ms | ActiveRecord: 3.6ms | Allocations: 26996)
+
+
+Started GET "/client-profil" for 127.0.0.1 at 2020-12-15 11:52:56 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (1.3ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 1], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 2.7ms | Allocations: 752)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 15.5ms | ActiveRecord: 2.2ms | Allocations: 10475)
+
+
+Started GET "/client-profil" for 127.0.0.1 at 2020-12-15 11:52:56 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (0.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 1], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 1.5ms | Allocations: 745)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.6ms | Allocations: 10440)
+
+
+Started GET "/client-profil" for 127.0.0.1 at 2020-12-15 11:52:56 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (3.6ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 1], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1934)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 73ms (Views: 61.5ms | ActiveRecord: 5.7ms | Allocations: 26224)
+
+
