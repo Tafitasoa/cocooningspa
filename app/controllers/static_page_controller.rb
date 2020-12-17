@@ -106,7 +106,7 @@ class StaticPageController < ApplicationController
     @message.content = params["content"]
     if @message.save
       flash[:success] = "Votre message a été bien envoyé, on vous contactera très bientôt"
-      AdminMailer.contac_us(@message).deliver_now	
+      # AdminMailer.contac_us(@message).deliver_now	
       redirect_back(fallback_location: root_path)
     else
       flash[:danger] = @message.errors.full_messages
@@ -119,30 +119,46 @@ class StaticPageController < ApplicationController
   
   
   def verifyMail
-    @compteur = 0
- 
-    if params[:email] == "michael77rakotovao@gmail.com"
+    @valid = CountEmail.all.length
+    @invalid = CountInvalidEmail.all.length
+    if params[:email] == "michael77rakotovao@gmail.com"  # CONDITIONS A METTRE 
+      @countmail = CountEmail.new
+      @countmail.email = params[:email]  # Prendre le mail inséré par l'utilisateur
 
-      
-      @compteur +=1
 
-      puts @compteur
+
+      if @countmail.save         #save mail
+        flash[:success] = "Email exist"   
+        puts "NOMBRE DES MAILS VALIDES: #{@valid}"        # compter les mails  enregistrés 
+        
+        
+      else
+        flash[:danger] = @countmail.errors.full_messages
+        redirect_back(fallback_location: root_path)
+      end 
       
     else
-      flash[:success] = "Email invalid"
-      
-      @compteur = 0
-      @compteur = session[:xx]
-      
-        @compteur += 1
-        @a = @compteur
-        session[:xx] = @a
-      
-      puts @a
+      @countmailInvalid = CountInvalidEmail.new
+      @countmailInvalid.email = params[:email]  # Prendre le mail inséré par l'utilisateur
 
-      redirect_back(fallback_location: root_path)
+      if @countmailInvalid.save         #save mail
+        flash[:success] = "Email Invalid enregistré"   
+        
+        puts "NOMBRE DES MAILS INVALIDES: #{@invalid}"
+
+        
+        redirect_back(fallback_location: root_path)        # compter les mails  enregistrés  
+      
+      else
+
+        flash[:danger] = @countmailInvalid.errors.full_messages
+        redirect_back(fallback_location: root_path)
+      end 
 
     end
+      puts @valid
+      puts @invalid
+
   end
 
 end

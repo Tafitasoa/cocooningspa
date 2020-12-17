@@ -1,0 +1,2 @@
+class CountEmail < ApplicationRecord
+end
