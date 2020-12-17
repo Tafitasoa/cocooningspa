@@ -1,4 +1,5 @@
 class StaticPageController < ApplicationController
+  before_action :verifyMail, only: [:save_message]
 #page d'acceuil
   def index
     @commentsAccueil = Comment.where(comment_for:"accueil")
@@ -105,10 +106,42 @@ class StaticPageController < ApplicationController
     @message.content = params["content"]
     if @message.save
       flash[:success] = "Votre message a été bien envoyé, on vous contactera très bientôt"
+      AdminMailer.contac_us(@message).deliver_now	
       redirect_back(fallback_location: root_path)
     else
       flash[:danger] = @message.errors.full_messages
       redirect_back(fallback_location: root_path)
+    end
+  end
+
+  private 
+
+  
+  
+  def verifyMail
+    @compteur = 0
+ 
+    if params[:email] == "michael77rakotovao@gmail.com"
+
+      
+      @compteur +=1
+
+      puts @compteur
+      
+    else
+      flash[:success] = "Email invalid"
+      
+      @compteur = 0
+      @compteur = session[:xx]
+      
+        @compteur += 1
+        @a = @compteur
+        session[:xx] = @a
+      
+      puts @a
+
+      redirect_back(fallback_location: root_path)
+
     end
   end
 
