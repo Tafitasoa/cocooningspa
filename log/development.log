@@ -34212,3 +34212,393 @@ Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 880
 >>>>>>> f2f514572215c44a6db213695ea49218b6b2e92b
 
 
+Started GET "/" for ::1 at 2020-12-17 09:24:37 +0300
+Started GET "/" for ::1 at 2020-12-17 09:24:37 +0300
+  [1m[35m (226.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (228.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (89.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+  [1m[36mComment Load (118.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-12-17 09:24:59 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-12-17 09:25:04 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-12-17 09:25:14 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+[Webpacker] Browserslist: caniuse-lite is outdated. Please run next command `yarn upgrade`
+
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 17530ms
+Built at: 17/12/2020 09:25:26
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 17419ms
+Built at: 17/12/2020 09:25:26
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 17553ms
+Built at: 17/12/2020 09:25:26
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 17898ms
+Built at: 17/12/2020 09:25:26
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered static_page/index.html.erb within layouts/application (Duration: 25504.6ms | Allocations: 25428)
+  Rendered static_page/index.html.erb within layouts/application (Duration: 23183.5ms | Allocations: 17390)
+  Rendered static_page/index.html.erb within layouts/application (Duration: 42215.2ms | Allocations: 47816)
+  Rendered static_page/index.html.erb within layouts/application (Duration: 42216.4ms | Allocations: 48056)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 20.6ms | Allocations: 937)
+  Rendered clients/shared/_links.html.erb (Duration: 22.9ms | Allocations: 1274)
+  Rendered clients/shared/_links.html.erb (Duration: 20.7ms | Allocations: 1002)
+  Rendered clients/shared/_links.html.erb (Duration: 20.6ms | Allocations: 961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46203ms (Views: 44666.2ms | ActiveRecord: 1029.2ms | Allocations: 257941)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26479ms (Views: 24724.4ms | ActiveRecord: 1752.7ms | Allocations: 227911)
+
+
+Completed 200 OK in 46143ms (Views: 44613.0ms | ActiveRecord: 879.4ms | Allocations: 260571)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28809ms (Views: 28752.8ms | ActiveRecord: 54.3ms | Allocations: 238121)
+
+
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Hash: c20178c34ce921ad418c
+Version: webpack 4.41.2
+Time: 3379ms
+Built at: 17/12/2020 09:25:41
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-0b67a3cc2fcde6055024.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-0b67a3cc2fcde6055024.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.79 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.2 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-0b67a3cc2fcde6055024.js js/application-0b67a3cc2fcde6055024.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered static_page/index.html.erb within layouts/application (Duration: 25049.0ms | Allocations: 222652)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25154ms (Views: 25151.9ms | ActiveRecord: 1.2ms | Allocations: 231224)
+
+
+Started GET "/" for ::1 at 2020-12-17 09:25:42 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 3979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.6ms | Allocations: 12584)
+
+
+Started POST "/admin/send-email" for ::1 at 2020-12-17 09:32:26 +0300
+Processing by StaticPageController#save_message as HTML
+  Parameters: {"authenticity_token"=>"GrpxoxG7eWRLE932wWZJku1qiicfe1EZE5k7k6VvjeBgi9bO3MwM+pGdhSRdhZiBEJpAAD7nr4/6edxkL6/Duw==", "first_name"=>"Rianasoa", "last_name"=>"Rabearison", "email"=>"rrianasoaonimalala@gmail.com", "mobile"=>"0349738479", "corp_name"=>"Rianasoa Rabearison", "content"=>"Coucou", "commit"=>"Envoyer"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1067)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/controllers/static_page_controller.rb:137:in `verifyMail'
+Started GET "/" for ::1 at 2020-12-17 11:41:22 +0300
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (41.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2020-12-17 11:41:25 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Hash: 52ade89e2a440ce177b7
+Version: webpack 4.44.2
+Time: 11262ms
+Built at: 17/12/2020 11:41:48
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-c229f7c7014cf8c8d494.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-c229f7c7014cf8c8d494.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.81 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.3 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Compiled all packs in /Users/admin/Desktop/coconingspa/cocooningspa/public/packs
+[Webpacker] Hash: 52ade89e2a440ce177b7
+Version: webpack 4.44.2
+Time: 11154ms
+Built at: 17/12/2020 11:41:48
+                                            Asset      Size              Chunks                         Chunk Names
+     js/ajax_notification-3526da7dbafc25ab16da.js     5 KiB   ajax_notification  [emitted] [immutable]  ajax_notification
+ js/ajax_notification-3526da7dbafc25ab16da.js.map   4.8 KiB   ajax_notification  [emitted] [dev]        ajax_notification
+           js/application-c229f7c7014cf8c8d494.js   124 KiB         application  [emitted] [immutable]  application
+       js/application-c229f7c7014cf8c8d494.js.map   139 KiB         application  [emitted] [dev]        application
+    js/buttons-prestation-fba783b33a85b8ce44bd.js  5.99 KiB  buttons-prestation  [emitted] [immutable]  buttons-prestation
+js/buttons-prestation-fba783b33a85b8ce44bd.js.map  6.07 KiB  buttons-prestation  [emitted] [dev]        buttons-prestation
+                js/delete-36f5312513794683ecf8.js  4.06 KiB              delete  [emitted] [immutable]  delete
+            js/delete-36f5312513794683ecf8.js.map  3.81 KiB              delete  [emitted] [dev]        delete
+              js/index-js-722c86eef88024e1f222.js  4.65 KiB            index-js  [emitted] [immutable]  index-js
+          js/index-js-722c86eef88024e1f222.js.map  4.51 KiB            index-js  [emitted] [dev]        index-js
+          js/orders_index-def6561a60681148c262.js  53.5 KiB        orders_index  [emitted] [immutable]  orders_index
+      js/orders_index-def6561a60681148c262.js.map  60.3 KiB        orders_index  [emitted] [dev]        orders_index
+                                    manifest.json  2.05 KiB                      [emitted]              
+Entrypoint ajax_notification = js/ajax_notification-3526da7dbafc25ab16da.js js/ajax_notification-3526da7dbafc25ab16da.js.map
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+Entrypoint buttons-prestation = js/buttons-prestation-fba783b33a85b8ce44bd.js js/buttons-prestation-fba783b33a85b8ce44bd.js.map
+Entrypoint delete = js/delete-36f5312513794683ecf8.js js/delete-36f5312513794683ecf8.js.map
+Entrypoint index-js = js/index-js-722c86eef88024e1f222.js js/index-js-722c86eef88024e1f222.js.map
+Entrypoint orders_index = js/orders_index-def6561a60681148c262.js js/orders_index-def6561a60681148c262.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/ajax_notification.js] 1.07 KiB {ajax_notification} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./app/javascript/packs/buttons-prestation.js] 2.05 KiB {buttons-prestation} [built]
+[./app/javascript/packs/delete.js] 201 bytes {delete} [built]
+[./app/javascript/packs/index-js.js] 793 bytes {index-js} [built]
+[./app/javascript/packs/orders_index.js] 49.8 KiB {orders_index} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered static_page/index.html.erb within layouts/application (Duration: 25655.0ms | Allocations: 21460)
+  Rendered static_page/index.html.erb within layouts/application (Duration: 23542.8ms | Allocations: 6919)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 31.1ms | Allocations: 673)
+  Rendered clients/shared/_links.html.erb (Duration: 31.3ms | Allocations: 793)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26537ms (Views: 26447.5ms | ActiveRecord: 62.3ms | Allocations: 69129)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24398ms (Views: 24207.0ms | ActiveRecord: 189.4ms | Allocations: 52580)
+
+
+Started GET "/" for ::1 at 2020-12-17 11:41:51 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.6ms | Allocations: 12603)
+
+
