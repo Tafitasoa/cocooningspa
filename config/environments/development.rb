@@ -3,7 +3,7 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   
   # acivation letter_opener
-  config.action_mailer.delivery_method = :letter_opener
+  #config.action_mailer.delivery_method = :letter_opener      A DECOMMENTER AVANT PUSH
   config.action_mailer.perform_deliveries = true
 
   # In the development environment your application's code is reloaded on
@@ -75,5 +75,18 @@ Rails.application.configure do
   #   authentication:       'plain',
   #   enable_starttls_auto: true 
   # }
+
+  # TEST MAIL
+  # # config for mailer
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'spamandona.fr',
+    user_name:            'michael77rakotovao@gmail.com',
+    password:             'zzadaorgdtcibfti',
+    authentication:       'plain',
+    enable_starttls_auto: true 
+  }
 
 end
