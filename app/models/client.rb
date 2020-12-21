@@ -1,5 +1,5 @@
 class Client < ApplicationRecord
-	after_create :send_email_to_client
+	# after_create :send_email_to_client
 
   has_many :orders, dependent: :destroy # un client 1 ---- N  commande
 
@@ -15,10 +15,16 @@ class Client < ApplicationRecord
   # :lockable, :timeoutable, :trackable and :omniauthable
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable#, :confirmable
+         :recoverable, :rememberable, :validatable, :confirmable
 
-  def send_email_to_client
-  	ClientMailer.welcome_client(self).deliver_now
-	end
+  	# def send_email_to_client
+  	# 	ClientMailer.welcome_client(self).deliver_now
+	# end
+
+	# protected
+	# def confirmation_required?
+	# 	false
+	# end
+
 
 end
