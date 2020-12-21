@@ -22,55 +22,5 @@ module EmailValidatable
             addr_spec = Regexp.new("#{local_part}\\x40#{domain}", nil, 'n')
             pattern = /\A#{addr_spec}\z/
         end
-
-        # def validate_each(record, attribute, value)
-        #     unless value =~ EmailAddress
-        #       record.errors[attribute] << (options[:message] || "is not valid") 
-        #     end
-        # end
-
-        # def validate_each(record, attribute, value)
-        #     address = Mail::Address.new(value)
-        #     record.errors[attribute] << (options[:message] || 'is invalid') unless (address.address == value > 1 rescue false)
-        # end
-
-        # def add_error(record, attribute)
-        #     record.errors.add(attribute, (options[:message] || "is not a valid email address"))
-        # end
-        
-        # def validate_each(record, attribute, value)
-        #     begin
-        #     a = Mail::Address.new(value)
-        #     rescue Mail::Field::ParseError
-        #     add_error(record, attribute)
-        #     end   
-
-        #     # email = “foo@example.com” #test with valid email
-        #     # value = a.address
-        #     # split_email = email.split(“@”) #split string with “@”
-        #     # domain = split_email[1].to_s #get domain name
-        #     # if email =~ (/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i)
-        #     # #checking domain name
-        #     # Resolv::DNS.open do |dns|
-        #     # @staus = dns.getresources(domain, Resolv::DNS::Resource::IN::MX)
-        #     # end
-        #     # else
-        #     # errors_add(:email, ‘domain name can not be found.’)
-        
-        #     # regexp from http://guides.rubyonrails.org/active_record_validations.html
-        #     value = a.address unless a.nil?
-        #     # split_email = value.split("@") #split string with “@”
-        #     # domain = split_email[1].to_s #get domain name
-        #     # if value =~ (/\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i)
-        #     #     #checking domain name
-        #     #     Resolv::DNS.open do |dns|
-        #     #     @staus = dns.getresources(domain, Resolv::DNS::Resource::IN::MX)
-        #     #     end
-        #     # else
-        #     #     add_error(:email, 'domain name can not be found.')
-        #     unless value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i 
-        #         add_error(record, attribute)
-        #     end
-        # end
     end
 end

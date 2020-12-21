@@ -11,13 +11,26 @@ class Message < ApplicationRecord
 	# validates :email, email: { no_sub_addressed: true, recorded: true, blacklisted: true }
 	validates :content, presence: true
 
+
+	# Fonction qui valide le nom de domaine des emails
 	validate :valid_email?
 	def valid_email?
 		begin
 		domain_name = Mail::Address.new(email).domain
 		domain_valid?(domain_name)
+
+		#Compte les emails validés
+		@nbrmail = CountEmail.new
+	    @nbrmail.email = email
+	    @nbrmail.description = "Mail de contact avec succès"
+	    @nbrmail.save
+	    @count = CountEmail.select('id').group("date_trunc('month', created_at)").count	 
+	    @count.each do |m|
+	       @nbrmail.update(countpermonth: m[1], month: m[0].strftime("%b")) 
+	   	end
+
 		rescue
-		errors.add("Votre email", "n'existe pas")
+		
 		end
 	end
 
@@ -25,9 +38,10 @@ class Message < ApplicationRecord
 		Resolv::DNS.open do |dns|
 		@mx = dns.getresources(domain.to_s, Resolv::DNS::Resource::IN::MX)
 		end
+
 		if @mx.empty?
-		logger.debug "[DEBUG] - Domain name #{email} has a problem."
-		errors_add(:email, 'domain name can not be found.')
+			logger.debug "[DEBUG] - Le nom de domaine de #{email} n'est pas validé."
+			errors.add("Votre email", "n'exite pas")
 		end
 	end
 
