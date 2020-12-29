@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_082203) do
+ActiveRecord::Schema.define(version: 2020_12_21_132838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -90,6 +90,24 @@ ActiveRecord::Schema.define(version: 2020_08_25_082203) do
     t.string "comment_for"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "count_emails", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.integer "countpermonth"
+    t.string "month"
+  end
+
+  create_table "count_invalid_emails", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "description"
+    t.string "monthinvalid"
+    t.integer "countpermonthinvalid"
   end
 
   create_table "countries", force: :cascade do |t|

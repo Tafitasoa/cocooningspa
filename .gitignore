@@ -1,8 +1,10 @@
-node_modules/
+#Module
+node_modules
 
-log/
+#Temp
+tmp
+*.cache
 
-tmp/
-cache/
-
+#log
+log
 *.log

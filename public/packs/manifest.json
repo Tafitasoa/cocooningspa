@@ -1,8 +1,8 @@
 {
   "ajax_notification.js": "/packs/js/ajax_notification-3526da7dbafc25ab16da.js",
   "ajax_notification.js.map": "/packs/js/ajax_notification-3526da7dbafc25ab16da.js.map",
-  "application.js": "/packs/js/application-0b67a3cc2fcde6055024.js",
-  "application.js.map": "/packs/js/application-0b67a3cc2fcde6055024.js.map",
+  "application.js": "/packs/js/application-c229f7c7014cf8c8d494.js",
+  "application.js.map": "/packs/js/application-c229f7c7014cf8c8d494.js.map",
   "buttons-prestation.js": "/packs/js/buttons-prestation-fba783b33a85b8ce44bd.js",
   "buttons-prestation.js.map": "/packs/js/buttons-prestation-fba783b33a85b8ce44bd.js.map",
   "delete.js": "/packs/js/delete-36f5312513794683ecf8.js",
@@ -18,10 +18,10 @@
     },
     "application": {
       "js": [
-        "/packs/js/application-0b67a3cc2fcde6055024.js"
+        "/packs/js/application-c229f7c7014cf8c8d494.js"
       ],
       "js.map": [
-        "/packs/js/application-0b67a3cc2fcde6055024.js.map"
+        "/packs/js/application-c229f7c7014cf8c8d494.js.map"
       ]
     },
     "buttons-prestation": {

@@ -56,10 +56,27 @@ class StaticPageController < ApplicationController
     end
 
     if @candidate.save
+      AdminMailer.new_partner(@candidate).deliver_now
+      PrestataireMailer.new_candidate(@candidate).deliver_now
       flash[:notice] = "Merci pour votre inscription! un message vous est envoyé dans à votre email pour poursuivre l'inscription veuillez bien le lire s'il vous plaît!"
       redirect_to cgu_path
     else
-      flash[:list_message_errors] = @candidate.errors.full_messages
+      
+      # compter les emails invalid
+
+      @nbrmailinvalid = CountInvalidEmail.new
+      @nbrmailinvalid.email = params["email"]
+      @nbrmailinvalid.description = @candidate.errors.full_messages
+      @nbrmailinvalid.save
+
+        @countinvalid = CountInvalidEmail.select('id').group("date_trunc('month', created_at)").count 
+        
+      
+        @countinvalid.each do |i|
+           @nbrmailinvalid.update(countpermonthinvalid: i[1], monthinvalid: i[0].strftime("%b")) 
+        end
+
+      flash[:danger] = @candidate.errors.full_messages
       redirect_back(fallback_location: root_path)
     end
   end
@@ -105,11 +122,29 @@ class StaticPageController < ApplicationController
     @message.content = params["content"]
     if @message.save
       flash[:success] = "Votre message a été bien envoyé, on vous contactera très bientôt"
+      AdminMailer.contac_us(@message).deliver_now
       redirect_back(fallback_location: root_path)
     else
+
+      # compter les emails invalid
+      
+
+      @nbrmailinvalid = CountInvalidEmail.new
+      @nbrmailinvalid.email = params["email"]
+      @nbrmailinvalid.description = @message.errors.full_messages #params["content"]
+      @nbrmailinvalid.save
+
+        @countinvalid = CountInvalidEmail.select('id').group("date_trunc('month', created_at)").count 
+        
+      
+        @countinvalid.each do |i|
+           @nbrmailinvalid.update(countpermonthinvalid: i[1], monthinvalid: i[0].strftime("%b")) 
+        end
+
       flash[:danger] = @message.errors.full_messages
       redirect_back(fallback_location: root_path)
     end
   end
+
 
 end
