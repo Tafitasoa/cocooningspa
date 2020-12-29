@@ -25,7 +25,7 @@ ServiceDepartment.destroy_all
 Spa.destroy_all
 Notification.destroy_all
 increment = 0
-Admin.create(email:'cocooningspa@outlook.com',password:'El#a&V45L@34C&nT',first_name: "Vincent",last_name: "lae")
+Admin.create(email:'admin@admin.com',password:'admin@admin.com',first_name: "Dévelopeur ",last_name: "Admin")
 
 # =========================== CREE LES SERVICE =========================== #
 s1 = Service.create(name:"Massage")
