@@ -26,7 +26,7 @@ class Message < ApplicationRecord
 	    @nbrmail.save
 	    @count = CountEmail.select('id').group("date_trunc('month', created_at)").count	 
 	    @count.each do |m|
-	       @nbrmail.update(countpermonth: m[1], month: m[0].strftime("%b")) 
+	       @nbrmail.update(countpermonth: m[1], monthvalid: m[0].strftime("%b")) 
 	   	end
 
 		rescue
