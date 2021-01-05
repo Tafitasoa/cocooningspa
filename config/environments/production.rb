@@ -117,17 +117,17 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # config for mailer
-#   config.action_mailer.delivery_method = :smtp
-#   config.action_mailer.smtp_settings = {
-#     address:              'mail.cocooningspa.com',
-#     port:                 587,
-#     domain:               'cocooningspa.com',
-#     user_name:            'vincentcharreau@cocooningspa.com',
-#     password:             'Cocooning06',
-#     authentication:       'plain'
-#   }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'mail.cocooningspa.com',
+    port:                 587,
+    domain:               'cocooningspa.com',
+    user_name:            'vincentcharreau@cocooningspa.com',
+    password:             'Cocooning06',
+    authentication:       'plain'
+  }
 
-    config.action_mailer.delivery_method = :sendmail
+    # config.action_mailer.delivery_method = :sendmail
     # Defaults to:
     # config.action_mailer.sendmail_settings = {
     #   location: '/usr/sbin/sendmail',
