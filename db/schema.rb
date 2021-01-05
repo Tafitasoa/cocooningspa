@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_05_101408) do
+ActiveRecord::Schema.define(version: 2021_01_05_113411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -99,7 +99,6 @@ ActiveRecord::Schema.define(version: 2021_01_05_101408) do
     t.text "description"
     t.integer "countpermonth"
     t.string "monthvalid"
-    t.string "month"
   end
 
   create_table "count_invalid_emails", force: :cascade do |t|

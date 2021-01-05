@@ -144,8 +144,8 @@
 				Prix Total : <strong><%= @totalPrice %>€</strong><br>
 				<span>Acompte à régler en ligne : <strong><%= @totalAcompte %>€</strong></span><br>
 				Montant à régler sur place (CB ou éspèces uniquement) : <strong><%= @totalPrice - @totalAcompte %>€</strong><br>
-				<form method="post" action="https://payment-webinit.mercanet.bnpparibas.net/paymentInit">
-				 <!--<form method="post" action="https://payment-webinit.simu.mercanet.bnpparibas.net/paymentInit"> -->
+				<%# <form method="post" action="https://payment-webinit.mercanet.bnpparibas.net/paymentInit"> %>
+				 <form method="post" action="https://payment-webinit.simu.mercanet.bnpparibas.net/paymentInit">
 					<input type="hidden" name="Data" value="<%=@data%>">
 					<input type="hidden" name="InterfaceVersion" value="HP_2.20">
 					<input type="hidden" name="Seal" value="<%=@seal%>"> <br>
