@@ -3,7 +3,8 @@ node_modules
 
 #Temp
 tmp
-*.cache
+cache
+#*.cache
 
 #log
 log
