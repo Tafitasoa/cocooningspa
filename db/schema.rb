@@ -97,9 +97,9 @@ ActiveRecord::Schema.define(version: 2021_01_04_120045) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.text "description"
+    t.integer "countpermonth"
     t.string "monthvalid"
     t.string "month"
-    t.integer "countpermonth"
   end
 
   create_table "count_invalid_emails", force: :cascade do |t|
