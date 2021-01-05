@@ -408,7 +408,7 @@ class OrdersController < ApplicationController
     # Génère un numéro de transaction aléatoire
     transactionReference = "simu" + rand(100000..999999).to_s
     #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
-    normalReturnUrl = "https://cocooningspa.com/reservation-prestation/paye-commande/" + current_client.id.to_s
+    ##normalReturnUrl = "https://cocooningspa.com/reservation-prestation/paye-commande/" + current_client.id.to_s
     # Contruit la requête des données à envoyer à Mercanet
     ##@data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=2"
     # @data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|transactionReference=" + transactionReference + "|keyVersion=2"
@@ -439,7 +439,7 @@ class OrdersController < ApplicationController
     # # Génère un numéro de transaction aléatoire
     # transactionReference = "simu" + rand(100000..999999).to_s
     # #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
-    # normalReturnUrl = "https://cocooningspa.com/reservation-prestation/paye-commande/" + current_client.id.to_s
+     normalReturnUrl = "https://cocooningspa-v11.herokuapp.com/reservation-prestation/paye-commande/" + current_client.id.to_s
     # # Contruit la requête des données à envoyer à Mercanet
      @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
     # # Encode en UTF-8 des données à envoyer à Mercanet
