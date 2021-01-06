@@ -475,38 +475,47 @@ class OrdersController < ApplicationController
       # =============================== Enregistrement des commandes si payer Mila amboarina ny mailer
       @order.update(is_validate:true)
       Client.find(params[:client_id]).update(is_client:true)
-      # @order.services.each do |service|
-      #   case service.name
-      #     when "Location spa"
-      #       mailToOrderServiceSpa = @order.order_services.find_by(service_id:service.id)
-      #       #====== Send email to prestataire location spa =====
-      #       @prestataires = []
-      #       if @order.department.nil?
-      #         @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:countries).where(countries:{name:@order.country.name})
-      #       else
-      #         @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:departments).where(departments:{name:@order.department.name})
-      #       end
-      #       @prestataires.each do |prestataire|
-      #         PrestataireMailer.new_orderSpa(mailToOrderServiceSpa.id,prestataire.id).deliver_now
-      #       end
-      #     when "Massage"
-      #       mailToOrderServiceMassage = @order.order_services.find_by(service_id:service.id)
-      #       #====== Send email to prestataire massage =====
-      #       @prestataires = []
-      #       if @order.department.nil?
-      #         @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:countries).where(countries:{name:@order.country.name})
-      #       else
-      #         @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:departments).where(departments:{name:@order.department.name})
-      #       end
-      #       @prestataires.each do |prestataire|
-      #         if prestataire.sexe == @order.praticien || @order.praticien == "all"
-      #           PrestataireMailer.new_orderMassage(mailToOrderServiceMassage.id,prestataire.id).deliver_now
-      #         end
-      #       end
-      #     else
-      #   end
-      # end
-      # ClientMailer.confirm_order(@order.id,current_client.id).deliver_now
+
+
+
+
+
+      @order.services.each do |service|
+        case service.name
+          when "Location spa"
+            mailToOrderServiceSpa = @order.order_services.find_by(service_id:service.id)
+            #====== Send email to prestataire location spa =====
+            @prestataires = []
+            if @order.department.nil?
+              @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:countries).where(countries:{name:@order.country.name})
+            else
+              @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:departments).where(departments:{name:@order.department.name})
+            end
+            @prestataires.each do |prestataire|
+              PrestataireMailer.new_orderSpa(mailToOrderServiceSpa.id,prestataire.id).deliver_now
+            end
+          when "Massage"
+            mailToOrderServiceMassage = @order.order_services.find_by(service_id:service.id)
+            #====== Send email to prestataire massage =====
+            @prestataires = []
+            if @order.department.nil?
+              @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:countries).where(countries:{name:@order.country.name})
+            else
+              @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:departments).where(departments:{name:@order.department.name})
+            end
+            @prestataires.each do |prestataire|
+              if prestataire.sexe == @order.praticien || @order.praticien == "all"
+                PrestataireMailer.new_orderMassage(mailToOrderServiceMassage.id,prestataire.id).deliver_now
+              end
+            end
+          else
+        end
+      end
+      ClientMailer.confirm_order(@order.id,current_client.id).deliver_now
+
+
+
+
       redirect_to payedsuccess_path
       # =====================================================================
     else
