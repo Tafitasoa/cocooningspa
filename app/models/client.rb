@@ -1,10 +1,10 @@
 class Client < ApplicationRecord
 
 	require 'resolv'
-	# after_create :message_send
+	#after_create :message_send
 	# Call Module EmailValidatable
 	include EmailValidatable
-	# after_create :send_email_to_client
+	after_create :send_email_to_client
 
   has_many :orders, dependent: :destroy # un client 1 ---- N  commande
 
@@ -20,7 +20,7 @@ class Client < ApplicationRecord
   # :lockable, :timeoutable, :trackable and :omniauthable
 
   	devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :confirmable
+         :recoverable, :rememberable, :validatable #, :confirmable
 
     # Fonction qui valide le nom de domaine des emails
 	validate :valid_email?
@@ -56,9 +56,9 @@ class Client < ApplicationRecord
 	end
 
 
-  	# def send_email_to_client
-  	# 	ClientMailer.welcome_client(self).deliver_now
-	# end
+  	def send_email_to_client
+  		ClientMailer.welcome_client(self).deliver_now
+	end
 
 	# protected
 	# def confirmation_required?

@@ -70,3 +70,1885 @@ Processing by NotificationController#index as JSON
 Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.9ms | Allocations: 2195)
 
 
+Started GET "/" for ::1 at 2021-01-06 16:32:05 +0300
+Started GET "/" for ::1 at 2021-01-06 16:32:10 +0300
+  [1m[35m (45.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+  [1m[35m (205.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (45.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  [1m[36mComment Load (45.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 556.1ms | Allocations: 14013)
+  Rendered static_page/index.html.erb within layouts/application (Duration: 560.9ms | Allocations: 14344)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (0.7ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mClient Load (1.2ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 14.6ms | Allocations: 665)
+  Rendered clients/shared/_links.html.erb (Duration: 15.0ms | Allocations: 790)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 993ms (Views: 790.1ms | ActiveRecord: 189.4ms | Allocations: 63594)
+
+
+Completed 200 OK in 1094ms (Views: 915.5ms | ActiveRecord: 73.7ms | Allocations: 66600)
+
+
+Started GET "/" for ::1 at 2021-01-06 16:32:18 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 4341)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mClient Load (0.5ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:147
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 1.2ms | Allocations: 13927)
+
+
+Started DELETE "/clients/sign_out" for ::1 at 2021-01-06 16:32:27 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"el9Z9T7mh0J4HOVmYLTtQmBuduhYxeQiVQkWD/1kT7wSaUIqMthTvRzQYR/VEuvRpeSEl2aWO1Ze25Ch0F7Eqg=="}
+  [1m[36mClient Load (0.8ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = $1 ORDER BY "admins"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 798ms (ActiveRecord: 9.4ms | Allocations: 215426)
+
+
+Started GET "/" for ::1 at 2021-01-06 16:32:28 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.4ms | Allocations: 12543)
+
+
+Started GET "/" for ::1 at 2021-01-06 16:32:29 +0300
+Processing by StaticPageController#index as HTML
+  Rendering static_page/index.html.erb within layouts/application
+  [1m[36mComment Load (1.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."comment_for" = $1[0m  [["comment_for", "accueil"]]
+  ↳ app/views/static_page/index.html.erb:420
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_page/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 3964)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 1.2ms | Allocations: 12518)
+
+
+Started GET "/clients/sign_in" for ::1 at 2021-01-06 16:32:34 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 50.6ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 95ms (Views: 92.6ms | ActiveRecord: 0.0ms | Allocations: 10635)
+
+
+Started GET "/clients/sign_in" for ::1 at 2021-01-06 16:32:34 +0300
+Started GET "/clients/img/home/Page_Accueil_BlocLocSpa.jpg" for ::1 at 2021-01-06 16:32:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/Page_Accueil_BlocLocSpa.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+Started GET "/clients/img/reserver.png" for ::1 at 2021-01-06 16:32:35 +0300
+Started GET "/clients/img/disponible.png" for ::1 at 2021-01-06 16:32:35 +0300
+Started GET "/clients/img/home/Massage.png" for ::1 at 2021-01-06 16:32:35 +0300
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 418)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.0ms | Allocations: 13207)
+
+
+Started GET "/clients/img/home/professionnel.png" for ::1 at 2021-01-06 16:32:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/professionnel.png"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/disponible.png"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/Massage.png"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/reserver.png"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/Relaxez.png" for ::1 at 2021-01-06 16:32:36 +0300
+Started GET "/clients/carousel/carousel.css" for ::1 at 2021-01-06 16:32:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/Relaxez.png"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/carousel/carousel.css"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_in" for ::1 at 2021-01-06 16:32:36 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering clients/sessions/new.html.erb within layouts/application
+  Rendered clients/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.6ms | Allocations: 101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 182ms (Views: 180.2ms | ActiveRecord: 0.0ms | Allocations: 61032)
+
+
+Started GET "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif" for ::1 at 2021-01-06 16:32:37 +0300
+Started GET "/clients/img/home/footer-bg.jpg" for ::1 at 2021-01-06 16:32:37 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/footer-bg.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_up" for ::1 at 2021-01-06 16:32:40 +0300
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 233)
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 82)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 30.2ms | Allocations: 2811)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 52.8ms | ActiveRecord: 0.0ms | Allocations: 12731)
+
+
+Started GET "/clients/sign_up" for ::1 at 2021-01-06 16:32:40 +0300
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered clients/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1373)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 10182)
+
+
+Started GET "/clients/carousel/carousel.css" for ::1 at 2021-01-06 16:32:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/carousel/carousel.css"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/sign_up" for ::1 at 2021-01-06 16:32:40 +0300
+Processing by RegistrationsController#new as HTML
+  Rendering clients/registrations/new.html.erb within layouts/application
+  Rendered clients/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 15)
+  Rendered clients/shared/_links.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered clients/registrations/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1380)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 78)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 121ms (Views: 118.8ms | ActiveRecord: 0.0ms | Allocations: 44145)
+
+
+Started GET "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif" for ::1 at 2021-01-06 16:32:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/plugins/simple-pre-loader/images/loader-64x/Preloader_2.gif"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/clients/img/home/footer-bg.jpg" for ::1 at 2021-01-06 16:32:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/clients/img/home/footer-bg.jpg"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/clients" for ::1 at 2021-01-06 16:34:16 +0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"g+CCnQD48z99UMyjnZgPhHkEi4zEOrcc81kVqjafAWlhsoPH8DmivXjjRpvLe+d2yNf/rXUzjdRE9gd/VKl3pw==", "client"=>{"sexe"=>"Homme", "last_name"=>"kin", "first_name"=>"kin", "country"=>"Luxembourg", "town"=>"kin", "zip_code"=>"11000", "adresse"=>"luxe", "adresse_complet"=>"luxe", "tel"=>"123456789", "email"=>"rronick@yahoo.fr", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mClient Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "clients" WHERE "clients"."email" = $1 LIMIT $2[0m  [["email", "rronick@yahoo.fr"], ["LIMIT", 1]]
+  [1m[36mCountEmail Create (101.5ms)[0m  [1m[32mINSERT INTO "count_emails" ("email", "created_at", "updated_at", "description") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "rronick@yahoo.fr"], ["created_at", "2021-01-06 13:34:17.325645"], ["updated_at", "2021-01-06 13:34:17.325645"], ["description", "Mail d'inscription avec succès"]]
+  ↳ app/models/client.rb:36:in `valid_email?'
+  [1m[35m (40.2ms)[0m  [1m[34mSELECT COUNT("count_emails"."id") AS count_id, date_trunc('month', created_at) AS date_trunc_month_created_at FROM "count_emails" GROUP BY date_trunc('month', created_at)[0m
+  ↳ app/models/client.rb:37:in `valid_email?'
+  [1m[36mCountEmail Update (29.8ms)[0m  [1m[33mUPDATE "count_emails" SET "updated_at" = $1, "countpermonth" = $2, "monthvalid" = $3 WHERE "count_emails"."id" = $4[0m  [["updated_at", "2021-01-06 13:34:17.476604"], ["countpermonth", 9], ["monthvalid", "Jan"], ["id", 10]]
+  ↳ app/models/client.rb:39:in `block in valid_email?'
+  [1m[36mClient Create (19.5ms)[0m  [1m[32mINSERT INTO "clients" ("email", "encrypted_password", "created_at", "updated_at", "first_name", "last_name", "adresse", "adresse_complet", "tel", "sexe", "country", "zip_code", "town") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["email", "rronick@yahoo.fr"], ["encrypted_password", "$2a$11$Y3TvnHV8rU6V/BT2Wz/2puN7P0cU.RN.vOft/Bf8N7Wms.f7SxTl2"], ["created_at", "2021-01-06 13:34:17.509632"], ["updated_at", "2021-01-06 13:34:17.509632"], ["first_name", "kin"], ["last_name", "kin"], ["adresse", "luxe"], ["adresse_complet", "luxe"], ["tel", "123456789"], ["sexe", "Homme"], ["country", "Luxembourg"], ["zip_code", "11000"], ["town", "kin"]]
+  Rendering client_mailer/welcome_client.html.erb within layouts/mailer
+  Rendered client_mailer/welcome_client.html.erb within layouts/mailer (Duration: 30.0ms | Allocations: 1054)
+ClientMailer#welcome_client: processed outbound mail in 101.4ms
+Delivered mail 5ff5bc5ac577d_e843feba37104487085c@Admins-MacBook-Pro-2.local.mail (234.8ms)
+Date: Wed, 06 Jan 2021 16:34:18 +0300
+From: michael77rakotovao@gmail.com
+To: rronick@yahoo.fr
+Message-ID: <5ff5bc5ac577d_e843feba37104487085c@Admins-MacBook-Pro-2.local.mail>
+Subject: =?UTF-8?Q?Votre_compte_client_a_bien_=C3=A9t=C3=A9_cr=C3=A9=C3=A9?=
+ =?UTF-8?Q?_!?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <!doctype html>=0D
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-micro=
+soft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">=0D
+    <head>=0D
+        <!-- NAME: SELL PRODUCTS -->=0D
+        <!--[if gte mso 15]>=0D
+        <xml>=0D
+            <o:OfficeDocumentSettings>=0D
+            <o:AllowPNG/>=0D
+            <o:PixelsPerInch>96</o:PixelsPerInch>=0D
+            </o:OfficeDocumentSettings>=0D
+        </xml>=0D
+        <![endif]-->=0D
+        <meta charset=3D"UTF-8">=0D
+        <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0D
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-=
+scale=3D1">=0D
+    <style type=3D"text/css">=0D
+		p{=0D
+			margin:10px 0;=0D
+			padding:0;=0D
+		}=0D
+		table{=0D
+			border-collapse:collapse;=0D
+		}=0D
+		h1,h2,h3,h4,h5,h6{=0D
+			display:block;=0D
+			margin:0;=0D
+			padding:0;=0D
+		}=0D
+		img,a img{=0D
+			border:0;=0D
+			height:auto;=0D
+			outline:none;=0D
+			text-decoration:none;=0D
+		}=0D
+		body,#bodyTable,#bodyCell{=0D
+			height:100%;=0D
+			margin:0;=0D
+			padding:0;=0D
+			width:100%;=0D
+		}=0D
+		.mcnPreviewText{=0D
+			display:none !important;=0D
+		}=0D
+		#outlook a{=0D
+			padding:0;=0D
+		}=0D
+		img{=0D
+			-ms-interpolation-mode:bicubic;=0D
+		}=0D
+		table{=0D
+			mso-table-lspace:0pt;=0D
+			mso-table-rspace:0pt;=0D
+		}=0D
+		.ReadMsgBody{=0D
+			width:100%;=0D
+		}=0D
+		.ExternalClass{=0D
+			width:100%;=0D
+		}=0D
+		p,a,li,td,blockquote{=0D
+			mso-line-height-rule:exactly;=0D
+		}=0D
+		a[href^=3Dtel],a[href^=3Dsms]{=0D
+			color:inherit;=0D
+			cursor:default;=0D
+			text-decoration:none;=0D
+		}=0D
+		p,a,li,td,body,table,blockquote{=0D
+			-ms-text-size-adjust:100%;=0D
+			-webkit-text-size-adjust:100%;=0D
+		}=0D
+		.ExternalClass,.ExternalClass p,.ExternalClass td,.ExternalClass div,.E=
+xternalClass span,.ExternalClass font{=0D
+			line-height:100%;=0D
+		}=0D
+		a[x-apple-data-detectors]{=0D
+			color:inherit !important;=0D
+			text-decoration:none !important;=0D
+			font-size:inherit !important;=0D
+			font-family:inherit !important;=0D
+			font-weight:inherit !important;=0D
+			line-height:inherit !important;=0D
+		}=0D
+		.templateContainer{=0D
+			max-width:600px !important;=0D
+		}=0D
+		a.mcnButton{=0D
+			display:block;=0D
+		}=0D
+		.mcnImage,.mcnRetinaImage{=0D
+			vertical-align:bottom;=0D
+		}=0D
+		.mcnTextContent{=0D
+			word-break:break-word;=0D
+		}=0D
+		.mcnTextContent img{=0D
+			height:auto !important;=0D
+		}=0D
+		.mcnDividerBlock{=0D
+			table-layout:fixed !important;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 1=0D
+	@style heading 1=0D
+	*/=0D
+		h1{=0D
+			/*@editable*/color:#222222;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:40px;=0D
+			/*@editable*/font-style:normal;=0D
+			/*@editable*/font-weight:bold;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:center;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 2=0D
+	@style heading 2=0D
+	*/=0D
+		h2{=0D
+			/*@editable*/color:#222222;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:34px;=0D
+			/*@editable*/font-style:normal;=0D
+			/*@editable*/font-weight:bold;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 3=0D
+	@style heading 3=0D
+	*/=0D
+		h3{=0D
+			/*@editable*/color:#444444;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:22px;=0D
+			/*@editable*/font-style:normal;=0D
+			/*@editable*/font-weight:bold;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Page=0D
+	@section Heading 4=0D
+	@style heading 4=0D
+	*/=0D
+		h4{=0D
+			/*@editable*/color:#949494;=0D
+			/*@editable*/font-family:Georgia;=0D
+			/*@editable*/font-size:20px;=0D
+			/*@editable*/font-style:italic;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/line-height:125%;=0D
+			/*@editable*/letter-spacing:normal;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Container Style=0D
+	*/=0D
+		#templateHeader{=0D
+			/*@editable*/background-color:#transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0px;=0D
+			/*@editable*/padding-bottom:0px;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Interior Style=0D
+	*/=0D
+		.headerContainer{=0D
+			/*@editable*/background-color:#transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0;=0D
+			/*@editable*/padding-bottom:0;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Text=0D
+	*/=0D
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/color:#757575;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:16px;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Header=0D
+	@section Header Link=0D
+	*/=0D
+		.headerContainer .mcnTextContent a,.headerContainer .mcnTextContent p a=
+{=0D
+			/*@editable*/color:#007C89;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/text-decoration:underline;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Container Style=0D
+	*/=0D
+		#templateBody{=0D
+			/*@editable*/background-color:#FFFFFF;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0px;=0D
+			/*@editable*/padding-bottom:0px;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Interior Style=0D
+	*/=0D
+		.bodyContainer{=0D
+			/*@editable*/background-color:transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0;=0D
+			/*@editable*/padding-bottom:0;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Text=0D
+	*/=0D
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{=0D
+			/*@editable*/color:#757575;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:16px;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/text-align:left;=0D
+		}=0D
+	/*=0D
+	@tab Body=0D
+	@section Body Link=0D
+	*/=0D
+		.bodyContainer .mcnTextContent a,.bodyContainer .mcnTextContent p a{=0D=
+
+			/*@editable*/color:#007C89;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/text-decoration:underline;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Style=0D
+	*/=0D
+		#templateFooter{=0D
+			/*@editable*/background-color:#333333;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0px;=0D
+			/*@editable*/padding-bottom:0px;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Interior Style=0D
+	*/=0D
+		.footerContainer{=0D
+			/*@editable*/background-color:#transparent;=0D
+			/*@editable*/background-image:none;=0D
+			/*@editable*/background-repeat:no-repeat;=0D
+			/*@editable*/background-position:center;=0D
+			/*@editable*/background-size:cover;=0D
+			/*@editable*/border-top:0;=0D
+			/*@editable*/border-bottom:0;=0D
+			/*@editable*/padding-top:0;=0D
+			/*@editable*/padding-bottom:0;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Text=0D
+	*/=0D
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/color:#FFFFFF;=0D
+			/*@editable*/font-family:Helvetica;=0D
+			/*@editable*/font-size:12px;=0D
+			/*@editable*/line-height:150%;=0D
+			/*@editable*/text-align:center;=0D
+		}=0D
+	/*=0D
+	@tab Footer=0D
+	@section Footer Link=0D
+	*/=0D
+		.footerContainer .mcnTextContent a,.footerContainer .mcnTextContent p a=
+{=0D
+			/*@editable*/color:#FFFFFF;=0D
+			/*@editable*/font-weight:normal;=0D
+			/*@editable*/text-decoration:underline;=0D
+		}=0D
+	@media only screen and (min-width:768px){=0D
+		.templateContainer{=0D
+			width:600px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		body,table,td,p,a,li,blockquote{=0D
+			-webkit-text-size-adjust:none !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		body{=0D
+			width:100% !important;=0D
+			min-width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnRetinaImage{=0D
+			max-width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImage{=0D
+			width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnCartContainer,.mcnCaptionTopContent,.mcnRecContentContainer,.mcnCap=
+tionBottomContent,.mcnTextContentContainer,.mcnBoxedTextContentContainer,=
+.mcnImageGroupContentContainer,.mcnCaptionLeftTextContentContainer,.mcnCa=
+ptionRightTextContentContainer,.mcnCaptionLeftImageContentContainer,.mcnC=
+aptionRightImageContentContainer,.mcnImageCardLeftTextContentContainer,.m=
+cnImageCardRightTextContentContainer,.mcnImageCardLeftImageContentContain=
+er,.mcnImageCardRightImageContentContainer{=0D
+			max-width:100% !important;=0D
+			width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnBoxedTextContentContainer{=0D
+			min-width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageGroupContent{=0D
+			padding:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnCaptionLeftContentOuter .mcnTextContent,.mcnCaptionRightContentOute=
+r .mcnTextContent{=0D
+			padding-top:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageCardTopImageContent,.mcnCaptionBottomContent:last-child .mcnCa=
+ptionBottomImageContent,.mcnCaptionBlockInner .mcnCaptionTopContent:last-=
+child .mcnTextContent{=0D
+			padding-top:18px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageCardBottomImageContent{=0D
+			padding-bottom:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageGroupBlockInner{=0D
+			padding-top:0 !important;=0D
+			padding-bottom:0 !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageGroupBlockOuter{=0D
+			padding-top:9px !important;=0D
+			padding-bottom:9px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnTextContent,.mcnBoxedTextContentColumn{=0D
+			padding-right:18px !important;=0D
+			padding-left:18px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcnImageCardLeftImageContent,.mcnImageCardRightImageContent{=0D
+			padding-right:18px !important;=0D
+			padding-bottom:0 !important;=0D
+			padding-left:18px !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+		.mcpreview-image-uploader{=0D
+			display:none !important;=0D
+			width:100% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 1=0D
+	@tip Make the first-level headings larger in size for better readability=
+ on small screens.=0D
+	*/=0D
+		h1{=0D
+			/*@editable*/font-size:30px !important;=0D
+			/*@editable*/line-height:125% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 2=0D
+	@tip Make the second-level headings larger in size for better readabilit=
+y on small screens.=0D
+	*/=0D
+		h2{=0D
+			/*@editable*/font-size:26px !important;=0D
+			/*@editable*/line-height:125% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 3=0D
+	@tip Make the third-level headings larger in size for better readability=
+ on small screens.=0D
+	*/=0D
+		h3{=0D
+			/*@editable*/font-size:20px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Heading 4=0D
+	@tip Make the fourth-level headings larger in size for better readabilit=
+y on small screens.=0D
+	*/=0D
+		h4{=0D
+			/*@editable*/font-size:18px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Boxed Text=0D
+	@tip Make the boxed text larger in size for better readability on small =
+screens. We recommend a font size of at least 16px.=0D
+	*/=0D
+		.mcnBoxedTextContentContainer .mcnTextContent,.mcnBoxedTextContentConta=
+iner .mcnTextContent p{=0D
+			/*@editable*/font-size:14px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Header Text=0D
+	@tip Make the header text larger in size for better readability on small=
+ screens.=0D
+	*/=0D
+		.headerContainer .mcnTextContent,.headerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/font-size:16px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Body Text=0D
+	@tip Make the body text larger in size for better readability on small s=
+creens. We recommend a font size of at least 16px.=0D
+	*/=0D
+		.bodyContainer .mcnTextContent,.bodyContainer .mcnTextContent p{=0D
+			/*@editable*/font-size:16px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}	@media only screen and (max-width: 480px){=0D
+	/*=0D
+	@tab Mobile Styles=0D
+	@section Footer Text=0D
+	@tip Make the footer content text larger in size for better readability =
+on small screens.=0D
+	*/=0D
+		.footerContainer .mcnTextContent,.footerContainer .mcnTextContent p{=0D=
+
+			/*@editable*/font-size:14px !important;=0D
+			/*@editable*/line-height:150% !important;=0D
+		}=0D
+=0D
+}</style>=0D
+                    <script>var w=3Dwindow;if(w.performance||w.mozPerform=
+ance||w.msPerformance||w.webkitPerformance){var d=3Ddocument;AKSB=3Dw.AKS=
+B||{},AKSB.q=3DAKSB.q||[],AKSB.mark=3DAKSB.mark||function(e,_){AKSB.q.pus=
+h(["mark",e,_||(new Date).getTime()])},AKSB.measure=3DAKSB.measure||funct=
+ion(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.don=
+e=3DAKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte"=
+,(new Date).getTime()),AKSB.prof=3D{custid:"405192",ustr:"",originlat:"0"=
+,clientrtt:"7",ghostip:"92.123.100.23",ipv6:false,pct:"10",clientip:"90.1=
+16.103.142",requestid:"2a64a86",region:"31260",protocol:"h2",blver:14,akM=
+:"x",akN:"ae",akTT:"O",akTX:"1",akTI:"2a64a86",ai:"386313",ra:"false",pmg=
+n:"",pmgi:"",pmp:"",qc:""},function(e){var _=3Dd.createElement("script");=
+_.async=3D"async",_.src=3De;var t=3Dd.getElementsByTagName("script"),t=3D=
+t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"=3D=3D=3Dd.locatio=
+n.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</sc=
+ript>=0D
+                    </head>=0D
+    <body>=0D
+        <!--*|IF:MC_PREVIEW_TEXT|*-->=0D
+        <!--[if !gte mso 9]><!----><span class=3D"mcnPreviewText" style=3D=
+"display:none; font-size:0px; line-height:0px; max-height:0px; max-width:=
+0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;"> </spa=
+n><!--<![endif]-->=0D
+        <!--*|END:IF|*-->=0D
+        <center>=0D
+            <table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" height=3D"100%" width=3D"100%" id=3D"bodyTable">=0D
+                <tr>=0D
+                    <td align=3D"center" valign=3D"top" id=3D"bodyCell">=0D=
+
+                        <!-- BEGIN TEMPLATE // -->=0D
+                        <table border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%">=0D
+                            <tr>=0D
+                                <td align=3D"center" valign=3D"top" id=3D=
+"templateHeader" data-template-container>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+=0D
+                                    <tr>=0D
+                                    <td align=3D"center" valign=3D"top" w=
+idth=3D"600" style=3D"width:600px;">=0D
+                                    <![endif]-->=0D
+                                    <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateConta=
+iner">=0D
+                                        <tr>=0D
+                                            <td valign=3D"top" class=3D"h=
+eaderContainer"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" class=3D"mcnImageBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnImageBlockOuter">=0D
+            <tr>=0D
+                <td valign=3D"top" style=3D"padding:9px" class=3D"mcnImag=
+eBlockInner">=0D
+                    <table align=3D"left" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width:100%;">=0D
+                        <tbody><tr>=0D
+                            <td class=3D"mcnImageContent" valign=3D"top" =
+style=3D"padding-right: 9px; padding-left: 9px; padding-top: 0; padding-b=
+ottom: 0; text-align:center;">=0D
+                                =0D
+                                    =0D
+                                        <img align=3D"center" alt=3D"" sr=
+c=3D"https://mcusercontent.com/099e41185bba84a5e7a6694a1/images/954098fc-=
+d781-429d-8fb2-81660140cd38.png" width=3D"564" style=3D"max-width:600px; =
+padding-bottom: 0; display: inline !important; vertical-align: bottom;" c=
+lass=3D"mcnImage">=0D
+                                    =0D
+                                =0D
+                            </td>=0D
+                        </tr>=0D
+                    </tbody></table>=0D
+                </td>=0D
+            </tr>=0D
+    </tbody>=0D
+</table></td>=0D
+                                        </tr>=0D
+                                    </table>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    </td>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                            <tr>=0D
+                                <td align=3D"center" valign=3D"top" id=3D=
+"templateBody" data-template-container>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+=0D
+                                    <tr>=0D
+                                    <td align=3D"center" valign=3D"top" w=
+idth=3D"600" style=3D"width:600px;">=0D
+                                    <![endif]-->=0D
+                                    <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateConta=
+iner">=0D
+                                        <tr>=0D
+                                            <td valign=3D"top" class=3D"b=
+odyContainer"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnTextBlockOuter">=0D
+        <tr>=0D
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddi=
+ng-top:9px;">=0D
+              	<!--[if mso]>=0D
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;">=0D
+				<tr>=0D
+				<![endif]-->=0D
+			    =0D
+				<!--[if mso]>=0D
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">=0D
+				<![endif]-->=0D
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=3D"100%" cl=
+ass=3D"mcnTextContentContainer">=0D
+                    <tbody><tr>=0D
+                        =0D
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:1=
+8px;">=0D
+                        =0D
+                            <h3 style=3D"text-align: center;"><br>=0D
+<span style=3D"color:#F0339A">Votre compte client a bien =C3=A9t=C3=A9 cr=
+=C3=A9=C3=A9 !</span></h3>=0D
+=0D
+<p><br>=0D
+<span style=3D"font-size:13px">Bonjour !<br>=0D
+<br>=0D
+Nous sommes tr=C3=A8s heureux de vous compter parmi la communaut=C3=A9 Co=
+cooning Spa. Votre compte client a bien =C3=A9t=C3=A9 cr=C3=A9=C3=A9 !<br=
+>=0D
+<br>=0D
+Sur notre site, vous pouvez r=C3=A9server en 2 clics une <a href=3D"http:=
+//cocooningspa.com/location-spa" target=3D"_blank"><strong>location de ja=
+cuzzi =C3=A0 domicile</strong></a>&nbsp;et/ou un <a href=3D"http://cocoon=
+ingspa.com/reservation-massage" target=3D"_blank"><strong>massage =C3=A0 =
+domicile</strong></a>. Notre r=C3=A9seau de professionnels nous permet d'=
+=C3=AAtre disponible partout en France, Belgique, Luxembourg et Suisse.<b=
+r>=0D
+<br>=0D
+Vous =C3=AAtes int=C3=A9ress=C3=A9(e) par nos services, mais vous avez en=
+core des questions ?&nbsp;Besoin d'aide ?<br>=0D
+Nous mettons un point d'honneur =C3=A0 r=C3=A9pondre rapidement et effica=
+cement =C3=A0 vos demandes. N'h=C3=A9sitez pas =C3=A0 nous en faire part,=
+ notre service client est disponible tous les jours de l'ann=C3=A9e&nbsp;=
+de 8h =C3=A0 20h par mail, t=C3=A9l=C3=A9phone, SMS, r=C3=A9seaux sociaux=
+...&nbsp;<br>=0D
+<br>=0D
+Voici les <a href=3D"http://cocooningspa.com/conditions-generales" target=
+=3D"_blank"><strong>conditions g=C3=A9n=C3=A9rales d'utilisation</strong>=
+</a> de la plateforme que vous avez accept=C3=A9es.<br>=0D
+<br>=0D
+=C3=80 tr=C3=A8s bient=C3=B4t&nbsp;!</span></p>=0D
+=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+				<!--[if mso]>=0D
+				</td>=0D
+				<![endif]-->=0D
+                =0D
+				<!--[if mso]>=0D
+				</tr>=0D
+				</table>=0D
+				<![endif]-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnButtonBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnButtonBlockOuter">=0D
+        <tr>=0D
+            <td style=3D"padding-top:0; padding-right:18px; padding-botto=
+m:18px; padding-left:18px;" valign=3D"top" align=3D"center" class=3D"mcnB=
+uttonBlockInner">=0D
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" c=
+lass=3D"mcnButtonContentContainer" style=3D"border-collapse: separate !im=
+portant;border-radius: 50px;background-color: #2BAADF;">=0D
+                    <tbody>=0D
+                        <tr>=0D
+                            <td align=3D"center" valign=3D"middle" class=3D=
+"mcnButtonContent" style=3D"font-family: Arial; font-size: 16px; padding:=
+ 18px;">=0D
+                                <a class=3D"mcnButton " title=3D"Je r=C3=A9=
+serve" href=3D"http://cocooningspa.com/reservation-prestation" target=3D"=
+_blank" style=3D"font-weight: bold;letter-spacing: normal;line-height: 10=
+0%;text-align: center;text-decoration: none;color: #FFFFFF;">Je r=C3=A9se=
+rve</a>=0D
+                            </td>=0D
+                        </tr>=0D
+                    </tbody>=0D
+                </table>=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table></td>=0D
+                                        </tr>=0D
+                                    </table>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    </td>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                            <tr>=0D
+                                <td align=3D"center" valign=3D"top" id=3D=
+"templateFooter" data-template-container>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"600" style=3D"width:600px;">=
+=0D
+                                    <tr>=0D
+                                    <td align=3D"center" valign=3D"top" w=
+idth=3D"600" style=3D"width:600px;">=0D
+                                    <![endif]-->=0D
+                                    <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"templateConta=
+iner">=0D
+                                        <tr>=0D
+                                            <td valign=3D"top" class=3D"f=
+ooterContainer"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnTextBlockOuter">=0D
+        <tr>=0D
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddi=
+ng-top:9px;">=0D
+              	<!--[if mso]>=0D
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;">=0D
+				<tr>=0D
+				<![endif]-->=0D
+			    =0D
+				<!--[if mso]>=0D
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">=0D
+				<![endif]-->=0D
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=3D"100%" cl=
+ass=3D"mcnTextContentContainer">=0D
+                    <tbody><tr>=0D
+                        =0D
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:1=
+8px;">=0D
+                        =0D
+                            <div style=3D"text-align: left;"><br>=0D
+<span style=3D"color:#F0339A"><span style=3D"font-size:16px"><em><strong>=
+L'=C3=89quipe Cocooning Spa</strong></em></span></span><br>=0D
+&nbsp;</div>=0D
+=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+				<!--[if mso]>=0D
+				</td>=0D
+				<![endif]-->=0D
+                =0D
+				<!--[if mso]>=0D
+				</tr>=0D
+				</table>=0D
+				<![endif]-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnDividerBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnDividerBlockOuter">=0D
+        <tr>=0D
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width:100%; p=
+adding:18px;">=0D
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border=
+-top: 2px solid #505050;">=0D
+                    <tbody><tr>=0D
+                        <td>=0D
+                            <span></span>=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+<!--            =0D
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px=
+;">=0D
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-co=
+lor:none; border-left-color:none; border-right-color:none; border-bottom-=
+width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-=
+right:0; margin-bottom:0; margin-left:0;" />=0D
+-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnFollowBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnFollowBlockOuter">=0D
+        <tr>=0D
+            <td align=3D"center" valign=3D"top" style=3D"padding:9px" cla=
+ss=3D"mcnFollowBlockInner">=0D
+                <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" class=3D"mcnFollowContentContainer" style=3D"min-width:100%=
+;">=0D
+    <tbody><tr>=0D
+        <td align=3D"center" style=3D"padding-left:9px;padding-right:9px;=
+">=0D
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" style=3D"min-width:100%;" class=3D"mcnFollowContent">=0D
+                <tbody><tr>=0D
+                    <td align=3D"center" valign=3D"top" style=3D"padding-=
+top:9px; padding-right:9px; padding-left:9px;">=0D
+                        <table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0">=0D
+                            <tbody><tr>=0D
+                                <td align=3D"center" valign=3D"top">=0D
+                                    <!--[if mso]>=0D
+                                    <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0">=0D
+                                    <tr>=0D
+                                    <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"https://www.facebook.com/cocooningspaev/" target=3D=
+"_blank"><img src=3D"https://cdn-images.mailchimp.com/icons/social-block-=
+v2/outline-light-facebook-48.png" alt=3D"Facebook" style=3D"display:block=
+;" height=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"https://www.instagram.com/cocooningspaev/?hl=3Dfr" =
+target=3D"_blank"><img src=3D"https://cdn-images.mailchimp.com/icons/soci=
+al-block-v2/outline-light-instagram-48.png" alt=3D"Link" style=3D"display=
+:block;" height=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"https://www.snapchat.com/add/cocooningspaev" target=
+=3D"_blank"><img src=3D"https://cdn-images.mailchimp.com/icons/social-blo=
+ck-v2/outline-light-snapchat-48.png" alt=3D"Link" style=3D"display:block;=
+" height=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:10px; padding-bottom:9px;" class=3D"mcnFollowContent=
+ItemContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"http://cocooningspa.com/" target=3D"_blank"><img sr=
+c=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/outline-light=
+-link-48.png" alt=3D"Website" style=3D"display:block;" height=3D"24" widt=
+h=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                        <!--[if mso]>=0D
+                                        <td align=3D"center" valign=3D"to=
+p">=0D
+                                        <![endif]-->=0D
+                                        =0D
+                                        =0D
+                                            <table align=3D"left" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"display:inline;">=0D
+                                                <tbody><tr>=0D
+                                                    <td valign=3D"top" st=
+yle=3D"padding-right:0; padding-bottom:9px;" class=3D"mcnFollowContentIte=
+mContainer">=0D
+                                                        <table border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" class=3D"mcnFollowC=
+ontentItem">=0D
+                                                            <tbody><tr>=0D=
+
+                                                                <td align=
+=3D"left" valign=3D"middle" style=3D"padding-top:5px; padding-right:10px;=
+ padding-bottom:5px; padding-left:9px;">=0D
+                                                                    <tabl=
+e align=3D"left" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"">=0D
+                                                                        <=
+tbody><tr>=0D
+                                                                         =
+   =0D
+                                                                         =
+       <td align=3D"center" valign=3D"middle" width=3D"24" class=3D"mcnFo=
+llowIconContent">=0D
+                                                                         =
+           <a href=3D"mailto:cocooningspa@outlook.com" target=3D"_blank">=
+<img src=3D"https://cdn-images.mailchimp.com/icons/social-block-v2/outlin=
+e-light-forwardtofriend-48.png" alt=3D"Email" style=3D"display:block;" he=
+ight=3D"24" width=3D"24" class=3D""></a>=0D
+                                                                         =
+       </td>=0D
+                                                                         =
+   =0D
+                                                                         =
+   =0D
+                                                                        <=
+/tr>=0D
+                                                                    </tbo=
+dy></table>=0D
+                                                                </td>=0D
+                                                            </tr>=0D
+                                                        </tbody></table>=0D=
+
+                                                    </td>=0D
+                                                </tr>=0D
+                                            </tbody></table>=0D
+                                        =0D
+                                        <!--[if mso]>=0D
+                                        </td>=0D
+                                        <![endif]-->=0D
+                                    =0D
+                                    <!--[if mso]>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                        </tbody></table>=0D
+                    </td>=0D
+                </tr>=0D
+            </tbody></table>=0D
+        </td>=0D
+    </tr>=0D
+</tbody></table>=0D
+=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnTextBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnTextBlockOuter">=0D
+        <tr>=0D
+            <td valign=3D"top" class=3D"mcnTextBlockInner" style=3D"paddi=
+ng-top:9px;">=0D
+              	<!--[if mso]>=0D
+				<table align=3D"left" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" style=3D"width:100%;">=0D
+				<tr>=0D
+				<![endif]-->=0D
+			    =0D
+				<!--[if mso]>=0D
+				<td valign=3D"top" width=3D"600" style=3D"width:600px;">=0D
+				<![endif]-->=0D
+                <table align=3D"left" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" style=3D"max-width:100%; min-width:100%;" width=3D"100%" cl=
+ass=3D"mcnTextContentContainer">=0D
+                    <tbody><tr>=0D
+                        =0D
+                        <td valign=3D"top" class=3D"mcnTextContent" style=
+=3D"padding-top:0; padding-right:18px; padding-bottom:9px; padding-left:1=
+8px;">=0D
+                        =0D
+                            <div style=3D"text-align: center;"><span styl=
+e=3D"font-size:13px">06 67 07 65 87</span></div>=0D
+=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+				<!--[if mso]>=0D
+				</td>=0D
+				<![endif]-->=0D
+                =0D
+				<!--[if mso]>=0D
+				</tr>=0D
+				</table>=0D
+				<![endif]-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnDividerBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnDividerBlockOuter">=0D
+        <tr>=0D
+            <td class=3D"mcnDividerBlockInner" style=3D"min-width:100%; p=
+adding:18px;">=0D
+                <table class=3D"mcnDividerContent" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"min-width: 100%;border=
+-top: 2px solid #505050;">=0D
+                    <tbody><tr>=0D
+                        <td>=0D
+                            <span></span>=0D
+                        </td>=0D
+                    </tr>=0D
+                </tbody></table>=0D
+<!--            =0D
+                <td class=3D"mcnDividerBlockInner" style=3D"padding: 18px=
+;">=0D
+                <hr class=3D"mcnDividerContent" style=3D"border-bottom-co=
+lor:none; border-left-color:none; border-right-color:none; border-bottom-=
+width:0; border-left-width:0; border-right-width:0; margin-top:0; margin-=
+right:0; margin-bottom:0; margin-left:0;" />=0D
+-->=0D
+            </td>=0D
+        </tr>=0D
+    </tbody>=0D
+</table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" class=3D"mcnImageBlock" style=3D"min-width:100%;">=0D
+    <tbody class=3D"mcnImageBlockOuter">=0D
+            <tr>=0D
+                <td valign=3D"top" style=3D"padding:9px" class=3D"mcnImag=
+eBlockInner">=0D
+                    <table align=3D"left" width=3D"100%" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"mcnImageContentContainer" style=
+=3D"min-width:100%;">=0D
+                        <tbody><tr>=0D
+                            <td class=3D"mcnImageContent" valign=3D"top" =
+style=3D"padding-right: 9px; padding-left: 9px; padding-top: 0; padding-b=
+ottom: 0; text-align:center;">=0D
+                                =0D
+                                    <a href=3D"http://cocooningspa.com/" =
+title=3D"" class=3D"" target=3D"_blank">=0D
+                                        <img align=3D"center" alt=3D"" sr=
+c=3D"https://gallery.mailchimp.com/099e41185bba84a5e7a6694a1/images/b2f39=
+879-3281-47e9-be3e-36130191a0d3.png" width=3D"78.03" style=3D"max-width:4=
+59px; padding-bottom: 0; display: inline !important; vertical-align: bott=
+om;" class=3D"mcnImage">=0D
+                                    </a>=0D
+                                =0D
+                            </td>=0D
+                        </tr>=0D
+                    </tbody></table>=0D
+                </td>=0D
+            </tr>=0D
+    </tbody>=0D
+</table></td>=0D
+                                        </tr>=0D
+                                    </table>=0D
+                                    <!--[if (gte mso 9)|(IE)]>=0D
+                                    </td>=0D
+                                    </tr>=0D
+                                    </table>=0D
+                                    <![endif]-->=0D
+                                </td>=0D
+                            </tr>=0D
+                        </table>=0D
+                        <!-- // END TEMPLATE -->=0D
+                    </td>=0D
+                </tr>=0D
+            </table>=0D
+        </center>=0D
+    </body>=0D
+</html>=0D
+=0D
+  </body>=0D
+</html>=0D
+
+  [1m[35m (164.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/client-profil
+Completed 302 Found in 2319ms (ActiveRecord: 373.9ms | Allocations: 58854)
+
+
+Started GET "/client-profil" for ::1 at 2021-01-06 16:34:19 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (0.4ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 3], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 36.9ms | Allocations: 2032)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.5ms | Allocations: 151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 779ms (Views: 464.4ms | ActiveRecord: 9.3ms | Allocations: 20893)
+
+
+Started GET "/client-profil" for ::1 at 2021-01-06 16:34:20 +0300
+Processing by ClientsController#profil as HTML
+  [1m[36mClient Load (0.7ms)[0m  [1m[34mSELECT "clients".* FROM "clients" WHERE "clients"."id" = $1 ORDER BY "clients"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering clients/profil.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" WHERE "orders"."client_id" = $1 AND "orders"."is_validate" = $2 LIMIT $3[0m  [["client_id", 3], ["is_validate", true], ["LIMIT", 1]]
+  ↳ app/views/clients/profil.html.erb:170
+  Rendered clients/profil.html.erb within layouts/application (Duration: 2.3ms | Allocations: 746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered clients/shared/_links.html.erb (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 1.3ms | Allocations: 11090)
+
+
