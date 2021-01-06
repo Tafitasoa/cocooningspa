@@ -408,25 +408,34 @@ class OrdersController < ApplicationController
     # Génère un numéro de transaction aléatoire
     transactionReference = "simu" + rand(100000..999999).to_s
     #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
+
+     
+  # //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////
     ##normalReturnUrl = "https://cocooningspa.com/reservation-prestation/paye-commande/" + current_client.id.to_s
+
+  # ////////////////////////////////  FIN  /////////////////////////////////////  
+
     # Contruit la requête des données à envoyer à Mercanet
+
+    # //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////
     ##@data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=2"
+    # ////////////////////////////////  FIN  /////////////////////////////////////
+
     # @data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|transactionReference=" + transactionReference + "|keyVersion=2"
 
 
-    #TEST MERCANET
-    # @data = "amount=#{@amount}|currencyCode=978|merchantId=211000021310001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
-
-    # secretKey = "S9i8qClCnb2CZU3y3Vn0toIOgz3z_aBi79akR30vM9o"
-
-    #FIN TEST
-
     # Encode en UTF-8 des données à envoyer à Mercanet
+
+     # //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////
     ##dataToSend = (@data).encode('utf-8')
+    
     # Clé secrète correspondant au merchandId de simulation
     ##secretKey = "p49S1kWFoQEv_G_KWpotcKpjvSHM-ku-v2Mza5dszJA"
     # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
     ##@seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
+
+    # ////////////////////////////////  FIN  /////////////////////////////////////
+
     # @code_promo = 0
     # code = session[:otherInfo]["code_promo"]
     # if code
@@ -439,7 +448,10 @@ class OrdersController < ApplicationController
     # # Génère un numéro de transaction aléatoire
     # transactionReference = "simu" + rand(100000..999999).to_s
     # #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
+
+    # ////////////////////////////////  CODE TEST HEROKU /////////////////////////////////////
      normalReturnUrl = "https://cocooningspa-v11.herokuapp.com/reservation-prestation/paye-commande/" + current_client.id.to_s
+
     # # Contruit la requête des données à envoyer à Mercanet
      @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
     # # Encode en UTF-8 des données à envoyer à Mercanet
@@ -448,7 +460,10 @@ class OrdersController < ApplicationController
      secretKey = "002001000000001_KEY1"
     # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
      @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
+    # ////////////////////////////////  FIN  /////////////////////////////////////
+    
   end
+  
 
   # 4 Le Payement
   def payment
@@ -478,7 +493,7 @@ class OrdersController < ApplicationController
 
 
 
-
+# ////////////////////////////////  CODE TEST HEROKU /////////////////////////////////////
 
       @order.services.each do |service|
         case service.name
@@ -513,6 +528,8 @@ class OrdersController < ApplicationController
       end
       ClientMailer.confirm_order(@order.id,current_client.id).deliver_now
 
+
+# ////////////////////////////////  FIN  /////////////////////////////////////
 
 
 

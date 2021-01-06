@@ -21,8 +21,9 @@ class NotificationController < ApplicationController
     order_lists = Order.where(is_validate:true)
     order_lists.each do |order|
       unless order.send_mail
-        # puts " ##########################################################################"
+# //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////       
         # send_email_now(order)
+# ////////////////////////////////  FIN /////////////////////////////////////        
         order.update(send_mail:true)
       end
       date = order.prestation_date.split("/")
@@ -46,7 +47,8 @@ class NotificationController < ApplicationController
     render html: helpers.tag.strong('Email sended')
   end
 
-  private
+  # //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////  
+  #private
 
   # def send_email_now(order)
   #   order.services.each do |service|
@@ -82,5 +84,5 @@ class NotificationController < ApplicationController
   #   end
   #   ClientMailer.confirm_order(order.id,order.client.id).deliver_now
   # end
-
+# ////////////////////////////////  FIN ///////////////////////////////////// 
 end
