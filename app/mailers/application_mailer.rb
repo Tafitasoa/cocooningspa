@@ -1,4 +1,8 @@
 class ApplicationMailer < ActionMailer::Base
+
+  default from: 'contact@cocooningspa.com'
+  layout 'mailer'
+
   SMTP_ERRORS = [
     IOError,
     Net::SMTPAuthenticationError,
@@ -9,9 +13,6 @@ class ApplicationMailer < ActionMailer::Base
     Net::SMTPSyntaxError
   ]
   rescue_from *SMTP_ERRORS, with: :show_errors
-
-  default from: 'contact@cocooningspa.com'
-  layout 'mailer'
 
   private
     def show_errors(exception)

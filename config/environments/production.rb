@@ -1,12 +1,9 @@
 Rails.application.configure do
   
-
   # Settings specified here will take precedence over those in config/application.rb.
   # configuration en production localhost a changé
   
-  config.action_mailer.default_url_options = { :host => 'https://cocooningspa-v11.herokuapp.com/' }
-
-
+  config.action_mailer.default_url_options = { :host => 'cocooningspa.com' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -119,21 +116,17 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # config for mailer
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.smtp_settings = {
-  #   address:              'mail.cocooningspa.com',
-  #   port:                 587,
-  #   domain:               'cocooningspa.com',
-  #   user_name:            'vincentcharreau@cocooningspa.com',
-  #   password:             'Cocooning06',
-  #   authentication:       'plain'
-  # }
+  #   config.action_mailer.delivery_method = :smtp
+  #   config.action_mailer.smtp_settings = {
+  #     address:              'mail.cocooningspa.com',
+  #     port:                 587,
+  #     domain:               'cocooningspa.com',
+  #     user_name:            'vincentcharreau@cocooningspa.com',
+  #     password:             'Cocooning06',
+  #     authentication:       'plain'
+  #   }
 
-  # //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////
-
-      #config.action_mailer.delivery_method = :sendmail
-
-  # ////////////////////////////////  FIN  /////////////////////////////////////  
+    config.action_mailer.delivery_method = :sendmail
     # Defaults to:
     # config.action_mailer.sendmail_settings = {
     #   location: '/usr/sbin/sendmail',
@@ -141,32 +134,9 @@ Rails.application.configure do
     # }
     config.action_mailer.perform_deliveries = true
     config.action_mailer.raise_delivery_errors = true
-
-  # //////////////////////////////// ORIGINAL CODE COMMENTE /////////////////////////////////////
-
-     #config.action_mailer.default_options = {from: 'contact@cocooningspa.com'}
-
-  # ////////////////////////////////  FIN  /////////////////////////////////////  
-
+    config.action_mailer.default_options = {from: 'contact@cocooningspa.com'}
     # config.action_mailer.default_options = {from: 'cocooningspa@outlook.com'}
-    # config.action_mailer.default_options = {from: 'itokiana@sayna.io'}
 
-
- # ////////////////////////////////  CODE TEST HEROKU /////////////////////////////////////
-  config.action_mailer.default_options = {from: 'michael77rakotovao@gmail.com'}
-
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'cocooningspa.com',
-    user_name:            'michael77rakotovao@gmail.com',
-    password:             'zzadaorgdtcibfti',
-    authentication:       'plain',
-    enable_starttls_auto: true 
-  }
-  # ////////////////////////////////  FIN  /////////////////////////////////////  
 end
 
 
