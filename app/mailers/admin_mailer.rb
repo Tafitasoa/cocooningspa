@@ -1,27 +1,18 @@
 class AdminMailer < ApplicationMailer
     def contac_us(message)
         @message = message
-        #@url = 'http://cocooningspa.com/'
-        @url = 'https://cocooningspa-v11.herokuapp.com/'
+        @url = 'http://cocooningspa.com/'
         # permet d'envoyer l'email à to: ...
-        #mail(to: 'cocooningspa@outlook.com', subject: "Un client a besoin d'information ou d'aide")
+        mail(to: 'tafitasoa.cedric@gmail.com', subject: "Un client a besoin d'information ou d'aide")
 
-        #mail(to: 'contact@cocooningspa.com', subject: "Un client a besoin d'information ou d'aide")
-
-        mail(to: 'k.randriam@outlook.fr', subject: "Un client a besoin d'information ou d'aide")
     end
 
     def new_partner(candidate)
         @candidate = candidate
-        #@url = 'http://cocooningspa.com/'
-        @url = 'https://cocooningspa-v11.herokuapp.com/'
-
+        @url = 'http://cocooningspa.com/'
         # permet d'envoyer l'email à to: ...
-#       mail(to: 'cocooningspa@outlook.com', subject: '​Nouvelle demande de partenariat !')
+        mail(to: 'contact@cocooningspa.com', subject: '​Nouvelle demande de partenariat !')
 
-        #mail(to: 'contact@cocooningspa.com', subject: '​Nouvelle demande de partenariat !')
-
-        mail(to: 'k.randriam@outlook.fr', subject: '​Nouvelle demande de partenariat !')
     end
 
     def new_order_relance_client(order_id,client_id)
@@ -42,10 +33,9 @@ class AdminMailer < ApplicationMailer
         if @order.code_promo
         @code_promo = @order.code_promo.reduction
         end
-        #mail(to: 'cocooningspa@outlook.com', subject: 'Votre devis effectué en ligne !')
 
-        #mail(to: 'contact@cocooningspa.com', subject: 'Votre devis effectué en ligne !')
-        mail(to: 'k.randriam@outlook.fr', subject: 'Votre devis effectué en ligne !')
+        mail(to: 'contact@cocooningspa.com', subject: 'Votre devis effectué en ligne !')
+
     end
 
 end

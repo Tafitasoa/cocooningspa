@@ -121,14 +121,15 @@ class StaticPageController < ApplicationController
     @message.name_corp = params["corp_name"]
     @message.content = params["content"]
     if @message.save
+      logger.info "Processing the send mail..."
       flash[:success] = "Votre message a été bien envoyé, on vous contactera très bientôt"
       AdminMailer.contac_us(@message).deliver_now
       redirect_back(fallback_location: root_path)
+
     else
+      logger.info "Processing the send mail failed..."
 
       # compter les emails invalid
-      
-
       @nbrmailinvalid = CountInvalidEmail.new
       @nbrmailinvalid.email = params["email"]
       @nbrmailinvalid.description = @message.errors.full_messages #params["content"]
