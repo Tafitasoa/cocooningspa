@@ -2,9 +2,7 @@ class PrestataireMailer < ApplicationMailer
 
   def new_candidate(candidate)
     @candidate = candidate
-    
-     #@url = 'http://cocooningspa.com/'
-     @url = 'https://cocooningspa-v11.herokuapp.com/'
+    @url = 'https://cocooningspa.com/'
   	mail(to: @candidate.email, subject: '​Bienvenue chez Cocooning Spa !')
   end
 
