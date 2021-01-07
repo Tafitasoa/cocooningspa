@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(version: 2021_01_05_113411) do
     t.text "description"
     t.integer "countpermonth"
     t.string "monthvalid"
+    t.string "month"
   end
 
   create_table "count_invalid_emails", force: :cascade do |t|
@@ -108,6 +109,7 @@ ActiveRecord::Schema.define(version: 2021_01_05_113411) do
     t.text "description"
     t.string "monthinvalid"
     t.integer "countpermonthinvalid"
+    t.string "month"
   end
 
   create_table "countries", force: :cascade do |t|

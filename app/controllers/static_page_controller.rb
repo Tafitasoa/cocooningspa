@@ -64,17 +64,17 @@ class StaticPageController < ApplicationController
       
       # compter les emails invalid
 
-      @nbrmailinvalid = CountInvalidEmail.new
-      @nbrmailinvalid.email = params["email"]
-      @nbrmailinvalid.description = @candidate.errors.full_messages
-      @nbrmailinvalid.save
+      # @nbrmailinvalid = CountInvalidEmail.new
+      # @nbrmailinvalid.email = params["email"]
+      # @nbrmailinvalid.description = @candidate.errors.full_messages
+      # @nbrmailinvalid.save
 
-        @countinvalid = CountInvalidEmail.select('id').group("date_trunc('month', created_at)").count 
+      #   @countinvalid = CountInvalidEmail.select('id').group("date_trunc('month', created_at)").count 
         
       
-        @countinvalid.each do |i|
-           @nbrmailinvalid.update(countpermonthinvalid: i[1], monthinvalid: i[0].strftime("%b")) 
-        end
+      #   @countinvalid.each do |i|
+      #      @nbrmailinvalid.update(countpermonthinvalid: i[1], monthinvalid: i[0].strftime("%b")) 
+      #   end
 
       flash[:danger] = @candidate.errors.full_messages
       redirect_back(fallback_location: root_path)
@@ -129,18 +129,18 @@ class StaticPageController < ApplicationController
     else
       logger.info "Processing the send mail failed..."
 
-      # compter les emails invalid
-      @nbrmailinvalid = CountInvalidEmail.new
-      @nbrmailinvalid.email = params["email"]
-      @nbrmailinvalid.description = @message.errors.full_messages #params["content"]
-      @nbrmailinvalid.save
+      # # compter les emails invalid
+      # @nbrmailinvalid = CountInvalidEmail.new
+      # @nbrmailinvalid.email = params["email"]
+      # @nbrmailinvalid.description = @message.errors.full_messages #params["content"]
+      # @nbrmailinvalid.save
 
-        @countinvalid = CountInvalidEmail.select('id').group("date_trunc('month', created_at)").count 
+      #   @countinvalid = CountInvalidEmail.select('id').group("date_trunc('month', created_at)").count 
         
       
-        @countinvalid.each do |i|
-           @nbrmailinvalid.update(countpermonthinvalid: i[1], monthinvalid: i[0].strftime("%b")) 
-        end
+      #   @countinvalid.each do |i|
+      #      @nbrmailinvalid.update(countpermonthinvalid: i[1], monthinvalid: i[0].strftime("%b")) 
+      #   end
 
       flash[:danger] = @message.errors.full_messages
       redirect_back(fallback_location: root_path)

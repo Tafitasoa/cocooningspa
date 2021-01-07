@@ -3,7 +3,7 @@ class AdminMailer < ApplicationMailer
         @message = message
         @url = 'http://cocooningspa.com/'
         # permet d'envoyer l'email à to: ...
-        mail(to: 'tafitasoa.cedric@gmail.com', subject: "Un client a besoin d'information ou d'aide")
+        mail(to: 'contact@cocooningspa.com', subject: "Un client a besoin d'information ou d'aide")
 
     end
 

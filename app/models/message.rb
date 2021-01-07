@@ -19,15 +19,15 @@ class Message < ApplicationRecord
 		domain_name = Mail::Address.new(email).domain
 		domain_valid?(domain_name)
 
-		#Compte les emails validés
-		@nbrmail = CountEmail.new
-	    @nbrmail.email = email
-	    @nbrmail.description = "Mail de contact avec succès"
-	    @nbrmail.save
-	    @count = CountEmail.select('id').group("date_trunc('month', created_at)").count	 
-	    @count.each do |m|
-	       @nbrmail.update(countpermonth: m[1], monthvalid: m[0].strftime("%b")) 
-	   	end
+		# #Compte les emails validés
+		# @nbrmail = CountEmail.new
+	    # @nbrmail.email = email
+	    # @nbrmail.description = "Mail de contact avec succès"
+	    # @nbrmail.save
+	    # @count = CountEmail.select('id').group("date_trunc('month', created_at)").count	 
+	    # @count.each do |m|
+	    #    @nbrmail.update(countpermonth: m[1], monthvalid: m[0].strftime("%b")) 
+	   	# end
 
 		rescue
 		

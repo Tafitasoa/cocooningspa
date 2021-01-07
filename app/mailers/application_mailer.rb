@@ -16,7 +16,7 @@ class ApplicationMailer < ActionMailer::Base
 
   private
     def show_errors(exception)
-      logger.fatal "[ERROR] #{exception}, \nCODE: #{exception.error_code} , \nMESSAGE #{exception.message}"
+      logger.debug "[ERROR] #{exception}, \nCODE: #{exception.error_code} , \nMESSAGE #{exception.message}"
     end
 
 end

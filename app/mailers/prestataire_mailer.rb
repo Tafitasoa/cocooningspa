@@ -6,17 +6,17 @@ class PrestataireMailer < ApplicationMailer
   	mail(to: @candidate.email, subject: '​Bienvenue chez Cocooning Spa !')
   end
 
-  def new_orderSpa(order_service,id)
+  def new_orderSpa(order_service_id,id)
     @prestataire = Prestataire.find(id)
-    @oService = OrderService.find(order_service)
+    @oService = OrderService.find(order_service_id)
     @order = @oService.order
     @date = @order.prestation_date
     mail(to: @prestataire.email, subject: 'Une nouvelle commande Cocooning Spa !')
   end
 
-  def new_orderMassage(order_service,id)
+  def new_orderMassage(order_service_id,id)
     @prestataire = Prestataire.find(id)
-    @oService = OrderService.find(order_service)
+    @oService = OrderService.find(order_service_id)
     @order = @oService.order
     @date = @order.prestation_date
     mail(to: @prestataire.email, subject: 'Une nouvelle commande Cocooning Spa !')
