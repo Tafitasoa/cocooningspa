@@ -109,7 +109,6 @@ ActiveRecord::Schema.define(version: 2021_01_05_113411) do
     t.text "description"
     t.string "monthinvalid"
     t.integer "countpermonthinvalid"
-    t.string "month"
   end
 
   create_table "countries", force: :cascade do |t|
