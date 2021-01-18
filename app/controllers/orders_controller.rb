@@ -205,7 +205,7 @@ class OrdersController < ApplicationController
     isError = false
 
     # gestion de l'heurs pour les prixs MM-DD 
-    exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+    exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
     current_date = session[:otherInfo]["date"].split("/")
 
     if timeSpas
@@ -493,6 +493,11 @@ class OrdersController < ApplicationController
       Client.find(params[:client_id]).update(is_client:true)
 
       begin
+        begin
+          ClientMailer.confirm_order(@order.id,current_client.id).deliver_now
+        rescue
+        end
+
         @order.services.each do |service|
           case service.name
             when "Location spa"
@@ -505,7 +510,10 @@ class OrdersController < ApplicationController
                 @prestataires = Prestataire.joins(:services).where(services:{name:service.name}).joins(:departments).where(departments:{name:@order.department.name})
               end
               @prestataires.each do |prestataire|
-                PrestataireMailer.new_orderSpa(@order_service.id,prestataire.id).deliver_now
+                begin
+                  PrestataireMailer.new_orderSpa(@order_service.id,prestataire.id).deliver_now
+                rescue
+                end
               end
             when "Massage"
               @order_service = @order.order_services.find_by(service_id:service.id)
@@ -519,7 +527,10 @@ class OrdersController < ApplicationController
               
               @prestataires.each do |prestataire|
                 if prestataire.sexe == @order.praticien || @order.praticien == "all"
-                  PrestataireMailer.new_orderMassage(@order_service.id,prestataire.id).deliver_now
+                  begin
+                    PrestataireMailer.new_orderMassage(@order_service.id,prestataire.id).deliver_now
+                  rescue
+                  end
                 end
               end
             else
@@ -530,7 +541,6 @@ class OrdersController < ApplicationController
         logger.error "[ERROR] at OrderController, Payment"
         
       ensure
-        ClientMailer.confirm_order(@order.id,current_client.id).deliver_now
         redirect_to payedsuccess_path
       end
       # =====================================================================
@@ -574,7 +584,7 @@ class OrdersController < ApplicationController
   end
 
   def validate_value_in_session
-    exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+    exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
     @code_promo = 0
     
     code = session[:otherInfo]["code_promo"]

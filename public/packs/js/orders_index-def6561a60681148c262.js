@@ -764,7 +764,7 @@ function htmlOptionSpaOrder(index, dataOption, dataForm, listOptions) {
 function priceTotalForOneSpa(index, dataOption, dataForm) {
   // [spa.duration,spa.exceptional_price,spa.ordinary_price,spa.exceptional_acompte,spa.ordinary_acompte]
   // [24, 180, 100, 50, 30]
-  var exceptionalDate = [["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
+  var exceptionalDate = [["12","02"],["13","02"],["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
   var zone = JSON.parse(sessionStorage.getItem("zone"));
   zone = zone.date.split("/"); // MM - DD - YYYY
 
@@ -806,7 +806,7 @@ function priceTotalForOneSpa(index, dataOption, dataForm) {
 }
 
 function priceTotalForAllSpa(dataOption, dataForm) {
-  var exceptionalDate = [["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
+  var exceptionalDate = [["12","02"],["13","02"],["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
   var zone = JSON.parse(sessionStorage.getItem("zone"));
   zone = zone.date.split("/"); // MM - DD - YYYY
 
@@ -986,7 +986,7 @@ function addMassageInOrder() {
 }
 
 function priceTotalForOneMassage(dataMassages, myData) {
-  var exceptionalDate = [["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
+  var exceptionalDate = [["12","02"],["13","02"],["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
   var zone = JSON.parse(sessionStorage.getItem("zone"));
   zone = zone.date.split("/"); // MM - DD - YYYY
 
@@ -1034,7 +1034,7 @@ function priceTotalForOneMassage(dataMassages, myData) {
 }
 
 function priceTotalForAllMassage(dataMassages) {
-  var exceptionalDate = [["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
+  var exceptionalDate = [["12","02"],["13","02"],["14", "02"], ["24", "12"], ["25", "12"], ["31", "12"]];
   var zone = JSON.parse(sessionStorage.getItem("zone"));
   zone = zone.date.split("/"); // MM - DD - YYYY
 

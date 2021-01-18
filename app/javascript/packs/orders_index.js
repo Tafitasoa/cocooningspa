@@ -581,7 +581,7 @@ function htmlOptionSpaOrder(index,dataOption,dataForm,listOptions){
 function priceTotalForOneSpa(index,dataOption,dataForm){
 // [spa.duration,spa.exceptional_price,spa.ordinary_price,spa.exceptional_acompte,spa.ordinary_acompte]
 // [24, 180, 100, 50, 30]
-let exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+let exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
 let zone = JSON.parse(sessionStorage.getItem("zone"))
 	zone = zone.date.split("/") // MM - DD - YYYY
 	let exceptionalPrice = false
@@ -616,7 +616,8 @@ let zone = JSON.parse(sessionStorage.getItem("zone"))
 }
 
 function priceTotalForAllSpa(dataOption,dataForm){
-	let exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+	
+	let exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
 	let zone = JSON.parse(sessionStorage.getItem("zone"))
 	zone = zone.date.split("/") // MM - DD - YYYY
 	let exceptionalPrice = false
@@ -773,7 +774,7 @@ function addMassageInOrder(){
 }
 
 function priceTotalForOneMassage(dataMassages,myData){
-	let exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+	let exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
 	let zone = JSON.parse(sessionStorage.getItem("zone"))
 	zone = zone.date.split("/") // MM - DD - YYYY
 	let exceptionalPrice = false
@@ -816,7 +817,7 @@ function priceTotalForOneMassage(dataMassages,myData){
 }
 
 function priceTotalForAllMassage(dataMassages){
-	let exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+	let exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
 	let zone = JSON.parse(sessionStorage.getItem("zone"))
 	zone = zone.date.split("/") // MM - DD - YYYY
 	let exceptionalPrice = false

@@ -25,18 +25,18 @@ class Order < ApplicationRecord
 
 
 	def isExceptional?
-		exceptionalDate = [["14","02"],["24","12"],["25","12"],["31","12"]]
+		exceptionalDate = [["12","02"],["13","02"],["14","02"],["24","12"],["25","12"],["31","12"]]
 		current_date = self.prestation_date.split("/")
 		isExeptional = false
 		if exceptionalDate.include?(current_date[0..1])
-      isExeptional = true
-    end
-    return isExeptional
+      		isExeptional = true
+    	end
+    	return isExeptional
 	end
 
   def is_future?
   	current_date = self.prestation_date.split("/")
-		is_future_date = false
+	is_future_date = false
   	self.order_services.each do |o_s|
   		current_time = o_s.service_time.split(":")
   		current_DateTime = Time.new(current_date[2],current_date[0],current_date[1],current_time[0],current_time[1])
@@ -71,32 +71,34 @@ class Order < ApplicationRecord
 
   	acompte = 0
   	price = 0
-		self.order_services.each do |o_s|
-			if o_s.service.name == "Massage"
-				self.order_massages.each do |o_massage| 
-					if self.isExceptional?
-						price += o_massage.massage_su_price.exceptional_price
-						acompte += o_massage.massage_su_price.exceptional_acompte
-					else
-						price += o_massage.massage_su_price.ordinary_price
-						acompte += o_massage.massage_su_price.ordinary_acompte
-					end
+	self.order_services.each do |o_s|
+		if o_s.service.name == "Massage"
+			self.order_massages.each do |o_massage| 
+				if self.isExceptional?
+					price += o_massage.massage_su_price.exceptional_price
+					acompte += o_massage.massage_su_price.exceptional_acompte
+				else
+					price += o_massage.massage_su_price.ordinary_price
+					acompte += o_massage.massage_su_price.ordinary_acompte
 				end
-			elsif o_s.service.name == "Location spa"
-				self.order_spas.each do |o_spa|
-					if self.isExceptional?
-						price += o_spa.spa.exceptional_price
-						acompte += o_spa.spa.exceptional_acompte 
-					else
-						price += o_spa.spa.ordinary_price
-						acompte += o_spa.spa.ordinary_acompte
-					end
-					unless o_spa.product.nil?
-						price += o_spa.product.price
-					end
-				end 
 			end
+		elsif o_s.service.name == "Location spa"
+			self.order_spas.each do |o_spa|
+				if self.isExceptional?
+					price += o_spa.spa.exceptional_price
+					acompte += o_spa.spa.exceptional_acompte 
+				else
+					price += o_spa.spa.ordinary_price
+					acompte += o_spa.spa.ordinary_acompte
+				end
+				unless o_spa.product.nil?
+					price += o_spa.product.price
+				end
+			end 
 		end
-		return [price.to_i-code_promo.to_i,acompte.to_i-code_promo.to_i]
+	end
+	return [price.to_i-code_promo.to_i,acompte.to_i-code_promo.to_i]
+
   end
+
 end
