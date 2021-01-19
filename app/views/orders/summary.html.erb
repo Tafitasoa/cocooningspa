@@ -146,11 +146,11 @@
 				Montant à régler sur place (CB ou éspèces uniquement) : <strong><%= @totalPrice - @totalAcompte %>€</strong><br>
 
 				<%# # ////////////////////////////////  CODE PROD ///////////////////////////////////// %>
-				<form method="post" action="https://payment-webinit.mercanet.bnpparibas.net/paymentInit">
+				<%# form method="post" action="https://payment-webinit.mercanet.bnpparibas.net/paymentInit"%>
 				<%# # ////////////////////////////////  CODE PROD ///////////////////////////////////// %>
 
-				<%# # ////////////////////////////////  CODE TEST HEROKU ///////////////////////////////////// %>
-				<%# form method="post" action="https://payment-webinit.simu.mercanet.bnpparibas.net/paymentInit">
+				<%# # ////////////////////////////////  CODE TEST ///////////////////////////////////// %>
+				<form method="post" action="https://payment-webinit.simu.mercanet.bnpparibas.net/paymentInit">
 				<%#////////////////////////////////  FIN  ///////////////////////////////////// %>
 
 					<input type="hidden" name="Data" value="<%=@data%>">

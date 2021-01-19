@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
 
-  default from: 'contact@cocooningspa.com'
+  default from: 'tafitaosa.cedric@gmail.com'
   layout 'mailer'
 
   SMTP_ERRORS = [
@@ -16,7 +16,7 @@ class ApplicationMailer < ActionMailer::Base
 
   private
     def show_errors(exception)
-      logger.debug "[ERROR] #{exception}"
+      logger.debug "[ERROR APPLICATION MAILER] Class: #{exception.class},\nMessage #{exception.message}"
     end
 
 end

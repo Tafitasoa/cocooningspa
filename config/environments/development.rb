@@ -80,14 +80,14 @@ Rails.application.configure do
 
 
   #config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.default_options = {from: 'contact@cocooningspa.com'}
+  config.action_mailer.default_options = {from: 'tafitaosa.cedric@gmail.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'cocooningspa.com',
-    user_name:            'michael77rakotovao@gmail.com',
-    password:             'zzadaorgdtcibfti',
+    domain:               'localhost:3000',
+    user_name:            'tafitasoa.cedric@gmail.com',
+    password:             'CedricGmail',
     authentication:       'plain',
     enable_starttls_auto: true 
   }

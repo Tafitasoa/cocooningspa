@@ -409,21 +409,21 @@ class OrdersController < ApplicationController
     transactionReference = "simu" + rand(100000..999999).to_s
 
     ######################## PRODUCTION  #################################################
-    #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
-    normalReturnUrl = "https://cocooningspa.com/reservation-prestation/paye-commande/" + current_client.id.to_s
+    # #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
+    # normalReturnUrl = "https://cocooningspa.com/reservation-prestation/paye-commande/" + current_client.id.to_s
 
-    # Contruit la requête des données à envoyer à Mercanet
-    @data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=2"
-    #@data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|transactionReference=" + transactionReference + "|keyVersion=2"
+    # # Contruit la requête des données à envoyer à Mercanet
+    # @data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=2"
+    # #@data = "amount=#{@amount}|currencyCode=978|merchantId=211000142040001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|transactionReference=" + transactionReference + "|keyVersion=2"
 
-    # Encode en UTF-8 des données à envoyer à Mercanet
-    dataToSend = (@data).encode('utf-8')
+    # # Encode en UTF-8 des données à envoyer à Mercanet
+    # dataToSend = (@data).encode('utf-8')
     
-    # Clé secrète correspondant au merchandId de simulation
-    secretKey = "p49S1kWFoQEv_G_KWpotcKpjvSHM-ku-v2Mza5dszJA"
+    # # Clé secrète correspondant au merchandId de simulation
+    # secretKey = "p49S1kWFoQEv_G_KWpotcKpjvSHM-ku-v2Mza5dszJA"
 
-    # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
-    @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
+    # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
+    # @seal = Digest::SHA256.hexdigest dataToSend + secretKey
     #########################################################################
 
     # @code_promo = 0
@@ -452,15 +452,15 @@ class OrdersController < ApplicationController
     # # ////////////////////////////////  FIN  /////////////////////////////////////
 
      # # ////////////////////////////////  CODE TEST LOCAL /////////////////////////////////////
-    #  normalReturnUrl = "http://localhost:3000/reservation-prestation/paye-commande/" + current_client.id.to_s
-    # # # Contruit la requête des données à envoyer à Mercanet
-    #  @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
-    # # # Encode en UTF-8 des données à envoyer à Mercanet
-    #  dataToSend = (@data).encode('utf-8')
-    # # # Clé secrète correspondant au merchandId de simulation
-    #  secretKey = "002001000000001_KEY1"
-    # # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
-    #  @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
+     normalReturnUrl = "http://localhost:3000/reservation-prestation/paye-commande/" + current_client.id.to_s
+    # # Contruit la requête des données à envoyer à Mercanet
+     @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
+    # # Encode en UTF-8 des données à envoyer à Mercanet
+     dataToSend = (@data).encode('utf-8')
+    # # Clé secrète correspondant au merchandId de simulation
+     secretKey = "002001000000001_KEY1"
+    # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
+     @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
     # # ////////////////////////////////  FIN  /////////////////////////////////////
     
   end
@@ -492,10 +492,19 @@ class OrdersController < ApplicationController
       @order.update(is_validate:true)
       Client.find(params[:client_id]).update(is_client:true)
 
+      # PREPARE DADA FOR MAILLING
+      @current_order_id = @order.id
+
       begin
         begin
-          ClientMailer.confirm_order(@order.id,current_client.id).deliver_now
-        rescue
+          logger.info "\n\n ################################# \n START Client Mailer \n\n "
+          logger.info "\n\n ################################# \n current_order_id: #{@current_order_id}, current_client.id: #{current_client.id},\n\n "
+
+          ClientMailer.confirm_order(@current_order_id,current_client.id).deliver_now
+        rescue => exception
+          logger.info "\n\n ################################# \n ERROR CONFIRM ORDER \n\n"
+          logger.debug "[ERROR APPLICATION MAILER] Class: #{exception.class},\nMessage #{exception.full_message(highlight: true, order: :top)}"
+          logger.info "\n\n ################################# \n\n"
         end
 
         @order.services.each do |service|
@@ -538,7 +547,7 @@ class OrdersController < ApplicationController
         end
 
       rescue
-        logger.error "[ERROR] at OrderController, Payment"
+        logger.debug "[ERROR PAYMENT] Class: #{exception.class},\nMessage #{exception.full_message(highlight: true, order: :top)}"
         
       ensure
         redirect_to payedsuccess_path

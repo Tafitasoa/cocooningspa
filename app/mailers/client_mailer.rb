@@ -1,7 +1,12 @@
 class ClientMailer < ApplicationMailer
+  require 'json'
   def confirm_order(order_id,client_id)
+    logger.info "\n\n ################################# \n def confirm_order(order_id,client_id) \n\n"
+
     @client = Client.find(client_id)
     @order = Order.find(order_id)
+
+    # DATA: date: string, heurs: ["",""], number_service: number, code_promo: number
     @date = @order.prestation_date
     @heurs = ["",""]
     @number_service = 0
@@ -17,6 +22,11 @@ class ClientMailer < ApplicationMailer
     if @order.code_promo
       @code_promo = @order.code_promo.reduction
     end
+
+    # send mail
+    logger.info "\n\n ################################# \n DATA SEND MAIL \n\n"
+    logger.info "\n\norder: #{@order.to_json}\nclient: #{@client.to_json}\ndate: #{@date}\nheurs: #{@heurs}\nnumber_service: #{@number_service}\ncode_promo #{@code_promo}"
+    logger.info "\n\n ################################# \n START SEND MAIL \n\n"
     mail(to: @client.email, subject: 'Votre commande Cocooning Spa !')
   end
 
