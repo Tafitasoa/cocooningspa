@@ -440,19 +440,7 @@ class OrdersController < ApplicationController
     # #Construit l'URL de retour pour récupérer le résultat du paiement sur le site e-commerce du marchand
 
     # # ////////////////////////////////  CODE TEST HEROKU /////////////////////////////////////
-    #  normalReturnUrl = "https://cocooningspa-v11.herokuapp.com/reservation-prestation/paye-commande/" + current_client.id.to_s
-    # # # Contruit la requête des données à envoyer à Mercanet
-    #  @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
-    # # # Encode en UTF-8 des données à envoyer à Mercanet
-    #  dataToSend = (@data).encode('utf-8')
-    # # # Clé secrète correspondant au merchandId de simulation
-    #  secretKey = "002001000000001_KEY1"
-    # # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
-    #  @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
-    # # ////////////////////////////////  FIN  /////////////////////////////////////
-
-     # # ////////////////////////////////  CODE TEST LOCAL /////////////////////////////////////
-     normalReturnUrl = "http://localhost:3000/reservation-prestation/paye-commande/" + current_client.id.to_s
+     normalReturnUrl = "https://cocooningspa-v11.herokuapp.com/reservation-prestation/paye-commande/" + current_client.id.to_s
     # # Contruit la requête des données à envoyer à Mercanet
      @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
     # # Encode en UTF-8 des données à envoyer à Mercanet
@@ -461,6 +449,18 @@ class OrdersController < ApplicationController
      secretKey = "002001000000001_KEY1"
     # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
      @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
+    # # ////////////////////////////////  FIN  /////////////////////////////////////
+
+     # # ////////////////////////////////  CODE TEST LOCAL /////////////////////////////////////
+    #  normalReturnUrl = "http://localhost:3000/reservation-prestation/paye-commande/" + current_client.id.to_s
+    # # # Contruit la requête des données à envoyer à Mercanet
+    #  @data = "amount=#{@amount}|currencyCode=978|merchantId=002001000000001|normalReturnUrl=" + normalReturnUrl + "|paymentMeanBrandList=CB,VISA,MAESTRO,MASTERCARD,VISA ELECTRON,PAYPAL|paypageData.bypassReceiptPage=Y|transactionReference=" + transactionReference + "|keyVersion=1"
+    # # # Encode en UTF-8 des données à envoyer à Mercanet
+    #  dataToSend = (@data).encode('utf-8')
+    # # # Clé secrète correspondant au merchandId de simulation
+    #  secretKey = "002001000000001_KEY1"
+    # # # Calcul du certificat par un cryptage SHA256 des données envoyées suffixé par la clé secrète
+    #  @seal = Digest::SHA256.hexdigest dataToSend + secretKey    # MILA JERANA !!
     # # ////////////////////////////////  FIN  /////////////////////////////////////
     
   end
