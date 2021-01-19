@@ -1,6 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
 
-  default from: 'tafitasoa.cedric@gmail.com'
+  default from: 'contact@cocooningspa.com'
   layout 'mailer'
 
   SMTP_ERRORS = [

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Exeption at Client Mailling : confirmation Order</h1>
+    <p>
+      Class: <%= @error.class %>
+    </p>
+    <p>
+      FullMessage: <%= @error.full_message(highlight: true, order: :top) %>
+    </p>
+    <p>
+      Client : <%= @client %> 
+    </p>
+  </body>
+</html>

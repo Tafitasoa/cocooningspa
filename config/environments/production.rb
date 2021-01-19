@@ -3,7 +3,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   # configuration en production localhost a changé
   
-  config.action_mailer.default_url_options = { :host => 'cocooningspa-v11.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'cocooningspa.com' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -116,7 +116,7 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
   # SEND MAIL
-  # config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :sendmail
   # Defaults to:
   # config.action_mailer.sendmail_settings = {
   #   location: '/usr/sbin/sendmail',
@@ -125,18 +125,17 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
-  #config.action_mailer.default_options = {from: 'contact@cocooningspa.com'}
-  config.action_mailer.default_options = {from: 'tafitasoa.cedric@gmail.com'}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    domain:               'cocooningspa-v11.herokuapp.com',
-    user_name:            'tafitasoa.cedric@gmail.com',
-    password:             'CedricGmail',
-    authentication:       'plain',
-    enable_starttls_auto: true 
-  }
+  config.action_mailer.default_options = {from: 'contact@cocooningspa.com'}
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address:              'mail.cocooningspa.com',
+  #   port:                 465,
+  #   domain:               'cocooningspa.com',
+  #   user_name:            'contact@cocooningspa.com',
+  #   password:             '@Cocooning06',
+  #   authentication:       'plain'
+  #   #enable_starttls_auto: true 
+  # }
 
 end
 
