@@ -12,7 +12,7 @@ class AdminMailer < ApplicationMailer
         @url = 'http://cocooningspa.com/'
         # permet d'envoyer l'email à to: ...
         #mail(to: 'contact@cocooningspa.com', subject: '​Nouvelle demande de partenariat !')
-        mail(to: 'tafitaosa.cedric@gmail.com', subject: '​Nouvelle demande de partenariat !')
+        mail(to: 'ttafitasoa.cedric@gmail.com', subject: '​Nouvelle demande de partenariat !')
     end
 
     def new_order_relance_client(order_id,client_id)
@@ -35,7 +35,7 @@ class AdminMailer < ApplicationMailer
         end
 
         #mail(to: 'contact@cocooningspa.com', subject: 'Votre devis effectué en ligne !')
-        mail(to: 'tafitaosa.cedric@gmail.com', subject: 'Votre devis effectué en ligne !')
+        mail(to: 'tafitasoa.cedric@gmail.com', subject: 'Votre devis effectué en ligne !')
     end
 
 end
